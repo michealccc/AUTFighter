@@ -8,6 +8,7 @@ public class WalkState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        character.anim.SetBool("IsWalking", true);
         Debug.Log("Entered Walking State");
     }
 
@@ -23,13 +24,16 @@ public class WalkState : ICharacterState
         {
             character.anim.SetBool("IsJumping", true);
             character.ChangeState(new JumpState());
+            character.Jump();
         }
 
         if (character.isCrouching)
         {
-            character.anim.SetBool("IsCrouching", true);
+            //character.anim.SetBool("IsCrouching", true);
             character.ChangeState(new CrouchState());
         }
+
+        character.HandleAttackPress();
     }
 
     public void Exit()

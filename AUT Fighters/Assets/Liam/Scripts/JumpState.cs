@@ -9,7 +9,8 @@ public class JumpState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
-        character.Jump();
+        character.anim.SetBool("IsJumping", true);
+        //character.Jump();
         Debug.Log("Entering Jump State");
     }
 
@@ -18,7 +19,11 @@ public class JumpState : ICharacterState
         if(character.IsLanding() && character.rb.velocity.y < 0)
         {
             character.ChangeState(new IdleState());
-            Debug.Log("Landing...");
+        }
+
+        if(!character.airAttackPerformed)
+        {
+            character.HandleAttackPress();
         }
     }
 
@@ -28,12 +33,4 @@ public class JumpState : ICharacterState
         character.anim.SetBool("IsJumping", false);
     }
 
-    //public bool IsLanding()
-    //{
-    //    float extraHeightCheck = 0.10f;
-    //    RaycastHit2D raycastHit = Physics2D.BoxCast(character.collider.bounds.center, character.collider.bounds.size, 0f, Vector2.down, extraHeightCheck, character.platformLayer);
-    //    Debug.Log("Raycast Grounded: " + raycastHit.collider);
-    //    //Return the raycast collider if it isn't null
-    //    return raycastHit.collider != null;
-    //}
 }

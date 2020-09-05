@@ -16,6 +16,8 @@ public class IdleState : ICharacterState
 
     public void Execute()
     {
+        character.DirectionToBeFacing();
+
         if(character.isMoving)
         {
             character.ChangeState(new WalkState());

@@ -14,6 +14,7 @@ public class WalkState : ICharacterState
 
     public void Execute()
     {
+        character.DirectionToBeFacing();
         character.Walk();
         if(!character.isMoving)
         {

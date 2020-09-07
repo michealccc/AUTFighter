@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Charlie/Scenes/OptionsScene.unity
     guid: 84ebc833fd2257347b74c7c5faeb94f8
+  - enabled: 1
+    path: Assets/Micheal/Scenes/FightScene.unity
+    guid: 198a1ee749a66a546b88490c5acb2454
   m_configObjects: {}

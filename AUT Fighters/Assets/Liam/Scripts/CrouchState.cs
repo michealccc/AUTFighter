@@ -23,6 +23,7 @@ public class CrouchState : ICharacterState
 
         if(character.isJumping)
         {
+            character.Jump();
             character.ChangeState(new JumpState());
         }
 
@@ -33,5 +34,21 @@ public class CrouchState : ICharacterState
     {
         Debug.Log("Exiting Crouch State");
         //character.anim.SetBool("IsCrouching", false);
+    }
+
+    public void OnTriggerEnter(Collider2D other)
+    {
+        if (other.CompareTag("Hitbox"))
+        {
+            if (character.IsBlocking())
+            {
+                character.OnBlock(other.GetComponentInParent<CharacterController>());
+            }
+            else
+            {
+                character.OnHit(other.GetComponentInParent<CharacterController>());
+            }
+            //Debug.Log(character.GetHashCode() + "Contact made in crouch");
+        }
     }
 }

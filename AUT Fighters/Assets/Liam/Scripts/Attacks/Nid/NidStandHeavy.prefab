@@ -47,7 +47,7 @@ MonoBehaviour:
   damage: 50
   pushback: 3
   pushforward: 1
-  blockStunDuration: 5
+  blockStunDuration: 1
   hitStunDuration: 5
   causeKnockdown: 0
   attackType: 0

@@ -42,4 +42,15 @@ public class IdleState : ICharacterState
         
     }
 
+    public void OnTriggerEnter(Collider2D other)
+    {
+        if (other.CompareTag("Hitbox"))
+        {
+            if(character.IsBlocking())
+            {
+                character.OnBlock(other.GetComponentInParent<CharacterController>());
+            }
+            Debug.Log(character.GetHashCode() + "Contact made in idle");
+        }
+    }
 }

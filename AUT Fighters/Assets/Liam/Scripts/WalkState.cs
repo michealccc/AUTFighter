@@ -39,6 +39,19 @@ public class WalkState : ICharacterState
 
     public void Exit()
     {
+        //character.rb.velocity = new Vector2(0, 0);
         character.anim.SetBool("IsWalking", false);
+    }
+
+    public void OnTriggerEnter(Collider2D other)
+    {
+        if (other.CompareTag("Hitbox"))
+        {
+            if (character.IsBlocking())
+            {
+                character.OnBlock(other.GetComponentInParent<CharacterController>());
+            }
+            Debug.Log(character.GetHashCode() + "Contact made in walk");
+        }
     }
 }

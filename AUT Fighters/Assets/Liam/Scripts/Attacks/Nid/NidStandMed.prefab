@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: NidStandMed
   damage: 20
-  pushback: 0
-  pushforward: 0
-  blockStunDuration: 0
+  pushback: 5
+  pushforward: 5
+  blockStunDuration: 1.3
   hitStunDuration: 0
   causeKnockdown: 0
   attackType: 0

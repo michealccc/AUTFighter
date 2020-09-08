@@ -8,4 +8,5 @@ public interface ICharacterState
     void Enter(CharacterController controller);
     void Execute();
     void Exit();
+    void OnTriggerEnter(Collider2D other);
 }

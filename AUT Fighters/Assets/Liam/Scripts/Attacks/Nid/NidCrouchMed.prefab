@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: NidCrouchMed
   damage: 0
-  pushback: 0
+  pushback: 4
   pushforward: 0
-  blockStunDuration: 0
+  blockStunDuration: 1
   hitStunDuration: 0
   causeKnockdown: 1
   attackType: 1

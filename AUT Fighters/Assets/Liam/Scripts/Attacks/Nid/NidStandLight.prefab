@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: NidStandLight
   damage: 10
-  pushback: 0
+  pushback: 4
   pushforward: 0
-  blockStunDuration: 0
+  blockStunDuration: 0.9
   hitStunDuration: 0
   causeKnockdown: 0
   attackType: 0

@@ -41,4 +41,13 @@ public class JumpAtkState : ICharacterState
         character.anim.SetInteger("AttackStrength", 0);
         character.airAttackPerformed = true;
     }
+
+
+    public void OnTriggerEnter(Collider2D other)
+    {
+        if (other.CompareTag("Hitbox"))
+        {
+            Debug.Log("Contact made in jump atk");
+        }
+    }
 }

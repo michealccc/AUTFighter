@@ -33,4 +33,11 @@ public class JumpState : ICharacterState
         character.anim.SetBool("IsJumping", false);
     }
 
+    public void OnTriggerEnter(Collider2D other)
+    {
+        if (other.CompareTag("Hitbox"))
+        {
+            Debug.Log("Contact made in jump");
+        }
+    }
 }

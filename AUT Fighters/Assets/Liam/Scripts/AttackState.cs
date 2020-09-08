@@ -17,7 +17,7 @@ public class AttackState : ICharacterState
 
     public void Execute()
     {
-        Debug.Log("Normalized Time: " + character.anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        //Debug.Log("Normalized Time: " + character.anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
         if(character.anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
         {
             character.ChangeState(new IdleState());
@@ -29,5 +29,13 @@ public class AttackState : ICharacterState
         Debug.Log("Exiting Attack State");
         character.anim.SetBool("IsAttacking", false);
         character.anim.SetInteger("AttackStrength", 0);
+    }
+
+    public void OnTriggerEnter(Collider2D other)
+    {
+        if (other.CompareTag("Hitbox"))
+        {
+            Debug.Log("Contact made in attack");
+        }
     }
 }

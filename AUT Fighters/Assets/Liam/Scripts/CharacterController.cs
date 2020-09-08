@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
     public BoxCollider2D collider;
     public ICharacterState currentState;
     public GameObject opponent;
+    //public AttackData recievingAtk;
 
     public AttackData[] attacks;
     public AttackData currentAttackData;
@@ -73,7 +74,7 @@ public class CharacterController : MonoBehaviour
     public void DirectionToBeFacing()
     {
         float distDifference = opponent.transform.position.x - gameObject.transform.position.x;
-        Debug.Log("Distance difference: " + distDifference);
+        //Debug.Log("Distance difference: " + distDifference);
         float newDirection = 0;
         //Can probably replace this if statement using some calculation and normalize
         if (distDifference < 0)
@@ -88,7 +89,7 @@ public class CharacterController : MonoBehaviour
         if(newDirection != direction)
         {
             direction = newDirection;
-            Debug.Log(this.gameObject.name + " The new direction is: " + direction);
+            //Debug.Log(this.gameObject.name + " The new direction is: " + direction);
             //anim.Play("NidTurn");
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y, 1);
         }
@@ -105,7 +106,7 @@ public class CharacterController : MonoBehaviour
 
     public bool IsLanding()
     {
-        float extraHeightCheck = 0.55f;
+        float extraHeightCheck = 0.45f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, extraHeightCheck, platformLayer);
         //Debug.Log("Raycast Grounded: " + raycastHit.collider);
         //Return the raycast collider if it isn't null
@@ -114,6 +115,13 @@ public class CharacterController : MonoBehaviour
 
     public bool IsBlocking()
     {
+        //Moving in the opposite direciton they are facing
+        if(moveDir == (direction * -1))
+        {
+            Debug.Log("Is Blocking");
+            return true;
+        }
+
         return false;
     }
 
@@ -146,19 +154,56 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    public void OnHit()
+    public void OnHit(CharacterController opponent)
     {
+        anim.SetBool("InHitStun", true);
 
+        opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
+        rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
+
+        if (isCrouching)
+        {
+            anim.Play("NidCrouchHit");
+        }
+        else
+        {
+            anim.Play("NidStandHit");
+        }
+
+        ChangeState(new HitStunState(opponent));
     }
 
-    public void OnBlock()
+    public void OnBlock(CharacterController opponent)
     {
+        anim.SetBool("InBlockStun", true);
 
+        opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into blockstun state, change the argument for the constructor
+        rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
+
+        if(isCrouching)
+        {
+            anim.Play("NidCrouchBlocking");
+        }
+        else
+        {
+            anim.Play("NidStandBlocking");
+        }
+
+        ChangeState(new BlockStunState(opponent));
     }
 
     public void SetAttackData(string atkData)
     {
         currentAttackData = FindAttackData(atkData);
+    }
+
+    //Detecting the hitbox that belongs to the opposing character
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.GetComponentInParent<CharacterController>().gameObject == opponent)
+        {
+            currentState.OnTriggerEnter(other);
+        }
     }
 
     private AttackData FindAttackData(string atkName)

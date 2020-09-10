@@ -20,6 +20,8 @@ public class HitStunState : ICharacterState
         Debug.Log("Entered Hit Stun State" + atkData);
         character = controller;
         hitDuration = atkData.hitStunDuration;
+        character.rb.velocity = new Vector2(0, 0);
+        //character.anim.GetCurrentAnimatorClipInfo(0).
     }
 
     public void Execute()
@@ -29,7 +31,6 @@ public class HitStunState : ICharacterState
 
     public void Exit()
     {
-        character.anim.SetBool("InHitStun", false);
         Debug.Log("Exiting Hit Stun State");
     }
 
@@ -44,12 +45,15 @@ public class HitStunState : ICharacterState
 
     private void HitStunned()
     {
+        Debug.Log(hitDuration);
         if (hitDuration > 0)
         {
             hitDuration -= 0.05f;
+            character.anim.Play("NidStandHit");
         }
         else
         {
+            character.anim.SetBool("InHitStun", false);
             character.ChangeState(new IdleState());
         }
     }

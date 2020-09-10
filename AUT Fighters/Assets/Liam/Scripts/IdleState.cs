@@ -10,6 +10,7 @@ public class IdleState : ICharacterState
         character = controller;
         character.rb.velocity = new Vector2(0, character.rb.velocity.y);
         character.airAttackPerformed = false;
+        //character.moveDir = 0;
         //character.isMoving = false;
         Debug.Log("Entered Idle State");
     }
@@ -18,18 +19,18 @@ public class IdleState : ICharacterState
     {
         character.DirectionToBeFacing();
 
-        if(character.isMoving)
+        if(character.inputs.walk.ReadValue<float>() != 0)
         {
             character.ChangeState(new WalkState());
         }
 
-        if(character.isJumping)
+        if(character.inputs.jump.ReadValue<float>() != 0)
         {
             character.ChangeState(new JumpState());
             character.Jump();
         }
 
-        if(character.isCrouching)
+        if(character.inputs.crouch.ReadValue<float>() != 0)
         {
             character.ChangeState(new CrouchState());
         }
@@ -39,7 +40,7 @@ public class IdleState : ICharacterState
 
     public void Exit()
     {
-        
+        Debug.Log("Exiting Idle State");
     }
 
     public void OnTriggerEnter(Collider2D other)
@@ -49,6 +50,10 @@ public class IdleState : ICharacterState
             if(character.IsBlocking())
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
+            }
+            else
+            {
+                character.OnHit(other.GetComponentInParent<CharacterController>());
             }
             Debug.Log(character.GetHashCode() + "Contact made in idle");
         }

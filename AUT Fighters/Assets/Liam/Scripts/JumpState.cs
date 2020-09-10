@@ -10,6 +10,7 @@ public class JumpState : ICharacterState
     {
         character = controller;
         character.anim.SetBool("IsJumping", true);
+        character.ToggleGroundCollider();
         //character.Jump();
         Debug.Log("Entering Jump State");
     }
@@ -18,6 +19,7 @@ public class JumpState : ICharacterState
     {
         if(character.IsLanding() && character.rb.velocity.y < 0)
         {
+            character.ToggleGroundCollider();
             character.ChangeState(new IdleState());
         }
 
@@ -31,6 +33,7 @@ public class JumpState : ICharacterState
     {
         Debug.Log("Exiting Jump State");
         character.anim.SetBool("IsJumping", false);
+       // character.anim.SetFloat("MoveX", 0);
     }
 
     public void OnTriggerEnter(Collider2D other)

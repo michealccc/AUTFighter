@@ -5,6 +5,7 @@ using UnityEngine;
 public class WalkState : ICharacterState
 {
     private CharacterController character;
+
     public void Enter(CharacterController controller)
     {
         character = controller;
@@ -14,23 +15,26 @@ public class WalkState : ICharacterState
 
     public void Execute()
     {
+        character.moveDir = character.inputs.walk.ReadValue<float>();
+        character.anim.SetFloat("MoveX", character.moveDir * character.direction);
+
         character.DirectionToBeFacing();
         character.Walk();
-        if(!character.isMoving)
+
+        if (character.inputs.walk.ReadValue<float>() == 0)
         {
             character.ChangeState(new IdleState());
         }
 
-        if (character.isJumping)
+        if (character.inputs.jump.ReadValue<float>() != 0)
         {
-            character.anim.SetBool("IsJumping", true);
+            //character.anim.SetBool("IsJumping", true);
             character.ChangeState(new JumpState());
             character.Jump();
         }
 
-        if (character.isCrouching)
+        if (character.inputs.crouch.ReadValue<float>() != 0)
         {
-            //character.anim.SetBool("IsCrouching", true);
             character.ChangeState(new CrouchState());
         }
 
@@ -39,8 +43,8 @@ public class WalkState : ICharacterState
 
     public void Exit()
     {
-        //character.rb.velocity = new Vector2(0, 0);
         character.anim.SetBool("IsWalking", false);
+        Debug.Log("Exiting Walking State");
     }
 
     public void OnTriggerEnter(Collider2D other)
@@ -50,6 +54,10 @@ public class WalkState : ICharacterState
             if (character.IsBlocking())
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
+            }
+            else
+            {
+                character.OnHit(other.GetComponentInParent<CharacterController>());
             }
             Debug.Log(character.GetHashCode() + "Contact made in walk");
         }

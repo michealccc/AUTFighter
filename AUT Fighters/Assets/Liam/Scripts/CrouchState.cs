@@ -15,14 +15,14 @@ public class CrouchState : ICharacterState
 
     public void Execute()
     {
-        if(!character.isCrouching)
+        if(character.inputs.crouch.ReadValue<float>() == 0)
         {
-            //character.anim.SetBool("IsCrouching", false);
             character.ChangeState(new IdleState());
         }
 
-        if(character.isJumping)
+        if(character.inputs.jump.ReadValue<float>() != 0)
         {
+            //character.moveDir = character.inputs.walk.ReadValue<float>();             //Get jump direction
             character.Jump();
             character.ChangeState(new JumpState());
         }
@@ -33,7 +33,11 @@ public class CrouchState : ICharacterState
     public void Exit()
     {
         Debug.Log("Exiting Crouch State");
-        //character.anim.SetBool("IsCrouching", false);
+        //Check to see if the character is attacking while crouched, if they are, do not set crouching to false because there are crouching attacks
+        if(character.anim.GetInteger("AttackStrength") == 0)
+        {
+            character.anim.SetBool("IsCrouching", false);
+        }
     }
 
     public void OnTriggerEnter(Collider2D other)
@@ -42,6 +46,7 @@ public class CrouchState : ICharacterState
         {
             if (character.IsBlocking())
             {
+                Debug.Log("Crouch trigger for blocking");
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }
             else

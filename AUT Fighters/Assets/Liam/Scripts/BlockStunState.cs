@@ -44,6 +44,10 @@ public class BlockStunState : ICharacterState
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }
+            else
+            {
+                character.OnHit(other.GetComponentInParent<CharacterController>());
+            }
             Debug.Log(character.GetHashCode() + "Contact made in blocking");
         }
     }
@@ -52,6 +56,7 @@ public class BlockStunState : ICharacterState
     {
         if(blockDuration > 0)
         {
+            Debug.Log("Still Blocking");
             blockDuration -= 0.05f;
         }
         else

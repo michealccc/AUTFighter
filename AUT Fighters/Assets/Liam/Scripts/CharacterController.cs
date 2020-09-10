@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-//Script that handles character controls
-public class CharacterController : MonoBehaviour
+public class CharacterController : MonoBehaviour, IGettingAttacked
 {
     public Animator anim;
     public Rigidbody2D rb;
     public BoxCollider2D collider;
+    public BoxCollider2D groundCollider;
     public ICharacterState currentState;
     public GameObject opponent;
-    //public AttackData recievingAtk;
 
     public AttackData[] attacks;
     public AttackData currentAttackData;
@@ -20,7 +19,7 @@ public class CharacterController : MonoBehaviour
     public float jumpForceY;
     public float jumpForceX;
 
-    public bool isMoving; 
+    public bool isMoving;
     public bool isJumping;
     public bool isCrouching;
 
@@ -33,25 +32,10 @@ public class CharacterController : MonoBehaviour
 
     [SerializeField]
     public LayerMask platformLayer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        ChangeState(new IdleState());
-        rb.gravityScale *= 1.25f;
-        Time.timeScale = 1f;
-        airAttackPerformed = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //DirectionToBeFacing();
-        currentState.Execute();
-    }
 
     public void ChangeState(ICharacterState newState)
     {
-        if(currentState != null)
+        if (currentState != null)
         {
             currentState.Exit();
         }
@@ -68,6 +52,7 @@ public class CharacterController : MonoBehaviour
 
     public void Jump()
     {
+        moveDir = inputs.walk.ReadValue<float>();
         rb.velocity = new Vector2(jumpForceX * moveDir * Time.deltaTime, jumpForceY);
     }
 
@@ -86,11 +71,9 @@ public class CharacterController : MonoBehaviour
             newDirection = 1;
         }
 
-        if(newDirection != direction)
+        if (newDirection != direction)
         {
             direction = newDirection;
-            //Debug.Log(this.gameObject.name + " The new direction is: " + direction);
-            //anim.Play("NidTurn");
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y, 1);
         }
     }
@@ -116,7 +99,7 @@ public class CharacterController : MonoBehaviour
     public bool IsBlocking()
     {
         //Moving in the opposite direciton they are facing
-        if(moveDir == (direction * -1))
+        if (inputs.walk.ReadValue<float>() == (direction * -1))
         {
             Debug.Log("Is Blocking");
             return true;
@@ -127,25 +110,29 @@ public class CharacterController : MonoBehaviour
 
     public void HandleAttackPress()
     {
-        if(inputs.light.ReadValue<float>() != 0)
+        if (inputs.light.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.LIGHT);
         }
-        else if(inputs.med.ReadValue<float>() != 0)
+        else if (inputs.med.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.MED);
         }
-        else if(inputs.heavy.ReadValue<float>() != 0)
+        else if (inputs.heavy.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.HEAVY);
         }
 
-        if(anim.GetInteger("AttackStrength") != 0)
+        if (anim.GetInteger("AttackStrength") != 0)
         {
-            if(anim.GetBool("IsJumping"))
+            if (anim.GetBool("IsJumping"))
             {
                 Debug.Log("Jump attcking");
                 ChangeState(new JumpAtkState());
+            }
+            else if(anim.GetBool("IsCrouching"))
+            {
+                ChangeState(new CrouchAttackState());
             }
             else
             {
@@ -154,42 +141,9 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    public void OnHit(CharacterController opponent)
+    public void ToggleGroundCollider()
     {
-        anim.SetBool("InHitStun", true);
-
-        opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
-        rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
-
-        if (isCrouching)
-        {
-            anim.Play("NidCrouchHit");
-        }
-        else
-        {
-            anim.Play("NidStandHit");
-        }
-
-        ChangeState(new HitStunState(opponent));
-    }
-
-    public void OnBlock(CharacterController opponent)
-    {
-        anim.SetBool("InBlockStun", true);
-
-        opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into blockstun state, change the argument for the constructor
-        rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
-
-        if(isCrouching)
-        {
-            anim.Play("NidCrouchBlocking");
-        }
-        else
-        {
-            anim.Play("NidStandBlocking");
-        }
-
-        ChangeState(new BlockStunState(opponent));
+        //groundCollider.enabled = !groundCollider.enabled;
     }
 
     public void SetAttackData(string atkData)
@@ -200,7 +154,7 @@ public class CharacterController : MonoBehaviour
     //Detecting the hitbox that belongs to the opposing character
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.GetComponentInParent<CharacterController>().gameObject == opponent)
+        if (other.GetComponentInParent<CharacterController>().gameObject == opponent)
         {
             currentState.OnTriggerEnter(other);
         }
@@ -210,15 +164,15 @@ public class CharacterController : MonoBehaviour
     {
         AttackData theData = null;
 
-        foreach(AttackData atk in attacks)
+        foreach (AttackData atk in attacks)
         {
-            if(atk.attackName.CompareTo(atkName) == 0)
+            if (atk.attackName.CompareTo(atkName) == 0)
             {
                 theData = atk;
             }
         }
 
-        if(theData == null)
+        if (theData == null)
         {
             Debug.LogError("ATTACK DATA NOT FOUND!");
         }
@@ -227,43 +181,53 @@ public class CharacterController : MonoBehaviour
 
     //All these callbacks could be replaced by having a data strucutre with the InputActions as variables and then poll them for their value
     //A callback function - Check for when the player inputs a walk control and set player to moving
-    public void OnWalk(InputValue value)
+    //public void OnWalk(InputValue value)
+    //{
+    //    moveDir = value.Get<float>();
+    //    if (moveDir != 0)
+    //    {
+    //        isMoving = true;
+    //        anim.SetFloat("MoveX", moveDir * direction);
+    //    }
+    //    else
+    //    {
+    //        isMoving = false;
+    //    }
+    //}
+
+    //public void OnJump(InputValue value)
+    //{
+    //    if (value.Get<float>() != 0 && IsGrounded())
+    //    {
+    //        isJumping = true;
+    //    }
+    //    else
+    //    {
+    //        isJumping = false;
+    //    }
+    //}
+
+    //public void OnCrouch(InputValue value)
+    //{
+    //    if (value.Get<float>() != 0)
+    //    {
+    //        isCrouching = true;
+    //    }
+    //    else
+    //    {
+    //        isCrouching = false;
+    //    }
+
+    //    //anim.SetBool("IsCrouching", isCrouching);
+    //}
+
+    public virtual void OnHit(CharacterController opponent)
     {
-        moveDir = value.Get<float>();
-        if(moveDir != 0)
-        {
-            isMoving = true;
-            anim.SetFloat("MoveX", moveDir * direction);
-        }
-        else
-        {
-            isMoving = false;
-        }
+        throw new System.NotImplementedException();
     }
 
-    public void OnJump(InputValue value)
+    public virtual void OnBlock(CharacterController opponent)
     {
-        if(value.Get<float>() != 0 && IsGrounded())
-        {
-            isJumping = true;
-        }
-        else
-        {
-            isJumping = false;
-        }
-    }
-
-    public void OnCrouch(InputValue value)
-    {
-        if(value.Get<float>() != 0)
-        {
-            isCrouching = true;
-        }
-        else
-        {
-            isCrouching = false;
-        }
-
-        anim.SetBool("IsCrouching", isCrouching);
+        throw new System.NotImplementedException();
     }
 }

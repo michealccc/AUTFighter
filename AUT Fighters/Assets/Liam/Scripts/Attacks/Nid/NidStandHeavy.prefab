@@ -48,6 +48,6 @@ MonoBehaviour:
   pushback: 3
   pushforward: 1
   blockStunDuration: 1
-  hitStunDuration: 5
+  hitStunDuration: 1.3
   causeKnockdown: 0
   attackType: 0

@@ -35,7 +35,15 @@ public class AttackState : ICharacterState
     {
         if (other.CompareTag("Hitbox"))
         {
-            Debug.Log("Contact made in attack");
+            if(character.IsBlocking())
+            {
+                character.OnBlock(other.GetComponentInParent<CharacterController>());
+            }
+            else
+            {
+                character.OnHit(other.GetComponentInParent<CharacterController>());
+            }
+            Debug.Log(character.GetHashCode() + "Contact made in idle");
         }
     }
 }

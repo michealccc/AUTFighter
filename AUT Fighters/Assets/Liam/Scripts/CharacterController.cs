@@ -9,8 +9,11 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     public Rigidbody2D rb;
     public BoxCollider2D collider;
     public BoxCollider2D groundCollider;
+    public BoxCollider2D throwBox;
     public ICharacterState currentState;
     public GameObject opponent;
+
+    public PlayerStats stats;
 
     public AttackData[] attacks;
     public AttackData currentAttackData;
@@ -89,11 +92,9 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
 
     public bool IsLanding()
     {
-        float extraHeightCheck = 0.45f;
-        RaycastHit2D raycastHit = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, extraHeightCheck, platformLayer);
-        //Debug.Log("Raycast Grounded: " + raycastHit.collider);
-        //Return the raycast collider if it isn't null
-        return raycastHit.collider != null;
+        float extraHeightCheck = 0.45f; 
+        RaycastHit2D raycastHitGround = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, extraHeightCheck, platformLayer);
+        return raycastHitGround.collider != null;
     }
 
     public bool IsBlocking()
@@ -110,7 +111,12 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
 
     public void HandleAttackPress()
     {
-        if (inputs.light.ReadValue<float>() != 0)
+        if (inputs.light.ReadValue<float>() != 0 && inputs.med.ReadValue<float>() != 0)
+        {
+            anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
+            //anim.SetBool("IsThrowing", true);
+        }
+        else if (inputs.light.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.LIGHT);
         }
@@ -122,10 +128,19 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.HEAVY);
         }
+        //else if (inputs.light.ReadValue<float>() != 0 && inputs.light.ReadValue<float>() != 0)
+        //{
+        //    anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
+        //    //anim.SetBool("IsThrowing", true);
+        //}
 
         if (anim.GetInteger("AttackStrength") != 0)
         {
-            if (anim.GetBool("IsJumping"))
+            if (anim.GetInteger("AttackStrength") == (int)AttackStrength.THROW && anim.GetBool("IsJumping") == false)
+            {
+                ChangeState(new ThrowState());
+            }
+            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.THROW)
             {
                 Debug.Log("Jump attcking");
                 ChangeState(new JumpAtkState());
@@ -134,6 +149,10 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             {
                 ChangeState(new CrouchAttackState());
             }
+            else if(anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.THROW)
+            {
+                //Do nothing
+            }
             else
             {
                 ChangeState(new AttackState());
@@ -141,9 +160,51 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         }
     }
 
-    public void ToggleGroundCollider()
+    public void CheckThrowCollider()
     {
-        //groundCollider.enabled = !groundCollider.enabled;
+        if(throwBox.IsTouching(opponent.GetComponent<BoxCollider2D>()))
+        {
+            Debug.Log("We are throwing!!!");
+            anim.SetBool("IsThrowing", true);
+        }
+    }
+
+    public void ThrowFinish()
+    {
+        opponent.GetComponent<CharacterController>().anim.SetBool("IsThrown", false);
+    }
+
+    public void JumpLandCheck(GameObject opponent)
+    {
+        float distanceFromOpponent = opponent.transform.position.x - this.transform.position.x;
+        if(opponent.GetComponent<Rigidbody2D>().velocity.y < 0 && Mathf.Abs(distanceFromOpponent) <= collider.bounds.extents.x * 1.5f)
+        {
+            if (distanceFromOpponent < 0)               //Left side landing
+            {
+                Debug.Log("Left side fall");
+                opponent.transform.position = new Vector2(opponent.transform.position.x + (-collider.bounds.extents.x - 0.65f), opponent.transform.position.y);
+                opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+            }
+            else if (distanceFromOpponent >= 0)               //Right side landing
+            {
+                opponent.transform.position = new Vector2(opponent.transform.position.x + (collider.bounds.extents.x + 0.65f), opponent.transform.position.y);
+                opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+            }
+        }
+    }
+
+    private bool CheckNextToWall(Vector2 direction, Vector2 origin, float dist)
+    {
+        RaycastHit2D raycastWallHit = Physics2D.Raycast(origin, direction, dist, platformLayer);
+        Debug.DrawRay(origin, direction * dist);
+        Debug.Log("CheckWall: " + raycastWallHit.collider);
+        if(raycastWallHit == null)
+        {
+            Debug.Log("Not next to wall!");
+            return false;
+        }
+        Debug.Log("next to wall!");
+        return true;
     }
 
     public void SetAttackData(string atkData)
@@ -154,6 +215,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     //Detecting the hitbox that belongs to the opposing character
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.GetComponentInParent<CharacterController>().gameObject);
         if (other.GetComponentInParent<CharacterController>().gameObject == opponent)
         {
             currentState.OnTriggerEnter(other);
@@ -227,6 +289,11 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     }
 
     public virtual void OnBlock(CharacterController opponent)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void OnThrown(CharacterController opponent)
     {
         throw new System.NotImplementedException();
     }

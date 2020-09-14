@@ -49,7 +49,7 @@ public class HitStunState : ICharacterState
         if (hitDuration > 0)
         {
             hitDuration -= 0.05f;
-            character.anim.Play("NidStandHit");
+            //character.anim.Play("NidStandHit");
         }
         else
         {

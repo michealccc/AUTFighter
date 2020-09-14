@@ -10,6 +10,7 @@ public class IdleState : ICharacterState
         character = controller;
         character.rb.velocity = new Vector2(0, character.rb.velocity.y);
         character.airAttackPerformed = false;
+        character.anim.SetInteger("AttackStrength", 0);
         //character.moveDir = 0;
         //character.isMoving = false;
         Debug.Log("Entered Idle State");
@@ -18,6 +19,7 @@ public class IdleState : ICharacterState
     public void Execute()
     {
         character.DirectionToBeFacing();
+        character.rb.velocity = new Vector2(0, 0);
 
         if(character.inputs.walk.ReadValue<float>() != 0)
         {
@@ -56,6 +58,14 @@ public class IdleState : ICharacterState
                 character.OnHit(other.GetComponentInParent<CharacterController>());
             }
             Debug.Log(character.GetHashCode() + "Contact made in idle");
+        }
+        else if(other.CompareTag("Throwbox"))
+        {
+            character.OnThrown(other.GetComponentInParent<CharacterController>());
+        }
+        else if(other.CompareTag("Landing"))
+        {
+            character.JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
     }
 }

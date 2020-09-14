@@ -61,5 +61,13 @@ public class WalkState : ICharacterState
             }
             Debug.Log(character.GetHashCode() + "Contact made in walk");
         }
+        else if (other.CompareTag("Throwbox"))
+        {
+            character.OnThrown(other.GetComponentInParent<CharacterController>());
+        }
+        else if (other.CompareTag("Landing"))
+        {
+            character.JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
+        }
     }
 }

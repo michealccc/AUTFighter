@@ -22,7 +22,6 @@ public class CrouchState : ICharacterState
 
         if(character.inputs.jump.ReadValue<float>() != 0)
         {
-            //character.moveDir = character.inputs.walk.ReadValue<float>();             //Get jump direction
             character.Jump();
             character.ChangeState(new JumpState());
         }
@@ -44,16 +43,23 @@ public class CrouchState : ICharacterState
     {
         if (other.CompareTag("Hitbox"))
         {
-            if (character.IsBlocking())
+            if(character.IsBlocking())
             {
-                Debug.Log("Crouch trigger for blocking");
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }
             else
             {
                 character.OnHit(other.GetComponentInParent<CharacterController>());
             }
-            //Debug.Log(character.GetHashCode() + "Contact made in crouch");
+            Debug.Log(character.GetHashCode() + "Contact made in crouch");
+        }
+        else if(other.CompareTag("Throwbox"))
+        {
+            character.OnThrown(other.GetComponentInParent<CharacterController>());
+        }
+        else if(other.CompareTag("Landing"))
+        {
+            character.JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
     }
 }

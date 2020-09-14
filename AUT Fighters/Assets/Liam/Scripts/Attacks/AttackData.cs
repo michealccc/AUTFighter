@@ -16,6 +16,7 @@ public class AttackData : MonoBehaviour
     public float damage;
     public float pushback;
     public float pushforward;
+    public Vector2 launchForce;
     public float blockStunDuration;
     public float hitStunDuration;
     public bool causeKnockdown;

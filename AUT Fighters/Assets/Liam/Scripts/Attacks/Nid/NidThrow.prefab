@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3921767901554022016}
   - component: {fileID: 5460595062749960663}
   m_Layer: 0
-  m_Name: NidCrouchHeavy
+  m_Name: NidThrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,12 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackName: NidCrouchHeavy
-  damage: 0
-  pushback: 7
+  attackName: NidThrow
+  damage: 30
+  pushback: 0
   pushforward: 0
-  launchForce: {x: 20, y: 45}
-  blockStunDuration: 1.5
+  launchForce: {x: 24, y: 60}
+  blockStunDuration: 0
   hitStunDuration: 0
   causeKnockdown: 1
   attackType: 0

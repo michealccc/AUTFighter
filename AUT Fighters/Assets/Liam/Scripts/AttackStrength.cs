@@ -6,5 +6,6 @@ public enum AttackStrength
 {
     LIGHT = 1,
     MED = 2,
-    HEAVY = 3
+    HEAVY = 3,
+    THROW = 4
 }

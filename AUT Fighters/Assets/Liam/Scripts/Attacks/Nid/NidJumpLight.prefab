@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: NidJumpLight
-  damage: 0
+  damage: 20
   pushback: 0
   pushforward: 0
+  launchForce: {x: 0, y: 0}
   blockStunDuration: 0
   hitStunDuration: 1
   causeKnockdown: 0

@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: NidCrouchLight
-  damage: 0
+  damage: 10
   pushback: 3
   pushforward: 0
+  launchForce: {x: 0, y: 0}
   blockStunDuration: 0.9
   hitStunDuration: 0.6
   causeKnockdown: 0

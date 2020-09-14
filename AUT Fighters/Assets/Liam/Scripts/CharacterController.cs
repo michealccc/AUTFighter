@@ -136,6 +136,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
 
         if (anim.GetInteger("AttackStrength") != 0)
         {
+            //Throw attack
             if (anim.GetInteger("AttackStrength") == (int)AttackStrength.THROW && anim.GetBool("IsJumping") == false)
             {
                 ChangeState(new ThrowState());
@@ -240,48 +241,6 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         }
         return theData;
     }
-
-    //All these callbacks could be replaced by having a data strucutre with the InputActions as variables and then poll them for their value
-    //A callback function - Check for when the player inputs a walk control and set player to moving
-    //public void OnWalk(InputValue value)
-    //{
-    //    moveDir = value.Get<float>();
-    //    if (moveDir != 0)
-    //    {
-    //        isMoving = true;
-    //        anim.SetFloat("MoveX", moveDir * direction);
-    //    }
-    //    else
-    //    {
-    //        isMoving = false;
-    //    }
-    //}
-
-    //public void OnJump(InputValue value)
-    //{
-    //    if (value.Get<float>() != 0 && IsGrounded())
-    //    {
-    //        isJumping = true;
-    //    }
-    //    else
-    //    {
-    //        isJumping = false;
-    //    }
-    //}
-
-    //public void OnCrouch(InputValue value)
-    //{
-    //    if (value.Get<float>() != 0)
-    //    {
-    //        isCrouching = true;
-    //    }
-    //    else
-    //    {
-    //        isCrouching = false;
-    //    }
-
-    //    //anim.SetBool("IsCrouching", isCrouching);
-    //}
 
     public virtual void OnHit(CharacterController opponent)
     {

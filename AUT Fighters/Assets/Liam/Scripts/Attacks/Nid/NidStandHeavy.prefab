@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: NidStandHeavy
-  damage: 50
+  damage: 30
   pushback: 3
   pushforward: 1
+  launchForce: {x: 0, y: 0}
   blockStunDuration: 1
   hitStunDuration: 1.3
   causeKnockdown: 0

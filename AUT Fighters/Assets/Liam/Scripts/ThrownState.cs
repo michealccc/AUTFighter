@@ -23,6 +23,7 @@ public class ThrownState : ICharacterState
         FollowThrowPos();
         if(character.anim.GetBool("IsThrown") == false)
         {
+            character.stats.TakeDamage(opponent.currentAttackData.damage);
             character.ChangeState(new LaunchState());
         }
     }

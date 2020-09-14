@@ -15,6 +15,8 @@ public class NidController : CharacterController
         rb.gravityScale *= 1.25f;
         Time.timeScale = 1f;
         airAttackPerformed = false;
+        stats.ResetHp();
+        stats.ResetSuperMeter();
         ChangeState(new IdleState());
         //Debug.Log(transform.Find("Hitbox").GetComponent<BoxCollider2D>());
         //Physics2D.IgnoreCollision(transform.Find("Hitbox").GetComponent<BoxCollider2D>(), opponent.transform.Find("GroundCollider").GetComponent<BoxCollider2D>());
@@ -30,13 +32,14 @@ public class NidController : CharacterController
 
     public override void OnHit(CharacterController opponent)
     {
+        //Apply the push back force of an attack
         opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
         rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
 
-        if(opponent.currentAttackData.causeKnockdown)
+        if(opponent.currentAttackData.causeKnockdown) //If the attack causes a knockdown
         {
             anim.Play("NidKnockdown");
-            if (opponent.currentAttackData.launchForce != new Vector2(0, 0))
+            if (opponent.currentAttackData.launchForce != new Vector2(0, 0))        //If the attack launches the target, apply the launch force
             {
                 rb.AddForce(new Vector2(-direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
                 ChangeState(new LaunchState());
@@ -47,7 +50,7 @@ public class NidController : CharacterController
                 ChangeState(new KnockdownState());
             }
         }
-        else
+        else //The attack does not cause a knockdown
         {
             anim.SetBool("InHitStun", true);
             ChangeState(new HitStunState(opponent));
@@ -64,6 +67,8 @@ public class NidController : CharacterController
             }
         }
 
+        stats.TakeDamage(opponent.currentAttackData.damage);
+        stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
     }
 
     public override void OnBlock(CharacterController opponent)
@@ -82,6 +87,9 @@ public class NidController : CharacterController
         {
             anim.Play("NidStandBlocking", 0, 0);
         }
+
+        stats.TakeDamage(opponent.currentAttackData.damage * 0.2f);
+        stats.GainMeter(opponent.currentAttackData.damage * 0.2f);
     }
 
     public override void OnThrown(CharacterController opponent)
@@ -89,6 +97,7 @@ public class NidController : CharacterController
         ChangeState(new ThrownState(opponent));
         anim.SetBool("IsThrown", true);
         anim.Play("NidGetThrown");
+        stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
     }
 
 }

@@ -15,6 +15,7 @@ public class CrouchState : ICharacterState
 
     public void Execute()
     {
+        character.rb.velocity = new Vector2(0, 0);
         if(character.inputs.crouch.ReadValue<float>() == 0)
         {
             character.ChangeState(new IdleState());

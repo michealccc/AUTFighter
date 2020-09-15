@@ -26,6 +26,9 @@ public class JumpState : ICharacterState
         {
             character.HandleAttackPress();
         }
+
+        Debug.Log("Velocity " + character.rb.velocity.normalized);
+        Debug.DrawRay(character.transform.position, character.rb.velocity.normalized);
     }
 
     public void Exit()

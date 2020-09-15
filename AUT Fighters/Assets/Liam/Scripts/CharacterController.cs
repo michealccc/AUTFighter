@@ -177,21 +177,40 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
 
     public void JumpLandCheck(GameObject opponent)
     {
-        float distanceFromOpponent = opponent.transform.position.x - this.transform.position.x;
-        if(opponent.GetComponent<Rigidbody2D>().velocity.y < 0 && Mathf.Abs(distanceFromOpponent) <= collider.bounds.extents.x * 1.5f)
+        //float distanceFromOpponent = opponent.transform.position.x - this.transform.position.x;
+        //if(opponent.GetComponent<Rigidbody2D>().velocity.y < 0 && Mathf.Abs(distanceFromOpponent) <= collider.bounds.extents.x * 1.5f)
+        //{
+        //    if (distanceFromOpponent < 0)               //Left side landing
+        //    {
+        //        Debug.Log("Left side fall");
+        //        opponent.transform.position = new Vector2(opponent.transform.position.x + (-collider.bounds.extents.x - 0.65f), opponent.transform.position.y);
+        //        opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+        //    }
+        //    else if (distanceFromOpponent >= 0)               //Right side landing
+        //    {
+        //        opponent.transform.position = new Vector2(opponent.transform.position.x + (collider.bounds.extents.x + 0.65f), opponent.transform.position.y);
+        //        opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+        //    }
+        //}
+        Vector2 futurePos = (Vector2)opponent.transform.position + opponent.GetComponent<Rigidbody2D>().velocity.normalized; //Get future position of the falling character
+        float xPosDiff = futurePos.x - transform.position.x; //Difference on the x-axis between this character and the opponent - to get if they're landing on the left or right side
+        if(xPosDiff <= 0)   //Left side landing
         {
-            if (distanceFromOpponent < 0)               //Left side landing
+            if(Mathf.Abs(xPosDiff) <= 1)
             {
-                Debug.Log("Left side fall");
-                opponent.transform.position = new Vector2(opponent.transform.position.x + (-collider.bounds.extents.x - 0.65f), opponent.transform.position.y);
-                opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
-            }
-            else if (distanceFromOpponent >= 0)               //Right side landing
-            {
-                opponent.transform.position = new Vector2(opponent.transform.position.x + (collider.bounds.extents.x + 0.65f), opponent.transform.position.y);
-                opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+                futurePos.x = transform.position.x - 1.1f;
             }
         }
+        else                //Right side landing
+        {
+            if (Mathf.Abs(xPosDiff) >= 1)
+            {
+                futurePos.x = transform.position.x + 1.1f;
+            }
+        }
+
+        //Move the position of the falling opponent into the future position
+        opponent.transform.position = futurePos;
     }
 
     private bool CheckNextToWall(Vector2 direction, Vector2 origin, float dist)

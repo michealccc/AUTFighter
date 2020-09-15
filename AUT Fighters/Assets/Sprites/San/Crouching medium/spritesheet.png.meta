@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -1370661682523340017
     second: spritesheet_7
+  - first:
+      213: -8276262488406422588
+    second: spritesheet_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:

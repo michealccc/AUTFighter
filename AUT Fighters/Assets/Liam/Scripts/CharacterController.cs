@@ -195,7 +195,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             }
         }
 
-        //Move the position of the falling opponent into the future position
+        //Move the position of the falling opponent into the future position (this should force the collider of the falling opponent into the collider of other character causing them to push each other away)
         opponent.transform.position = futurePos;
         opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
     }

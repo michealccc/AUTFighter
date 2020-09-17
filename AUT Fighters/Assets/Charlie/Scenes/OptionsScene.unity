@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 54813738}
   - component: {fileID: 54813737}
   m_Layer: 5
-  m_Name: RightButton
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ RectTransform:
   m_Children:
   - {fileID: 988767817}
   m_Father: {fileID: 1437234833}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -312,7 +312,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 54813738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498286640}
+        m_MethodName: changeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 54813735}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &54813738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,7 +1315,7 @@ GameObject:
   - component: {fileID: 406028583}
   - component: {fileID: 406028582}
   m_Layer: 5
-  m_Name: DownButton
+  m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1372,7 +1383,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 406028583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498286640}
+        m_MethodName: changeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 406028580}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &406028583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1422,7 +1444,7 @@ GameObject:
   - component: {fileID: 427235182}
   - component: {fileID: 427235181}
   m_Layer: 5
-  m_Name: Left
+  m_Name: LeftText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1595,10 +1617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3deac035ace7fb4bb55ab9af230ed54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: {fileID: 988767819}
+  up: {fileID: 516351138}
   down: {fileID: 1637454224}
   left: {fileID: 653185055}
-  right: {fileID: 516351138}
+  right: {fileID: 988767819}
+  currentKey: {fileID: 0}
 --- !u!4 &498286641
 Transform:
   m_ObjectHideFlags: 0
@@ -1625,7 +1648,7 @@ GameObject:
   - component: {fileID: 516351139}
   - component: {fileID: 516351138}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: UpButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2214,7 +2237,7 @@ GameObject:
   - component: {fileID: 653185054}
   - component: {fileID: 653185055}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LeftButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3132,7 +3155,7 @@ GameObject:
   - component: {fileID: 905994535}
   - component: {fileID: 905994534}
   m_Layer: 5
-  m_Name: Up
+  m_Name: UpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3908,7 +3931,7 @@ GameObject:
   - component: {fileID: 988767818}
   - component: {fileID: 988767819}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: RightButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4376,7 +4399,7 @@ GameObject:
   - component: {fileID: 1061066024}
   - component: {fileID: 1061066023}
   m_Layer: 5
-  m_Name: Down
+  m_Name: DownText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5467,7 +5490,7 @@ GameObject:
   - component: {fileID: 1249289256}
   - component: {fileID: 1249289255}
   m_Layer: 5
-  m_Name: LeftButton
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5535,7 +5558,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1249289256}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498286640}
+        m_MethodName: changeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1249289253}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1249289256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5715,7 +5749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1223003649}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1254488959
@@ -6051,7 +6085,7 @@ GameObject:
   - component: {fileID: 1290180839}
   - component: {fileID: 1290180838}
   m_Layer: 5
-  m_Name: UpButton
+  m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6070,7 +6104,7 @@ RectTransform:
   m_Children:
   - {fileID: 516351140}
   m_Father: {fileID: 1437234833}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6119,7 +6153,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1290180839}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498286640}
+        m_MethodName: changeKey
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1290180836}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1290180839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6726,7 +6771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1437234833
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6744,10 +6789,10 @@ RectTransform:
   - {fileID: 1061066022}
   - {fileID: 427235180}
   - {fileID: 1768039233}
-  - {fileID: 54813736}
+  - {fileID: 1290180837}
   - {fileID: 406028581}
   - {fileID: 1249289254}
-  - {fileID: 1290180837}
+  - {fileID: 54813736}
   m_Father: {fileID: 1765957172}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7029,7 +7074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1574018859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7152,7 +7197,7 @@ GameObject:
   - component: {fileID: 1637454223}
   - component: {fileID: 1637454224}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DownButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7747,7 +7792,7 @@ GameObject:
   - component: {fileID: 1768039235}
   - component: {fileID: 1768039234}
   m_Layer: 5
-  m_Name: Right
+  m_Name: RightText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

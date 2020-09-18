@@ -7,12 +7,11 @@ public class HitStunState : ICharacterState
     private CharacterController character;
     private AttackData atkData;
     private float hitDuration;
-    private CharacterController opponent;
+    //private CharacterController opponent;
 
-    public HitStunState(CharacterController opponent)
+    public HitStunState(AttackData atk)
     {
-        atkData = opponent.currentAttackData;
-        this.opponent = opponent;
+        atkData = atk;
     }
 
     public void Enter(CharacterController controller)
@@ -20,7 +19,7 @@ public class HitStunState : ICharacterState
         Debug.Log("Entered Hit Stun State" + atkData);
         character = controller;
         hitDuration = atkData.hitStunDuration;
-        character.rb.velocity = new Vector2(0, 0);
+        //character.rb.velocity = new Vector2(0, 0);
         //character.anim.GetCurrentAnimatorClipInfo(0).
     }
 

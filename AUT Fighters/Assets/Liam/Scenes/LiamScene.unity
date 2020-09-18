@@ -1809,6 +1809,12 @@ PrefabInstance:
       propertyPath: enemyGroundCol
       value: 
       objectReference: {fileID: 691497685}
+    - target: {fileID: 210302935320503889, guid: 4d0c669649728134dbc10deecd37a815,
+        type: 3}
+      propertyPath: chairPrefab
+      value: 
+      objectReference: {fileID: 4711428166695717520, guid: 1812347e2a1cfbb4293c19e63cc7eb6d,
+        type: 3}
     - target: {fileID: 210302935320503890, guid: 4d0c669649728134dbc10deecd37a815,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1867,22 +1873,22 @@ PrefabInstance:
     - target: {fileID: 210302935320503895, guid: 4d0c669649728134dbc10deecd37a815,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.57
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 210302935320503895, guid: 4d0c669649728134dbc10deecd37a815,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.42
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 210302935320503895, guid: 4d0c669649728134dbc10deecd37a815,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.2
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 210302935320503895, guid: 4d0c669649728134dbc10deecd37a815,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.2097418
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 210302935320503895, guid: 4d0c669649728134dbc10deecd37a815,
         type: 3}

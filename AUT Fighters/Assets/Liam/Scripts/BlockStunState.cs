@@ -7,12 +7,11 @@ public class BlockStunState : ICharacterState
     private CharacterController character;
     private AttackData atkData;
     private float blockDuration;
-    private CharacterController opponent;
+    //private CharacterController opponent;
 
-    public BlockStunState(CharacterController opponent)
+    public BlockStunState(AttackData atk)
     {
-        atkData = opponent.currentAttackData;
-        this.opponent = opponent;
+        atkData = atk;
         //blockDuration = attack.blockStunDuration;
     }
 
@@ -21,7 +20,7 @@ public class BlockStunState : ICharacterState
         Debug.Log("Entered Block Stun State" + atkData);
         character = controller;
         blockDuration = atkData.blockStunDuration;
-        Debug.Log("Push forward force: " + character.transform.right * character.direction * opponent.currentAttackData.pushforward);
+        Debug.Log("Push forward force: " + character.transform.right * character.direction * atkData.pushforward);
         //character.rb.AddForce(character.transform.right * character.direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
     }
 

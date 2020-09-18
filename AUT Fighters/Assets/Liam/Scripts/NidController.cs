@@ -8,6 +8,7 @@ public class NidController : CharacterController
 {
     public Collider2D myHitbox;
     public Collider2D enemyGroundCol;
+    public ChairScript chairPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,7 @@ public class NidController : CharacterController
         else //The attack does not cause a knockdown
         {
             anim.SetBool("InHitStun", true);
-            ChangeState(new HitStunState(opponent));
+            ChangeState(new HitStunState(opponent.currentAttackData));
             if (inputs.crouch.ReadValue<float>() != 0)
             {
                 Debug.Log("Play crouch hit stun");
@@ -71,13 +72,53 @@ public class NidController : CharacterController
         stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
     }
 
+    public override void OnHit(AttackData atkData)
+    {
+        Debug.Log("Hit via special atk");
+        rb.AddForce(transform.right * -direction * atkData.pushforward, ForceMode2D.Impulse);
+
+        if (atkData.causeKnockdown) //If the attack causes a knockdown
+        {
+            anim.Play("NidKnockdown");
+            if (atkData.launchForce != new Vector2(0, 0))        //If the attack launches the target, apply the launch force
+            {
+                rb.AddForce(new Vector2(-direction * atkData.launchForce.x, 1 * atkData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
+                ChangeState(new LaunchState());
+            }
+            else
+            {
+                //Debug.Log(new Vector2(1 * -opponent.direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y));
+                ChangeState(new KnockdownState());
+            }
+        }
+        else //The attack does not cause a knockdown
+        {
+            anim.SetBool("InHitStun", true);
+            ChangeState(new HitStunState(atkData));
+            if (inputs.crouch.ReadValue<float>() != 0)
+            {
+                Debug.Log("Play crouch hit stun");
+                //anim.Play("NidCrouchHit", 0, 0);
+                anim.Play("NidCrouchHit", 0, 0);
+            }
+            else
+            {
+                Debug.Log("Play stand hit stun");
+                anim.Play("NidStandHit", 0, 0);
+            }
+        }
+
+        stats.TakeDamage(atkData.damage);
+        stats.GainMeter(atkData.damage * 0.3f);
+    }
+
     public override void OnBlock(CharacterController opponent)
     {
         anim.SetBool("InBlockStun", true);
 
         opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into blockstun state, change the argument for the constructor
         rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
-        ChangeState(new BlockStunState(opponent));
+        ChangeState(new BlockStunState(opponent.currentAttackData));
 
         if (inputs.crouch.ReadValue<float>() != 0)
         {
@@ -92,6 +133,26 @@ public class NidController : CharacterController
         stats.GainMeter(opponent.currentAttackData.damage * 0.2f);
     }
 
+    public override void OnBlock(AttackData atkData)
+    {
+        anim.SetBool("InBlockStun", true);
+
+        rb.AddForce(transform.right * -direction * atkData.pushforward, ForceMode2D.Impulse);
+        ChangeState(new BlockStunState(atkData));
+
+        if (inputs.crouch.ReadValue<float>() != 0)
+        {
+            anim.Play("NidCrouchBlocking", 0, 0);
+        }
+        else
+        {
+            anim.Play("NidStandBlocking", 0, 0);
+        }
+
+        stats.TakeDamage(atkData.damage * 0.2f);
+        stats.GainMeter(atkData.damage * 0.2f);
+    }
+
     public override void OnThrown(CharacterController opponent)
     {
         ChangeState(new ThrownState(opponent));
@@ -100,4 +161,18 @@ public class NidController : CharacterController
         stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
     }
 
+    public void ThrowChair()
+    {
+        ChairScript chairInstance = Instantiate(chairPrefab, transform.position + new Vector3(direction * 3, 0, 0), transform.rotation);
+        chairInstance.rb.velocity = new Vector2(direction * chairInstance.moveSpeed, 0);
+        Debug.Log("Throw a chair!");
+    }
+
+    public void SpecialAttack()
+    {
+        if(inputs.special.ReadValue<float>() != 0)
+        {
+            anim.SetBool("IsSpecialAttacking", true);
+        }
+    }
 }

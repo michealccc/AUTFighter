@@ -1,0 +1,5420 @@
+fileFormatVersion: 2
+guid: de65d6683d01e484aa7a4d87b732ce5e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5292315001625443138
+    second: NicePng_mortal-kombat-scorpion-png_1910659_0
+  - first:
+      213: -8581046628142968852
+    second: NicePng_mortal-kombat-scorpion-png_1910659_1
+  - first:
+      213: -1929577537139015345
+    second: NicePng_mortal-kombat-scorpion-png_1910659_2
+  - first:
+      213: -2516043681159047869
+    second: NicePng_mortal-kombat-scorpion-png_1910659_3
+  - first:
+      213: 8416107688233776128
+    second: NicePng_mortal-kombat-scorpion-png_1910659_4
+  - first:
+      213: 564461719338939656
+    second: NicePng_mortal-kombat-scorpion-png_1910659_5
+  - first:
+      213: 43967049110763280
+    second: NicePng_mortal-kombat-scorpion-png_1910659_6
+  - first:
+      213: -6701873397638764076
+    second: NicePng_mortal-kombat-scorpion-png_1910659_7
+  - first:
+      213: 4775120534796906195
+    second: NicePng_mortal-kombat-scorpion-png_1910659_8
+  - first:
+      213: 4179885638505535064
+    second: NicePng_mortal-kombat-scorpion-png_1910659_9
+  - first:
+      213: 3164749148228668040
+    second: NicePng_mortal-kombat-scorpion-png_1910659_10
+  - first:
+      213: 1306350933688661937
+    second: NicePng_mortal-kombat-scorpion-png_1910659_11
+  - first:
+      213: -4687997167426439302
+    second: NicePng_mortal-kombat-scorpion-png_1910659_12
+  - first:
+      213: -3162334009038865705
+    second: NicePng_mortal-kombat-scorpion-png_1910659_13
+  - first:
+      213: 1452280036945473085
+    second: NicePng_mortal-kombat-scorpion-png_1910659_14
+  - first:
+      213: 1243880342312261755
+    second: NicePng_mortal-kombat-scorpion-png_1910659_15
+  - first:
+      213: 1521448451452936865
+    second: NicePng_mortal-kombat-scorpion-png_1910659_16
+  - first:
+      213: 6030736245420370904
+    second: NicePng_mortal-kombat-scorpion-png_1910659_17
+  - first:
+      213: -8178246253361559856
+    second: NicePng_mortal-kombat-scorpion-png_1910659_18
+  - first:
+      213: -5755493390992843649
+    second: NicePng_mortal-kombat-scorpion-png_1910659_19
+  - first:
+      213: -3853086797431124983
+    second: NicePng_mortal-kombat-scorpion-png_1910659_20
+  - first:
+      213: -3708402402120938560
+    second: NicePng_mortal-kombat-scorpion-png_1910659_21
+  - first:
+      213: 2774209773600852163
+    second: NicePng_mortal-kombat-scorpion-png_1910659_22
+  - first:
+      213: -3067235841610501284
+    second: NicePng_mortal-kombat-scorpion-png_1910659_23
+  - first:
+      213: -6465915247170726985
+    second: NicePng_mortal-kombat-scorpion-png_1910659_24
+  - first:
+      213: -1743540678954558404
+    second: NicePng_mortal-kombat-scorpion-png_1910659_25
+  - first:
+      213: 7570886015267285661
+    second: NicePng_mortal-kombat-scorpion-png_1910659_26
+  - first:
+      213: 8503871531742182335
+    second: NicePng_mortal-kombat-scorpion-png_1910659_27
+  - first:
+      213: -5302849305552540553
+    second: NicePng_mortal-kombat-scorpion-png_1910659_28
+  - first:
+      213: -6994067795291887193
+    second: NicePng_mortal-kombat-scorpion-png_1910659_29
+  - first:
+      213: 2902206878497248563
+    second: NicePng_mortal-kombat-scorpion-png_1910659_30
+  - first:
+      213: 7394108340887954614
+    second: NicePng_mortal-kombat-scorpion-png_1910659_31
+  - first:
+      213: -7095947472804802550
+    second: NicePng_mortal-kombat-scorpion-png_1910659_32
+  - first:
+      213: 7849937347332647482
+    second: NicePng_mortal-kombat-scorpion-png_1910659_33
+  - first:
+      213: 1466536056017146676
+    second: NicePng_mortal-kombat-scorpion-png_1910659_34
+  - first:
+      213: 3263763383603147850
+    second: NicePng_mortal-kombat-scorpion-png_1910659_35
+  - first:
+      213: -1733473486795211380
+    second: NicePng_mortal-kombat-scorpion-png_1910659_36
+  - first:
+      213: 6960559711450382666
+    second: NicePng_mortal-kombat-scorpion-png_1910659_37
+  - first:
+      213: 7214821395390115349
+    second: NicePng_mortal-kombat-scorpion-png_1910659_38
+  - first:
+      213: 6974610789544468421
+    second: NicePng_mortal-kombat-scorpion-png_1910659_39
+  - first:
+      213: 6514007725416666501
+    second: NicePng_mortal-kombat-scorpion-png_1910659_40
+  - first:
+      213: 7754300013753152205
+    second: NicePng_mortal-kombat-scorpion-png_1910659_41
+  - first:
+      213: 1812198268246210008
+    second: NicePng_mortal-kombat-scorpion-png_1910659_42
+  - first:
+      213: -4414763234946190992
+    second: NicePng_mortal-kombat-scorpion-png_1910659_43
+  - first:
+      213: -4118353907308263020
+    second: NicePng_mortal-kombat-scorpion-png_1910659_44
+  - first:
+      213: -1081702805531801
+    second: NicePng_mortal-kombat-scorpion-png_1910659_45
+  - first:
+      213: 5110971107366212869
+    second: NicePng_mortal-kombat-scorpion-png_1910659_46
+  - first:
+      213: -1275392952481434219
+    second: NicePng_mortal-kombat-scorpion-png_1910659_47
+  - first:
+      213: 5227937710196653377
+    second: NicePng_mortal-kombat-scorpion-png_1910659_48
+  - first:
+      213: -977757091982343448
+    second: NicePng_mortal-kombat-scorpion-png_1910659_49
+  - first:
+      213: 1057999966375633291
+    second: NicePng_mortal-kombat-scorpion-png_1910659_50
+  - first:
+      213: -7966482124074608952
+    second: NicePng_mortal-kombat-scorpion-png_1910659_51
+  - first:
+      213: -5714420693041535995
+    second: NicePng_mortal-kombat-scorpion-png_1910659_52
+  - first:
+      213: -6486151390017195809
+    second: NicePng_mortal-kombat-scorpion-png_1910659_53
+  - first:
+      213: -2401526170369643911
+    second: NicePng_mortal-kombat-scorpion-png_1910659_54
+  - first:
+      213: -8434562928351761865
+    second: NicePng_mortal-kombat-scorpion-png_1910659_55
+  - first:
+      213: -8941052500068108549
+    second: NicePng_mortal-kombat-scorpion-png_1910659_56
+  - first:
+      213: 5024503335316934327
+    second: NicePng_mortal-kombat-scorpion-png_1910659_57
+  - first:
+      213: 4782132759389169714
+    second: NicePng_mortal-kombat-scorpion-png_1910659_58
+  - first:
+      213: 6929334368985444817
+    second: NicePng_mortal-kombat-scorpion-png_1910659_59
+  - first:
+      213: 6382794798841327096
+    second: NicePng_mortal-kombat-scorpion-png_1910659_60
+  - first:
+      213: -2186114390723638289
+    second: NicePng_mortal-kombat-scorpion-png_1910659_61
+  - first:
+      213: -2457847875090355282
+    second: NicePng_mortal-kombat-scorpion-png_1910659_62
+  - first:
+      213: -1961409834487452081
+    second: NicePng_mortal-kombat-scorpion-png_1910659_63
+  - first:
+      213: -6909662601356224327
+    second: NicePng_mortal-kombat-scorpion-png_1910659_64
+  - first:
+      213: -1959059711072839889
+    second: NicePng_mortal-kombat-scorpion-png_1910659_65
+  - first:
+      213: 5301595686387247908
+    second: NicePng_mortal-kombat-scorpion-png_1910659_66
+  - first:
+      213: 7107035840800557512
+    second: NicePng_mortal-kombat-scorpion-png_1910659_67
+  - first:
+      213: 1159622641652723349
+    second: NicePng_mortal-kombat-scorpion-png_1910659_68
+  - first:
+      213: 178870243554825003
+    second: NicePng_mortal-kombat-scorpion-png_1910659_69
+  - first:
+      213: 4905773580812905141
+    second: NicePng_mortal-kombat-scorpion-png_1910659_70
+  - first:
+      213: 3189664748173978296
+    second: NicePng_mortal-kombat-scorpion-png_1910659_71
+  - first:
+      213: 7308800115543562267
+    second: NicePng_mortal-kombat-scorpion-png_1910659_72
+  - first:
+      213: -7682746303311462882
+    second: NicePng_mortal-kombat-scorpion-png_1910659_73
+  - first:
+      213: 8246948355216926001
+    second: NicePng_mortal-kombat-scorpion-png_1910659_74
+  - first:
+      213: -8416914518956953465
+    second: NicePng_mortal-kombat-scorpion-png_1910659_75
+  - first:
+      213: -4661124838216380138
+    second: NicePng_mortal-kombat-scorpion-png_1910659_76
+  - first:
+      213: 2053863965868154270
+    second: NicePng_mortal-kombat-scorpion-png_1910659_77
+  - first:
+      213: -1682227014331513282
+    second: NicePng_mortal-kombat-scorpion-png_1910659_78
+  - first:
+      213: -3587078740240664671
+    second: NicePng_mortal-kombat-scorpion-png_1910659_79
+  - first:
+      213: -1473327467761518307
+    second: NicePng_mortal-kombat-scorpion-png_1910659_80
+  - first:
+      213: -5650941134010450376
+    second: NicePng_mortal-kombat-scorpion-png_1910659_81
+  - first:
+      213: 7586745639450298113
+    second: NicePng_mortal-kombat-scorpion-png_1910659_82
+  - first:
+      213: 4923017454512314529
+    second: NicePng_mortal-kombat-scorpion-png_1910659_83
+  - first:
+      213: 3554242070907098009
+    second: NicePng_mortal-kombat-scorpion-png_1910659_84
+  - first:
+      213: 8127262701760906844
+    second: NicePng_mortal-kombat-scorpion-png_1910659_85
+  - first:
+      213: 8642138077814563343
+    second: NicePng_mortal-kombat-scorpion-png_1910659_86
+  - first:
+      213: 7948886209390403533
+    second: NicePng_mortal-kombat-scorpion-png_1910659_87
+  - first:
+      213: -1463685389400488132
+    second: NicePng_mortal-kombat-scorpion-png_1910659_88
+  - first:
+      213: 2052123934662653307
+    second: NicePng_mortal-kombat-scorpion-png_1910659_89
+  - first:
+      213: 6662474871619949205
+    second: NicePng_mortal-kombat-scorpion-png_1910659_90
+  - first:
+      213: 5649003298067759723
+    second: NicePng_mortal-kombat-scorpion-png_1910659_91
+  - first:
+      213: 8137033953461125186
+    second: NicePng_mortal-kombat-scorpion-png_1910659_92
+  - first:
+      213: 2011759343394646978
+    second: NicePng_mortal-kombat-scorpion-png_1910659_93
+  - first:
+      213: 873114750727490858
+    second: NicePng_mortal-kombat-scorpion-png_1910659_94
+  - first:
+      213: 1670373849837452002
+    second: NicePng_mortal-kombat-scorpion-png_1910659_95
+  - first:
+      213: 8272155212791246764
+    second: NicePng_mortal-kombat-scorpion-png_1910659_96
+  - first:
+      213: 1298907837315816639
+    second: NicePng_mortal-kombat-scorpion-png_1910659_97
+  - first:
+      213: -6296284909794086532
+    second: NicePng_mortal-kombat-scorpion-png_1910659_98
+  - first:
+      213: -1812697022813096404
+    second: NicePng_mortal-kombat-scorpion-png_1910659_99
+  - first:
+      213: 90698896362585453
+    second: NicePng_mortal-kombat-scorpion-png_1910659_100
+  - first:
+      213: 451610639342379506
+    second: NicePng_mortal-kombat-scorpion-png_1910659_101
+  - first:
+      213: 8652140830828620773
+    second: NicePng_mortal-kombat-scorpion-png_1910659_102
+  - first:
+      213: -2572218541663104190
+    second: NicePng_mortal-kombat-scorpion-png_1910659_103
+  - first:
+      213: 8339281371784789408
+    second: NicePng_mortal-kombat-scorpion-png_1910659_104
+  - first:
+      213: 5348086603427551275
+    second: NicePng_mortal-kombat-scorpion-png_1910659_105
+  - first:
+      213: 1945923730434953604
+    second: NicePng_mortal-kombat-scorpion-png_1910659_106
+  - first:
+      213: -8508948025728024466
+    second: NicePng_mortal-kombat-scorpion-png_1910659_107
+  - first:
+      213: 5798273572856620025
+    second: NicePng_mortal-kombat-scorpion-png_1910659_108
+  - first:
+      213: -5586782710254308331
+    second: NicePng_mortal-kombat-scorpion-png_1910659_109
+  - first:
+      213: 5468525876249229129
+    second: NicePng_mortal-kombat-scorpion-png_1910659_110
+  - first:
+      213: -3997209621425932737
+    second: NicePng_mortal-kombat-scorpion-png_1910659_111
+  - first:
+      213: 1122497066219357945
+    second: NicePng_mortal-kombat-scorpion-png_1910659_112
+  - first:
+      213: 7565931815690477945
+    second: NicePng_mortal-kombat-scorpion-png_1910659_113
+  - first:
+      213: 3597539869578118326
+    second: NicePng_mortal-kombat-scorpion-png_1910659_114
+  - first:
+      213: -7857812941372722043
+    second: NicePng_mortal-kombat-scorpion-png_1910659_115
+  - first:
+      213: -9209296987125601465
+    second: NicePng_mortal-kombat-scorpion-png_1910659_116
+  - first:
+      213: -6171023089265330941
+    second: NicePng_mortal-kombat-scorpion-png_1910659_117
+  - first:
+      213: 7980396716885478744
+    second: NicePng_mortal-kombat-scorpion-png_1910659_118
+  - first:
+      213: -8974516626455639554
+    second: NicePng_mortal-kombat-scorpion-png_1910659_119
+  - first:
+      213: 2527670645067996363
+    second: NicePng_mortal-kombat-scorpion-png_1910659_120
+  - first:
+      213: -1525834929344505274
+    second: NicePng_mortal-kombat-scorpion-png_1910659_121
+  - first:
+      213: 6353645243464574381
+    second: NicePng_mortal-kombat-scorpion-png_1910659_122
+  - first:
+      213: 6944308999663004321
+    second: NicePng_mortal-kombat-scorpion-png_1910659_123
+  - first:
+      213: 5960637721566964080
+    second: NicePng_mortal-kombat-scorpion-png_1910659_124
+  - first:
+      213: -7286015289919572988
+    second: NicePng_mortal-kombat-scorpion-png_1910659_125
+  - first:
+      213: -7641903331839035086
+    second: NicePng_mortal-kombat-scorpion-png_1910659_126
+  - first:
+      213: 5920687735623429119
+    second: NicePng_mortal-kombat-scorpion-png_1910659_127
+  - first:
+      213: -4428857856942678701
+    second: NicePng_mortal-kombat-scorpion-png_1910659_128
+  - first:
+      213: 685104703657621178
+    second: NicePng_mortal-kombat-scorpion-png_1910659_129
+  - first:
+      213: -3472540635518382579
+    second: NicePng_mortal-kombat-scorpion-png_1910659_130
+  - first:
+      213: 3581399511106338891
+    second: NicePng_mortal-kombat-scorpion-png_1910659_131
+  - first:
+      213: -8315263020307943421
+    second: NicePng_mortal-kombat-scorpion-png_1910659_132
+  - first:
+      213: -640713434531990942
+    second: NicePng_mortal-kombat-scorpion-png_1910659_133
+  - first:
+      213: 8129166224868475082
+    second: NicePng_mortal-kombat-scorpion-png_1910659_134
+  - first:
+      213: -7270877028609900211
+    second: NicePng_mortal-kombat-scorpion-png_1910659_135
+  - first:
+      213: 7900281166391314467
+    second: NicePng_mortal-kombat-scorpion-png_1910659_136
+  - first:
+      213: 8834869961981636889
+    second: NicePng_mortal-kombat-scorpion-png_1910659_137
+  - first:
+      213: -165904576078040567
+    second: NicePng_mortal-kombat-scorpion-png_1910659_138
+  - first:
+      213: 933803616951357084
+    second: NicePng_mortal-kombat-scorpion-png_1910659_139
+  - first:
+      213: -4126972522254424881
+    second: NicePng_mortal-kombat-scorpion-png_1910659_140
+  - first:
+      213: 1844493536725946851
+    second: NicePng_mortal-kombat-scorpion-png_1910659_141
+  - first:
+      213: -5443974830931834429
+    second: NicePng_mortal-kombat-scorpion-png_1910659_142
+  - first:
+      213: 8315175726723476197
+    second: NicePng_mortal-kombat-scorpion-png_1910659_143
+  - first:
+      213: -2577330363709566935
+    second: NicePng_mortal-kombat-scorpion-png_1910659_144
+  - first:
+      213: 1470181597625250332
+    second: NicePng_mortal-kombat-scorpion-png_1910659_145
+  - first:
+      213: -978016600346553966
+    second: NicePng_mortal-kombat-scorpion-png_1910659_146
+  - first:
+      213: -383993042921409088
+    second: NicePng_mortal-kombat-scorpion-png_1910659_147
+  - first:
+      213: 3841572097028507383
+    second: NicePng_mortal-kombat-scorpion-png_1910659_148
+  - first:
+      213: 6280697983251787086
+    second: NicePng_mortal-kombat-scorpion-png_1910659_149
+  - first:
+      213: -2715617951889980044
+    second: NicePng_mortal-kombat-scorpion-png_1910659_150
+  - first:
+      213: -6164712968684240143
+    second: NicePng_mortal-kombat-scorpion-png_1910659_151
+  - first:
+      213: -3278504574119451364
+    second: NicePng_mortal-kombat-scorpion-png_1910659_152
+  - first:
+      213: 6082310767872426817
+    second: NicePng_mortal-kombat-scorpion-png_1910659_153
+  - first:
+      213: 6217680441440991042
+    second: NicePng_mortal-kombat-scorpion-png_1910659_154
+  - first:
+      213: 4413137015148686824
+    second: NicePng_mortal-kombat-scorpion-png_1910659_155
+  - first:
+      213: -9068696895591446793
+    second: NicePng_mortal-kombat-scorpion-png_1910659_156
+  - first:
+      213: -2818758777665336354
+    second: NicePng_mortal-kombat-scorpion-png_1910659_157
+  - first:
+      213: 2417120893697244164
+    second: NicePng_mortal-kombat-scorpion-png_1910659_158
+  - first:
+      213: 8712891600169196812
+    second: NicePng_mortal-kombat-scorpion-png_1910659_159
+  - first:
+      213: -5243324307591147056
+    second: NicePng_mortal-kombat-scorpion-png_1910659_160
+  - first:
+      213: 337386934903790575
+    second: NicePng_mortal-kombat-scorpion-png_1910659_161
+  - first:
+      213: 3786684601172969212
+    second: NicePng_mortal-kombat-scorpion-png_1910659_162
+  - first:
+      213: -2492642220359908934
+    second: NicePng_mortal-kombat-scorpion-png_1910659_163
+  - first:
+      213: -4123095229593305562
+    second: NicePng_mortal-kombat-scorpion-png_1910659_164
+  - first:
+      213: 8737360321545772764
+    second: NicePng_mortal-kombat-scorpion-png_1910659_165
+  - first:
+      213: -3816733751234850082
+    second: NicePng_mortal-kombat-scorpion-png_1910659_166
+  - first:
+      213: -5380868801595140577
+    second: NicePng_mortal-kombat-scorpion-png_1910659_167
+  - first:
+      213: -4368772440904657412
+    second: NicePng_mortal-kombat-scorpion-png_1910659_168
+  - first:
+      213: 7623677472019495888
+    second: NicePng_mortal-kombat-scorpion-png_1910659_169
+  - first:
+      213: -35211818109042671
+    second: NicePng_mortal-kombat-scorpion-png_1910659_170
+  - first:
+      213: 1675328220433740388
+    second: NicePng_mortal-kombat-scorpion-png_1910659_171
+  - first:
+      213: 4670315408836749308
+    second: NicePng_mortal-kombat-scorpion-png_1910659_172
+  - first:
+      213: 1146360859288944340
+    second: NicePng_mortal-kombat-scorpion-png_1910659_173
+  - first:
+      213: -3455319407893798006
+    second: NicePng_mortal-kombat-scorpion-png_1910659_174
+  - first:
+      213: -2423723951242920630
+    second: NicePng_mortal-kombat-scorpion-png_1910659_175
+  - first:
+      213: 9148911949158667555
+    second: NicePng_mortal-kombat-scorpion-png_1910659_176
+  - first:
+      213: 1757416998968418062
+    second: NicePng_mortal-kombat-scorpion-png_1910659_177
+  - first:
+      213: 5810465001963164641
+    second: NicePng_mortal-kombat-scorpion-png_1910659_178
+  - first:
+      213: -3550528673080133135
+    second: NicePng_mortal-kombat-scorpion-png_1910659_179
+  - first:
+      213: -3105943496932023192
+    second: NicePng_mortal-kombat-scorpion-png_1910659_180
+  - first:
+      213: -1946112154961300796
+    second: NicePng_mortal-kombat-scorpion-png_1910659_181
+  - first:
+      213: -7701568096263846206
+    second: NicePng_mortal-kombat-scorpion-png_1910659_182
+  - first:
+      213: 5235921010043754873
+    second: NicePng_mortal-kombat-scorpion-png_1910659_183
+  - first:
+      213: -4571613199412408388
+    second: NicePng_mortal-kombat-scorpion-png_1910659_184
+  - first:
+      213: -8831314556819990130
+    second: NicePng_mortal-kombat-scorpion-png_1910659_185
+  - first:
+      213: -5864984168458695445
+    second: NicePng_mortal-kombat-scorpion-png_1910659_186
+  - first:
+      213: -5830348391574460633
+    second: NicePng_mortal-kombat-scorpion-png_1910659_187
+  - first:
+      213: -3271077113121498742
+    second: NicePng_mortal-kombat-scorpion-png_1910659_188
+  - first:
+      213: -1834819997379659230
+    second: NicePng_mortal-kombat-scorpion-png_1910659_189
+  - first:
+      213: -5858391050764312077
+    second: NicePng_mortal-kombat-scorpion-png_1910659_190
+  - first:
+      213: -3627384719238437333
+    second: NicePng_mortal-kombat-scorpion-png_1910659_191
+  - first:
+      213: 1946154445352576086
+    second: NicePng_mortal-kombat-scorpion-png_1910659_192
+  - first:
+      213: 2144295073190128727
+    second: NicePng_mortal-kombat-scorpion-png_1910659_193
+  - first:
+      213: 382925585347888905
+    second: NicePng_mortal-kombat-scorpion-png_1910659_194
+  - first:
+      213: -166034705611252906
+    second: NicePng_mortal-kombat-scorpion-png_1910659_195
+  - first:
+      213: -1005211296489479780
+    second: NicePng_mortal-kombat-scorpion-png_1910659_196
+  - first:
+      213: -1160656687116069098
+    second: NicePng_mortal-kombat-scorpion-png_1910659_197
+  - first:
+      213: -8252795718651094825
+    second: NicePng_mortal-kombat-scorpion-png_1910659_198
+  - first:
+      213: -8092155141493732850
+    second: NicePng_mortal-kombat-scorpion-png_1910659_199
+  - first:
+      213: 5005570645537149149
+    second: NicePng_mortal-kombat-scorpion-png_1910659_200
+  - first:
+      213: 6681562890273062367
+    second: NicePng_mortal-kombat-scorpion-png_1910659_201
+  - first:
+      213: -3835881526503352527
+    second: NicePng_mortal-kombat-scorpion-png_1910659_202
+  - first:
+      213: 6738398499639546155
+    second: NicePng_mortal-kombat-scorpion-png_1910659_203
+  - first:
+      213: 3182422090455008890
+    second: NicePng_mortal-kombat-scorpion-png_1910659_204
+  - first:
+      213: -6957022268425640227
+    second: NicePng_mortal-kombat-scorpion-png_1910659_205
+  - first:
+      213: 5809200773499329522
+    second: NicePng_mortal-kombat-scorpion-png_1910659_206
+  - first:
+      213: 1436106613722498842
+    second: NicePng_mortal-kombat-scorpion-png_1910659_207
+  - first:
+      213: 6196055713060659836
+    second: NicePng_mortal-kombat-scorpion-png_1910659_208
+  - first:
+      213: 1232572502140852807
+    second: NicePng_mortal-kombat-scorpion-png_1910659_209
+  - first:
+      213: 4295610554318883815
+    second: NicePng_mortal-kombat-scorpion-png_1910659_210
+  - first:
+      213: 7553298919754817047
+    second: NicePng_mortal-kombat-scorpion-png_1910659_211
+  - first:
+      213: -6091619892470402016
+    second: NicePng_mortal-kombat-scorpion-png_1910659_212
+  - first:
+      213: -5800094714284734579
+    second: NicePng_mortal-kombat-scorpion-png_1910659_213
+  - first:
+      213: -3716337465199979131
+    second: NicePng_mortal-kombat-scorpion-png_1910659_214
+  - first:
+      213: -1081886189295206941
+    second: NicePng_mortal-kombat-scorpion-png_1910659_215
+  - first:
+      213: 6456152993475742402
+    second: NicePng_mortal-kombat-scorpion-png_1910659_216
+  - first:
+      213: 1227354005317324582
+    second: NicePng_mortal-kombat-scorpion-png_1910659_217
+  - first:
+      213: -4530236690243442458
+    second: NicePng_mortal-kombat-scorpion-png_1910659_218
+  - first:
+      213: 731876051538583065
+    second: NicePng_mortal-kombat-scorpion-png_1910659_219
+  - first:
+      213: -8123173578069414868
+    second: NicePng_mortal-kombat-scorpion-png_1910659_220
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1457
+        width: 48
+        height: 97
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb405a0cb8bed86b0800000000000000
+      internalID: -5292315001625443138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1458
+        width: 48
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef89785e8ff9e880800000000000000
+      internalID: -8581046628142968852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1457
+        width: 47
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41814c0473c835e0800000000000000
+      internalID: -1929577537139015345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1457
+        width: 47
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34516214a97351dd0800000000000000
+      internalID: -2516043681159047869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1457
+        width: 47
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004bb9c1a550cc470800000000000000
+      internalID: 8416107688233776128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_5
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1457
+        width: 47
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805f08e61fe55d700800000000000000
+      internalID: 564461719338939656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_6
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1457
+        width: 48
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017b1185cc33c9000800000000000000
+      internalID: 43967049110763280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_7
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1457
+        width: 49
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9e91427a92ef2a0800000000000000
+      internalID: -6701873397638764076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_8
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1457
+        width: 44
+        height: 100
+      alignment: 9
+      pivot: {x: 0.54, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de2e34a3d2a44240800000000000000
+      internalID: 4775120534796906195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_9
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1457
+        width: 43
+        height: 100
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85611ec97dfe10a30800000000000000
+      internalID: 4179885638505535064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_10
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1457
+        width: 44
+        height: 101
+      alignment: 9
+      pivot: {x: 0.54, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ac36f25927beb20800000000000000
+      internalID: 3164749148228668040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_11
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1457
+        width: 47
+        height: 100
+      alignment: 9
+      pivot: {x: 0.51, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7338ab047112210800000000000000
+      internalID: 1306350933688661937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_12
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1458
+        width: 46
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77728f0a63e0feb0800000000000000
+      internalID: -4687997167426439302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_13
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1458
+        width: 39
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daf91a39f12d14d0800000000000000
+      internalID: -3162334009038865705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_14
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1457
+        width: 39
+        height: 100
+      alignment: 9
+      pivot: {x: 0.61, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ea684cff8872410800000000000000
+      internalID: 1452280036945473085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_15
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1457
+        width: 45
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b781d9ab496234110800000000000000
+      internalID: 1243880342312261755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_16
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1457
+        width: 45
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2abec3e454d1510800000000000000
+      internalID: 1521448451452936865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_17
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1457
+        width: 44
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbaa5ab9aa71b350800000000000000
+      internalID: 6030736245420370904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_18
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1457
+        width: 41
+        height: 69
+      alignment: 9
+      pivot: {x: 0.58, y: 0.71}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d607bedc58018e80800000000000000
+      internalID: -8178246253361559856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1328
+        width: 48
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c53ca31416020b0800000000000000
+      internalID: -5755493390992843649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_20
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1329
+        width: 47
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cce56e8f5178ac0800000000000000
+      internalID: -3853086797431124983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_21
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 1328
+        width: 47
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb4069c9ab198cc0800000000000000
+      internalID: -3708402402120938560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_22
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1328
+        width: 47
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c845e73719ff7620800000000000000
+      internalID: 2774209773600852163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_23
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1328
+        width: 46
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53b572c04dfe65d0800000000000000
+      internalID: -3067235841610501284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1328
+        width: 47
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b35b9037547446a0800000000000000
+      internalID: -6465915247170726985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_25
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1328
+        width: 47
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c587b7df2bdc7e0800000000000000
+      internalID: -1743540678954558404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_26
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1328
+        width: 55
+        height: 98
+      alignment: 9
+      pivot: {x: 0.47, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9aaaf6f7b0311960800000000000000
+      internalID: 7570886015267285661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_27
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1328
+        width: 52
+        height: 98
+      alignment: 9
+      pivot: {x: 0.49, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbbc094a12d30670800000000000000
+      internalID: 8503871531742182335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_28
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1328
+        width: 43
+        height: 73
+      alignment: 9
+      pivot: {x: 0.55, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c2d1df6ae7866b0800000000000000
+      internalID: -5302849305552540553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_29
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1328
+        width: 45
+        height: 107
+      alignment: 9
+      pivot: {x: 0.53, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9a0a6756410fe90800000000000000
+      internalID: -6994067795291887193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_30
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1328
+        width: 41
+        height: 90
+      alignment: 9
+      pivot: {x: 0.58, y: 0.54}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335168987c5b64820800000000000000
+      internalID: 2902206878497248563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_31
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1328
+        width: 40
+        height: 101
+      alignment: 9
+      pivot: {x: 0.6, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b421614c562d9660800000000000000
+      internalID: 7394108340887954614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_32
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1328
+        width: 33
+        height: 48
+      alignment: 9
+      pivot: {x: 0.72, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0093a29e51268d90800000000000000
+      internalID: -7095947472804802550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_33
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 1328
+        width: 39
+        height: 47
+      alignment: 9
+      pivot: {x: 0.61, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3aa5d83d6490fc60800000000000000
+      internalID: 7849937347332647482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_34
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 1328
+        width: 42
+        height: 38
+      alignment: 9
+      pivot: {x: 0.57, y: 1.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433543dd5ce2a5410800000000000000
+      internalID: 1466536056017146676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_35
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1328
+        width: 41
+        height: 44
+      alignment: 9
+      pivot: {x: 0.58, y: 1.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44b79651873b4d20800000000000000
+      internalID: 3263763383603147850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_36
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 1328
+        width: 34
+        height: 48
+      alignment: 9
+      pivot: {x: 0.7, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d73005c0771f7e0800000000000000
+      internalID: -1733473486795211380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_37
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1328
+        width: 39
+        height: 48
+      alignment: 9
+      pivot: {x: 0.61, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4145eecd20e89060800000000000000
+      internalID: 6960559711450382666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_38
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1328
+        width: 41
+        height: 39
+      alignment: 9
+      pivot: {x: 0.58, y: 1.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ead1655d1302460800000000000000
+      internalID: 7214821395390115349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_39
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1328
+        width: 44
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf976d5f8bcac060800000000000000
+      internalID: 6974610789544468421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_40
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1328
+        width: 41
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5855c997387666a50800000000000000
+      internalID: 6514007725416666501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_41
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 1328
+        width: 41
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2309947cecc9b60800000000000000
+      internalID: 7754300013753152205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_42
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1328
+        width: 43
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5b46939b8362910800000000000000
+      internalID: 1812198268246210008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_43
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1212
+        width: 47
+        height: 100
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071f39d6a3c9bb2c0800000000000000
+      internalID: -4414763234946190992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_44
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1212
+        width: 55
+        height: 101
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4998c87f0faa8d6c0800000000000000
+      internalID: -4118353907308263020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_45
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1212
+        width: 71
+        height: 101
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763168072382cfff0800000000000000
+      internalID: -1081702805531801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_46
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1212
+        width: 42
+        height: 103
+      alignment: 9
+      pivot: {x: 0.57, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50519df9421dde640800000000000000
+      internalID: 5110971107366212869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_47
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1212
+        width: 53
+        height: 103
+      alignment: 9
+      pivot: {x: 0.45, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595be46fdd4ec4ee0800000000000000
+      internalID: -1275392952481434219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_48
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1212
+        width: 71
+        height: 103
+      alignment: 9
+      pivot: {x: 0.33, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14df32c06ad5d8840800000000000000
+      internalID: 5227937710196653377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_49
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1212
+        width: 48
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e206cfea1f4e62f0800000000000000
+      internalID: -977757091982343448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_50
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1212
+        width: 55
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81e1382d55ceae00800000000000000
+      internalID: 1057999966375633291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_51
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1098
+        width: 47
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6980567be517190800000000000000
+      internalID: -7966482124074608952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_52
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1098
+        width: 70
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5042e1ee7ac42b0b0800000000000000
+      internalID: -5714420693041535995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_53
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1098
+        width: 42
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd07e960daf8cf5a0800000000000000
+      internalID: -6486151390017195809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_54
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1098
+        width: 53
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a20500ca01caed0800000000000000
+      internalID: -2401526170369643911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_55
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1098
+        width: 70
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a2ae374b962fa80800000000000000
+      internalID: -8434562928351761865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_56
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1098
+        width: 54
+        height: 98
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf672577f100be380800000000000000
+      internalID: -8941052500068108549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_57
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1098
+        width: 73
+        height: 97
+      alignment: 9
+      pivot: {x: 0.32, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bec45a992f9ab540800000000000000
+      internalID: 5024503335316934327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_58
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1098
+        width: 52
+        height: 73
+      alignment: 9
+      pivot: {x: 0.46, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2386628686c8d5240800000000000000
+      internalID: 4782132759389169714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_59
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1098
+        width: 52
+        height: 73
+      alignment: 9
+      pivot: {x: 0.46, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1784935e0f92060800000000000000
+      internalID: 6929334368985444817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_60
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 1098
+        width: 43
+        height: 47
+      alignment: 9
+      pivot: {x: 0.55, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fde5235d0e349850800000000000000
+      internalID: 6382794798841327096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_61
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 1098
+        width: 65
+        height: 65
+      alignment: 9
+      pivot: {x: 0.36, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb4c8e4b8c59a1e0800000000000000
+      internalID: -2186114390723638289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_62
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1098
+        width: 77
+        height: 74
+      alignment: 9
+      pivot: {x: 0.31, y: 0.66}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab6a4d3168f3edd0800000000000000
+      internalID: -2457847875090355282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_63
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 983
+        width: 45
+        height: 98
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4eea64c52ca7c4e0800000000000000
+      internalID: -1961409834487452081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_64
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 983
+        width: 47
+        height: 102
+      alignment: 9
+      pivot: {x: 0.51, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b85c581972fb10a0800000000000000
+      internalID: -6909662601356224327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_65
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 983
+        width: 35
+        height: 100
+      alignment: 9
+      pivot: {x: 0.68, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2759b3829500d4e0800000000000000
+      internalID: -1959059711072839889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_66
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 983
+        width: 54
+        height: 84
+      alignment: 9
+      pivot: {x: 0.44, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42beadd003d039940800000000000000
+      internalID: 5301595686387247908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_67
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 983
+        width: 77
+        height: 91
+      alignment: 9
+      pivot: {x: 0.31, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c903e8417341a260800000000000000
+      internalID: 7107035840800557512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_68
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 983
+        width: 63
+        height: 79
+      alignment: 9
+      pivot: {x: 0.38, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ee53d06aec71010800000000000000
+      internalID: 1159622641652723349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_69
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 983
+        width: 45
+        height: 98
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2319ffe9897b7200800000000000000
+      internalID: 178870243554825003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_70
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 983
+        width: 47
+        height: 102
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba69d0741fc41440800000000000000
+      internalID: 4905773580812905141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_71
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 983
+        width: 35
+        height: 100
+      alignment: 9
+      pivot: {x: 0.68, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8baee7b5037f34c20800000000000000
+      internalID: 3189664748173978296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_72
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 983
+        width: 54
+        height: 84
+      alignment: 9
+      pivot: {x: 0.44, y: 0.58}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18de4d3bf21e6560800000000000000
+      internalID: 7308800115543562267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_73
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 983
+        width: 81
+        height: 76
+      alignment: 9
+      pivot: {x: 0.29, y: 0.64}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ebcab21f6616590800000000000000
+      internalID: -7682746303311462882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_74
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 983
+        width: 63
+        height: 79
+      alignment: 9
+      pivot: {x: 0.38, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13562b9b5db037270800000000000000
+      internalID: 8246948355216926001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_75
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 983
+        width: 48
+        height: 99
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7803eb8f6dc113b80800000000000000
+      internalID: -8416914518956953465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_76
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 983
+        width: 52
+        height: 94
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611dc54c7ab505fb0800000000000000
+      internalID: -4661124838216380138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_77
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 868
+        width: 46
+        height: 98
+      alignment: 9
+      pivot: {x: 0.52, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ddb86256ac08c10800000000000000
+      internalID: 2053863965868154270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_78
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 868
+        width: 51
+        height: 92
+      alignment: 9
+      pivot: {x: 0.47, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36443b717787a8e0800000000000000
+      internalID: -1682227014331513282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_79
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 868
+        width: 77
+        height: 88
+      alignment: 9
+      pivot: {x: 0.31, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7799214e2283ec0800000000000000
+      internalID: -3587078740240664671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_80
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 868
+        width: 50
+        height: 94
+      alignment: 9
+      pivot: {x: 0.48, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19bf3e5970bd8be0800000000000000
+      internalID: -1473327467761518307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_81
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 868
+        width: 43
+        height: 93
+      alignment: 9
+      pivot: {x: 0.55, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ef9a48af2d391b0800000000000000
+      internalID: -5650941134010450376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_82
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 868
+        width: 44
+        height: 85
+      alignment: 9
+      pivot: {x: 0.54, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107cda876f8894960800000000000000
+      internalID: 7586745639450298113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_83
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 868
+        width: 47
+        height: 102
+      alignment: 9
+      pivot: {x: 0.51, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a81147aa42125440800000000000000
+      internalID: 4923017454512314529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_84
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 868
+        width: 45
+        height: 98
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9939a221554335130800000000000000
+      internalID: 3554242070907098009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_85
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 868
+        width: 45
+        height: 65
+      alignment: 9
+      pivot: {x: 0.53, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c568dbefd56d9c070800000000000000
+      internalID: 8127262701760906844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_86
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 868
+        width: 44
+        height: 49
+      alignment: 9
+      pivot: {x: 0.54, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02a3043bca0fe770800000000000000
+      internalID: 8642138077814563343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_87
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 868
+        width: 44
+        height: 51
+      alignment: 9
+      pivot: {x: 0.54, y: 0.96}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf57b674ed105e60800000000000000
+      internalID: 7948886209390403533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_88
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 868
+        width: 76
+        height: 48
+      alignment: 9
+      pivot: {x: 0.31, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37cadda4e1ffabe0800000000000000
+      internalID: -1463685389400488132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_89
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 868
+        width: 76
+        height: 50
+      alignment: 9
+      pivot: {x: 0.31, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75f4a098db9a7c10800000000000000
+      internalID: 2052123934662653307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_90
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 868
+        width: 42
+        height: 64
+      alignment: 9
+      pivot: {x: 0.57, y: 0.76}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5929fdfa89dd57c50800000000000000
+      internalID: 6662474871619949205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_91
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 868
+        width: 67
+        height: 58
+      alignment: 9
+      pivot: {x: 0.35, y: 0.84}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62c654e19a456e40800000000000000
+      internalID: 5649003298067759723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_92
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 868
+        width: 45
+        height: 89
+      alignment: 9
+      pivot: {x: 0.53, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240c751d44d8ce070800000000000000
+      internalID: 8137033953461125186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_93
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 734
+        width: 46
+        height: 87
+      alignment: 9
+      pivot: {x: 0.52, y: 0.56}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb6c9cc6743beb10800000000000000
+      internalID: 2011759343394646978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_94
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 734
+        width: 50
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d04456d3ded1c00800000000000000
+      internalID: 873114750727490858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_95
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 734
+        width: 69
+        height: 104
+      alignment: 9
+      pivot: {x: 0.34, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eab9a99a2c5e2710800000000000000
+      internalID: 1670373849837452002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_96
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 734
+        width: 42
+        height: 123
+      alignment: 9
+      pivot: {x: 0.57, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf615996599cc270800000000000000
+      internalID: 8272155212791246764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_97
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 734
+        width: 39
+        height: 115
+      alignment: 9
+      pivot: {x: 0.61, y: 0.42}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc1e2fcbc5a60210800000000000000
+      internalID: 1298907837315816639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_98
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 734
+        width: 53
+        height: 102
+      alignment: 9
+      pivot: {x: 0.45, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c713213db3a1f98a0800000000000000
+      internalID: -6296284909794086532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_99
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 734
+        width: 66
+        height: 48
+      alignment: 9
+      pivot: {x: 0.36, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2631dd69a108d6e0800000000000000
+      internalID: -1812697022813096404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_100
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 734
+        width: 72
+        height: 70
+      alignment: 9
+      pivot: {x: 0.33, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d363b6a2a324100800000000000000
+      internalID: 90698896362585453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_101
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 734
+        width: 38
+        height: 79
+      alignment: 9
+      pivot: {x: 0.63, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f12ac6db71744600800000000000000
+      internalID: 451610639342379506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_102
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 734
+        width: 54
+        height: 73
+      alignment: 9
+      pivot: {x: 0.44, y: 0.67}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb6130ae34921870800000000000000
+      internalID: 8652140830828620773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_103
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 734
+        width: 90
+        height: 55
+      alignment: 9
+      pivot: {x: 0.26, y: 0.89}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2435f735dd4ad4cd0800000000000000
+      internalID: -2572218541663104190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_104
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 734
+        width: 56
+        height: 89
+      alignment: 9
+      pivot: {x: 0.42, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adb34769341bb370800000000000000
+      internalID: 8339281371784789408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_105
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 734
+        width: 75
+        height: 72
+      alignment: 9
+      pivot: {x: 0.32, y: 0.68}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2813513e68383a40800000000000000
+      internalID: 5348086603427551275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_106
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 734
+        width: 41
+        height: 64
+      alignment: 9
+      pivot: {x: 0.58, y: 0.76}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4811498a25f410b10800000000000000
+      internalID: 1945923730434953604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_107
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 734
+        width: 82
+        height: 74
+      alignment: 9
+      pivot: {x: 0.29, y: 0.66}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60483a5ad42ae980800000000000000
+      internalID: -8508948025728024466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_108
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 615
+        width: 46
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f367ac081b977050800000000000000
+      internalID: 5798273572856620025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_109
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 615
+        width: 49
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5147ffd99b2c772b0800000000000000
+      internalID: -5586782710254308331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_110
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 615
+        width: 54
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947fdda9f4b14eb40800000000000000
+      internalID: 5468525876249229129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_111
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 615
+        width: 44
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f363226070f0788c0800000000000000
+      internalID: -3997209621425932737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_112
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 615
+        width: 47
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f64c6d6229e39f00800000000000000
+      internalID: 1122497066219357945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_113
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 615
+        width: 54
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971ae0d76e69ff860800000000000000
+      internalID: 7565931815690477945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_114
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 615
+        width: 56
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4428763770de130800000000000000
+      internalID: 3597539869578118326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_115
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 615
+        width: 47
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584f20623c073f290800000000000000
+      internalID: -7857812941372722043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_116
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 615
+        width: 35
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bad43ee21023080800000000000000
+      internalID: -9209296987125601465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_117
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 615
+        width: 29
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3053b9f123f1c5aa0800000000000000
+      internalID: -6171023089265330941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_118
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 615
+        width: 38
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d07a4388010ce60800000000000000
+      internalID: 7980396716885478744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_119
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 615
+        width: 40
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef946416dac147380800000000000000
+      internalID: -8974516626455639554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_120
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 615
+        width: 48
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccd57c3f07141320800000000000000
+      internalID: 2527670645067996363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_121
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 615
+        width: 41
+        height: 55
+      alignment: 9
+      pivot: {x: 0.58, y: 0.89}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a998a473523dae0800000000000000
+      internalID: -1525834929344505274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_122
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 615
+        width: 45
+        height: 60
+      alignment: 9
+      pivot: {x: 0.53, y: 0.81}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da56e859faeac2850800000000000000
+      internalID: 6353645243464574381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_123
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 615
+        width: 53
+        height: 57
+      alignment: 9
+      pivot: {x: 0.45, y: 0.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa267f1e342f5060800000000000000
+      internalID: 6944308999663004321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_124
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 615
+        width: 37
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079eacc4d6078b250800000000000000
+      internalID: 5960637721566964080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_125
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 615
+        width: 42
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404774062bfd2ea90800000000000000
+      internalID: -7286015289919572988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_126
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 615
+        width: 41
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2393cd1886182f590800000000000000
+      internalID: -7641903331839035086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_127
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 615
+        width: 39
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffba8db50228a2250800000000000000
+      internalID: 5920687735623429119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_128
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 615
+        width: 38
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ddb348e398982c0800000000000000
+      internalID: -4428857856942678701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_129
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 615
+        width: 43
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6367f191bf18900800000000000000
+      internalID: 685104703657621178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_130
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 615
+        width: 43
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e41d7b0be0fcfc0800000000000000
+      internalID: -3472540635518382579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_131
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 615
+        width: 47
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40404a51efa3b130800000000000000
+      internalID: 3581399511106338891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_132
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 615
+        width: 36
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3007a94d6504a9c80800000000000000
+      internalID: -8315263020307943421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_133
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 615
+        width: 41
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26276e3a68abb17f0800000000000000
+      internalID: -640713434531990942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_134
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 615
+        width: 50
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac083618c9990d070800000000000000
+      internalID: 8129166224868475082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_135
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 615
+        width: 52
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41c8208dd7a81b90800000000000000
+      internalID: -7270877028609900211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_136
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 615
+        width: 42
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32886740ddf63ad60800000000000000
+      internalID: 7900281166391314467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_137
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 507
+        width: 69
+        height: 95
+      alignment: 9
+      pivot: {x: 0.34, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9113fa8db63cb9a70800000000000000
+      internalID: 8834869961981636889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_138
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 507
+        width: 71
+        height: 74
+      alignment: 9
+      pivot: {x: 0.33, y: 0.66}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902b144caa692bdf0800000000000000
+      internalID: -165904576078040567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_139
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 507
+        width: 51
+        height: 86
+      alignment: 9
+      pivot: {x: 0.47, y: 0.56}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e4c5e217985fc00800000000000000
+      internalID: 933803616951357084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_140
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 507
+        width: 42
+        height: 75
+      alignment: 9
+      pivot: {x: 0.57, y: 0.65}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc42a3d4b5c0ab6c0800000000000000
+      internalID: -4126972522254424881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_141
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 507
+        width: 67
+        height: 62
+      alignment: 9
+      pivot: {x: 0.35, y: 0.79}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1dd0f5915f89910800000000000000
+      internalID: 1844493536725946851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_142
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 507
+        width: 89
+        height: 27
+      alignment: 9
+      pivot: {x: 0.26, y: 1.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c904241cbd1374b0800000000000000
+      internalID: -5443974830931834429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_143
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 507
+        width: 61
+        height: 88
+      alignment: 9
+      pivot: {x: 0.39, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaad4c8440756370800000000000000
+      internalID: 8315175726723476197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_144
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 507
+        width: 58
+        height: 47
+      alignment: 9
+      pivot: {x: 0.41, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920534280bb7b3cd0800000000000000
+      internalID: -2577330363709566935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_145
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 507
+        width: 57
+        height: 72
+      alignment: 9
+      pivot: {x: 0.42, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12f4c9af52276410800000000000000
+      internalID: 1470181597625250332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_146
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 507
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29198ef65136d62f0800000000000000
+      internalID: -978016600346553966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_147
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 507
+        width: 66
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5b278ac58cbaaf0800000000000000
+      internalID: -383993042921409088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_148
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 507
+        width: 62
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6cf6ef771005530800000000000000
+      internalID: 3841572097028507383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_149
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 412
+        width: 55
+        height: 83
+      alignment: 9
+      pivot: {x: 0.43, y: 0.59}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d2c390a85892750800000000000000
+      internalID: 6280697983251787086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_150
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 412
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4758ce75cdf205ad0800000000000000
+      internalID: -2715617951889980044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_151
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 412
+        width: 59
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2055f873a827aa0800000000000000
+      internalID: -6164712968684240143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_152
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 412
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15ed19c5796082d0800000000000000
+      internalID: -3278504574119451364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_153
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 412
+        width: 55
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143c19cfa65b86450800000000000000
+      internalID: 6082310767872426817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_154
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 412
+        width: 67
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247fbf63b63a94650800000000000000
+      internalID: 6217680441440991042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_155
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 412
+        width: 89
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eda015cbbc9e3d30800000000000000
+      internalID: 4413137015148686824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_156
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 412
+        width: 34
+        height: 50
+      alignment: 9
+      pivot: {x: 0.7, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f68592b834852280800000000000000
+      internalID: -9068696895591446793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_157
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 412
+        width: 34
+        height: 69
+      alignment: 9
+      pivot: {x: 0.7, y: 0.71}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb4ebd73d1c1e8d0800000000000000
+      internalID: -2818758777665336354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_158
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 412
+        width: 41
+        height: 37
+      alignment: 9
+      pivot: {x: 0.58, y: 1.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cbff775a65b8120800000000000000
+      internalID: 2417120893697244164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_159
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 412
+        width: 62
+        height: 63
+      alignment: 9
+      pivot: {x: 0.38, y: 0.77}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0dd19a5fb86ae870800000000000000
+      internalID: 8712891600169196812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_160
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 412
+        width: 53
+        height: 77
+      alignment: 9
+      pivot: {x: 0.45, y: 0.63}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1dbd39258fb37b0800000000000000
+      internalID: -5243324307591147056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_161
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 299
+        width: 62
+        height: 99
+      alignment: 9
+      pivot: {x: 0.38, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb5cc631a3aea400800000000000000
+      internalID: 337386934903790575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_162
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 299
+        width: 50
+        height: 92
+      alignment: 9
+      pivot: {x: 0.48, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf64b5105910d8430800000000000000
+      internalID: 3786684601172969212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_163
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 299
+        width: 74
+        height: 99
+      alignment: 9
+      pivot: {x: 0.32, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab18e4f6b1b586dd0800000000000000
+      internalID: -2492642220359908934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_164
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 299
+        width: 74
+        height: 95
+      alignment: 9
+      pivot: {x: 0.32, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ebbf8dbb2d7c6c0800000000000000
+      internalID: -4123095229593305562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_165
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 299
+        width: 70
+        height: 95
+      alignment: 9
+      pivot: {x: 0.34, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde14508be6514970800000000000000
+      internalID: 8737360321545772764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_166
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 299
+        width: 49
+        height: 100
+      alignment: 9
+      pivot: {x: 0.48, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2176b00ec380bc0800000000000000
+      internalID: -3816733751234850082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_167
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 299
+        width: 47
+        height: 99
+      alignment: 9
+      pivot: {x: 0.51, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1690f185505355b0800000000000000
+      internalID: -5380868801595140577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_168
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 271
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf59c5b9c900f53c0800000000000000
+      internalID: -4368772440904657412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_169
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 269
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbbed1d44ebcc960800000000000000
+      internalID: 7623677472019495888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_170
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 265
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11007b9b907e28ff0800000000000000
+      internalID: -35211818109042671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_171
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 265
+        width: 48
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462f325e326ff3710800000000000000
+      internalID: 1675328220433740388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_172
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 269
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf76fb4be1b40d040800000000000000
+      internalID: 4670315408836749308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_173
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 269
+        width: 50
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de345ab021b8ef00800000000000000
+      internalID: 1146360859288944340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_174
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 265
+        width: 99
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a832afa3e4d3c00d0800000000000000
+      internalID: -3455319407893798006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_175
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 265
+        width: 110
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d3f8468e33d5ed0800000000000000
+      internalID: -2423723951242920630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_176
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 271
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325ddead1f677fe70800000000000000
+      internalID: 9148911949158667555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_177
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 269
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fdeb90379936810800000000000000
+      internalID: 1757416998968418062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_178
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 265
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e39ad5522be2a050800000000000000
+      internalID: 5810465001963164641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_179
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 265
+        width: 48
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9383cbbfcf9bec0800000000000000
+      internalID: -3550528673080133135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_180
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 269
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864aee478d875e4d0800000000000000
+      internalID: -3105943496932023192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_181
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 271
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c236765e450ef4e0800000000000000
+      internalID: -1946112154961300796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_182
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 265
+        width: 99
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c646b00f988e1590800000000000000
+      internalID: -7701568096263846206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_183
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 265
+        width: 110
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97999a3ea6ab9a840800000000000000
+      internalID: 5235921010043754873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_184
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 272
+        width: 160
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf498e340e5e80c0800000000000000
+      internalID: -4571613199412408388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_185
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 275
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89120d633ed07580800000000000000
+      internalID: -8831314556819990130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_186
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 275
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beccab909f36b9ea0800000000000000
+      internalID: -5864984168458695445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_187
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 108
+        width: 39
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7272f634701761fa0800000000000000
+      internalID: -5830348391574460633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_188
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 108
+        width: 38
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a899b7f42bcca92d0800000000000000
+      internalID: -3271077113121498742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_189
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 108
+        width: 40
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22af6650fe86986e0800000000000000
+      internalID: -1834819997379659230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_190
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 108
+        width: 38
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1addfd060d2bea0800000000000000
+      internalID: -5858391050764312077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_191
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 108
+        width: 38
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26ec1a01d0f8adc0800000000000000
+      internalID: -3627384719238437333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_192
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 108
+        width: 54
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654a9492821220b10800000000000000
+      internalID: 1946154445352576086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_193
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 108
+        width: 51
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c2e13120112cd10800000000000000
+      internalID: 2144295073190128727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_194
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 108
+        width: 58
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907c1128acc605500800000000000000
+      internalID: 382925585347888905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_195
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 108
+        width: 61
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b97af905022bdf0800000000000000
+      internalID: -166034705611252906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_196
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 108
+        width: 69
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91e884d6a5cc02f0800000000000000
+      internalID: -1005211296489479780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_197
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 108
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617d34a74e484efe0800000000000000
+      internalID: -1160656687116069098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_198
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 108
+        width: 58
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8dfe1e40e287d80800000000000000
+      internalID: -8252795718651094825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_199
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 108
+        width: 29
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a4aebd5c3e2bf80800000000000000
+      internalID: -8092155141493732850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_200
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 117
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd05d514bfb577540800000000000000
+      internalID: 5005570645537149149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_201
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 156
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd782b5c0ea9bc50800000000000000
+      internalID: 6681562890273062367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_202
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 108
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137d844331634cac0800000000000000
+      internalID: -3835881526503352527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_203
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 144
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b215a0edbb9938d50800000000000000
+      internalID: 6738398499639546155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_204
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 133
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a764de2b70c3a2c20800000000000000
+      internalID: 3182422090455008890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_205
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 108
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6e1045b11b37f90800000000000000
+      internalID: -6957022268425640227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_206
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 108
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb1a55335d6e9050800000000000000
+      internalID: 5809200773499329522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_207
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 108
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17c48a3b531ee310800000000000000
+      internalID: 1436106613722498842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_208
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 119
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72a289c7dfccf550800000000000000
+      internalID: 6196055713060659836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_209
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 108
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a1506092afa1110800000000000000
+      internalID: 1232572502140852807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_210
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 112
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb889f3a031d9b30800000000000000
+      internalID: 4295610554318883815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_211
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 108
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ed3523955b2d860800000000000000
+      internalID: 7553298919754817047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_212
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 39
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024399a8bf7367ba0800000000000000
+      internalID: -6091619892470402016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_213
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 35
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87007b669ce18fa0800000000000000
+      internalID: -5800094714284734579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_214
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5859741f3caec6cc0800000000000000
+      internalID: -3716337465199979131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_215
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 31
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed78af2e3e5cf0f0800000000000000
+      internalID: -1081886189295206941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_216
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 0
+        width: 35
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca42bff0fcd89950800000000000000
+      internalID: 6456152993475742402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_217
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 0
+        width: 35
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f879c07ff680110800000000000000
+      internalID: 1227354005317324582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_218
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 35
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e829918bbd5121c0800000000000000
+      internalID: -4530236690243442458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_219
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 35
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e92972465282a00800000000000000
+      internalID: 731876051538583065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NicePng_mortal-kombat-scorpion-png_1910659_220
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c655e4ba0b44f80800000000000000
+      internalID: -8123173578069414868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

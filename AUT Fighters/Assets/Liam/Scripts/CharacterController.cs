@@ -116,6 +116,10 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
             //anim.SetBool("IsThrowing", true);
         }
+        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0)
+        {
+            anim.SetInteger("AttackStrength", (int)AttackStrength.SUPER);
+        }
         else if (inputs.light.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.LIGHT);
@@ -140,7 +144,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             {
                 ChangeState(new ThrowState());
             }
-            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.THROW && anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.SPECIAL)
+            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.THROW && anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.SPECIAL && anim.GetInteger("AttackStrength") != (int)AttackStrength.SUPER)
             {
                 Debug.Log("Jump attcking");
                 ChangeState(new JumpAtkState());
@@ -149,7 +153,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             {
                 ChangeState(new CrouchAttackState());
             }
-            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.THROW || anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.SPECIAL)
+            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.THROW || anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.SPECIAL || anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.SUPER)
             {
                 //Do nothing
             }
@@ -222,7 +226,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
-        if(other.tag == "Special")
+        if(other.tag == "Special" && other.GetComponentInParent<CharacterController>().gameObject == opponent)
         {
             Debug.Log("Special Collision");
             currentState.OnTriggerEnter(other);

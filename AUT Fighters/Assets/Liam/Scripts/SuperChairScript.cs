@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChairScript : Special
+public class SuperChairScript : Special
 {
     public float moveSpeed;
     public float timeToLive;
     public Rigidbody2D rb;
+    public GameObject self;
 
     void Update()
     {
@@ -15,7 +16,7 @@ public class ChairScript : Special
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.GetComponentInParent<CharacterController>().gameObject != self)
         {
             Destroy(gameObject);
         };
@@ -23,7 +24,7 @@ public class ChairScript : Special
 
     private void DestroySelf()
     {
-        if(timeToLive <= 0)
+        if (timeToLive <= 0)
         {
             Destroy(gameObject);
         }

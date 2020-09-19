@@ -50,5 +50,5 @@ MonoBehaviour:
   launchForce: {x: 0, y: 0}
   blockStunDuration: 1
   hitStunDuration: 1.25
-  causeKnockdown: 1
+  causeKnockdown: 0
   attackType: 1

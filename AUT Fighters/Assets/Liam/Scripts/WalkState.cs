@@ -61,6 +61,18 @@ public class WalkState : ICharacterState
             }
             Debug.Log(character.GetHashCode() + "Contact made in walk");
         }
+        else if (other.CompareTag("Special"))
+        {
+            Debug.Log("Hit by special");
+            if (character.IsBlocking())
+            {
+                character.OnBlock(other.GetComponent<Special>().atkData);
+            }
+            else
+            {
+                character.OnHit(other.GetComponent<Special>().atkData);
+            }
+        }
         else if (other.CompareTag("Throwbox"))
         {
             character.OnThrown(other.GetComponentInParent<CharacterController>());

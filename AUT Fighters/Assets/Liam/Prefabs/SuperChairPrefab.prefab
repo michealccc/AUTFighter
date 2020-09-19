@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2271299964243249929}
   - component: {fileID: 2271299964243249928}
   - component: {fileID: 2271299964243249927}
-  - component: {fileID: 4711428166695717520}
+  - component: {fileID: 775827017547504239}
   m_Layer: 0
-  m_Name: ChairPrefab
+  m_Name: SuperChairPrefab
   m_TagString: Special
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f60334c0afb0a394fb832d02821df003, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.04004982, g: 0.9433962, b: 0.047947608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &4711428166695717520
+--- !u!114 &775827017547504239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,10 +160,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2271299964243249926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 735ff7567c2358447984e6676db23d46, type: 3}
+  m_Script: {fileID: 11500000, guid: 91277a2d817d52343a42dd42155dd0f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   atkData: {fileID: 5460595062749960663, guid: df6d650a964680b47a7a32606c3a9fcf, type: 3}
-  moveSpeed: 35
-  timeToLive: 5
+  moveSpeed: 25
+  timeToLive: 8
   rb: {fileID: 2271299964243249927}
+  self: {fileID: 0}

@@ -9,6 +9,7 @@ public class NidController : CharacterController
     public Collider2D myHitbox;
     public Collider2D enemyGroundCol;
     public ChairScript chairPrefab;
+    public GameObject chairSuperPrefab;   
 
     // Start is called before the first frame update
     void Start()
@@ -165,14 +166,14 @@ public class NidController : CharacterController
     {
         ChairScript chairInstance = Instantiate(chairPrefab, transform.position + new Vector3(direction * 3, 0, 0), transform.rotation);
         chairInstance.rb.velocity = new Vector2(direction * chairInstance.moveSpeed, 0);
+        chairInstance.transform.parent = transform;
         Debug.Log("Throw a chair!");
     }
 
-    public void SpecialAttack()
+    public void SuperAttack()
     {
-        if(inputs.special.ReadValue<float>() != 0)
-        {
-            anim.SetBool("IsSpecialAttacking", true);
-        }
+        GameObject superInstance = Instantiate(chairSuperPrefab, transform.position, transform.rotation);
+        superInstance.transform.parent = transform;
+        Debug.Log("Chair Super");
     }
 }

@@ -8,7 +8,10 @@ public class CrouchState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
-        character.anim.SetBool("IsCrouching", true);
+        if(!character.anim.GetBool("IsCrouching"))
+        {
+            character.anim.SetBool("IsCrouching", true);
+        }
         character.rb.velocity = new Vector2(0, 0);
         Debug.Log("Entered Crouch State");
     }

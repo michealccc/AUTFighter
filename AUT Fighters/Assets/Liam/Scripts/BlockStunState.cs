@@ -20,7 +20,8 @@ public class BlockStunState : ICharacterState
         Debug.Log("Entered Block Stun State" + atkData);
         character = controller;
         blockDuration = atkData.blockStunDuration;
-        Debug.Log("Push forward force: " + character.transform.right * character.direction * atkData.pushforward);
+        character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * character.opponent.currentAttackData.pushback, ForceMode2D.Impulse);
+        character.rb.AddForce(character.transform.right * -character.direction * character.opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
         //character.rb.AddForce(character.transform.right * character.direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
     }
 
@@ -60,7 +61,17 @@ public class BlockStunState : ICharacterState
         }
         else
         {
-            character.ChangeState(new IdleState());
+            //character.ChangeState(new IdleState());
+            if (character.inputs.crouch.ReadValue<float>() != 0)
+            {
+                Debug.Log("Maintain crouch from block");
+                character.anim.SetBool("IsCrouching", true);
+                character.ChangeState(new CrouchState());
+            }
+            else
+            {
+                character.ChangeState(new IdleState());
+            }
         }
     }
 }

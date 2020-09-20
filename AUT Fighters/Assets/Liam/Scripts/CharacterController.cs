@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterController : MonoBehaviour, IGettingAttacked
+public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 {
     public Animator anim;
     public Rigidbody2D rb;
@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     public BoxCollider2D groundCollider;
     public BoxCollider2D throwBox;
     public ICharacterState currentState;
-    public GameObject opponent;
+    public CharacterController opponent;
 
     public PlayerStats stats;
 
@@ -61,7 +61,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
 
     public void DirectionToBeFacing()
     {
-        float distDifference = opponent.transform.position.x - gameObject.transform.position.x;
+        float distDifference = opponent.gameObject.transform.position.x - gameObject.transform.position.x;
         //Debug.Log("Distance difference: " + distDifference);
         float newDirection = 0;
         //Can probably replace this if statement using some calculation and normalize
@@ -246,7 +246,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             Debug.Log("Special Collision");
             currentState.OnTriggerEnter(other);
         }
-        else if (other.GetComponentInParent<CharacterController>().gameObject == opponent)
+        else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
         {
             Debug.Log("Trigger Collision");
             currentState.OnTriggerEnter(other);
@@ -293,6 +293,16 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     }
 
     public virtual void OnThrown(CharacterController opponent)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void OnVictory()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void OnKO()
     {
         throw new System.NotImplementedException();
     }

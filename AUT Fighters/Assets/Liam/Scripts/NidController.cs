@@ -35,15 +35,15 @@ public class NidController : CharacterController
     public override void OnHit(CharacterController opponent)
     {
         //Apply the push back force of an attack
-        opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
-        rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
-
+        //opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
+        //rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
+        rb.velocity = new Vector2(0, 0);
         if(opponent.currentAttackData.causeKnockdown) //If the attack causes a knockdown
         {
             anim.Play("NidKnockdown");
             if (opponent.currentAttackData.launchForce != new Vector2(0, 0))        //If the attack launches the target, apply the launch force
             {
-                rb.AddForce(new Vector2(-direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
+                //rb.AddForce(new Vector2(-direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
                 ChangeState(new LaunchState());
             }
             else
@@ -51,6 +51,10 @@ public class NidController : CharacterController
                 //Debug.Log(new Vector2(1 * -opponent.direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y));
                 ChangeState(new KnockdownState());
             }
+        }
+        else if(!IsGrounded())   //They are hit in the air
+        {
+            ChangeState(new AirResetState());
         }
         else //The attack does not cause a knockdown
         {
@@ -76,14 +80,15 @@ public class NidController : CharacterController
     public override void OnHit(AttackData atkData)
     {
         Debug.Log("Hit via special atk");
-        rb.AddForce(transform.right * -direction * atkData.pushforward, ForceMode2D.Impulse);
+        rb.velocity = new Vector2(0, 0);
+        //rb.AddForce(transform.right * -direction * atkData.pushforward, ForceMode2D.Impulse);
 
         if (atkData.causeKnockdown) //If the attack causes a knockdown
         {
             anim.Play("NidKnockdown");
             if (atkData.launchForce != new Vector2(0, 0))        //If the attack launches the target, apply the launch force
             {
-                rb.AddForce(new Vector2(-direction * atkData.launchForce.x, 1 * atkData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
+                //rb.AddForce(new Vector2(-direction * atkData.launchForce.x, 1 * atkData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
                 ChangeState(new LaunchState());
             }
             else
@@ -91,6 +96,10 @@ public class NidController : CharacterController
                 //Debug.Log(new Vector2(1 * -opponent.direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y));
                 ChangeState(new KnockdownState());
             }
+        }
+        else if (!IsGrounded())   //They are hit in the air
+        {
+            ChangeState(new AirResetState());
         }
         else //The attack does not cause a knockdown
         {
@@ -116,9 +125,9 @@ public class NidController : CharacterController
     public override void OnBlock(CharacterController opponent)
     {
         anim.SetBool("InBlockStun", true);
-
-        opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into blockstun state, change the argument for the constructor
-        rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
+        rb.velocity = new Vector2(0, 0);
+        //opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into blockstun state, change the argument for the constructor
+        //rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
         ChangeState(new BlockStunState(opponent.currentAttackData));
 
         if (inputs.crouch.ReadValue<float>() != 0)
@@ -137,8 +146,8 @@ public class NidController : CharacterController
     public override void OnBlock(AttackData atkData)
     {
         anim.SetBool("InBlockStun", true);
-
-        rb.AddForce(transform.right * -direction * atkData.pushforward, ForceMode2D.Impulse);
+        rb.velocity = new Vector2(0, 0);
+        //rb.AddForce(transform.right * -direction * atkData.pushforward, ForceMode2D.Impulse);
         ChangeState(new BlockStunState(atkData));
 
         if (inputs.crouch.ReadValue<float>() != 0)
@@ -160,6 +169,20 @@ public class NidController : CharacterController
         anim.SetBool("IsThrown", true);
         anim.Play("NidGetThrown");
         stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
+    }
+
+    public override void OnVictory()
+    {
+       //Enter the round start/empty state and play victory animation
+        ChangeState(new RoundStartState());
+        anim.Play("NidVictory");
+    }
+
+    public override void OnKO()
+    {
+        //Enter the round start/empty state and play KO animation
+        ChangeState(new RoundStartState());
+        anim.Play("NidKO");
     }
 
     public void ThrowChair()

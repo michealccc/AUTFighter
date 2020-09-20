@@ -49,7 +49,7 @@ public class IdleState : ICharacterState
     {
         if (other.CompareTag("Hitbox"))
         {
-            if(character.IsBlocking())
+            if (character.IsBlocking(other.GetComponentInParent<CharacterController>().currentAttackData))
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }
@@ -62,7 +62,7 @@ public class IdleState : ICharacterState
         else if(other.CompareTag("Special"))
         {
             Debug.Log("Hit by special");
-            if (character.IsBlocking())
+            if (character.IsBlocking(other.GetComponent<Special>().atkData))
             {
                 character.OnBlock(other.GetComponent<Special>().atkData);
             }

@@ -36,7 +36,7 @@ public class AttackState : ICharacterState
     {
         if (other.CompareTag("Hitbox"))
         {
-            if(character.IsBlocking())
+            if (character.IsBlocking(other.GetComponentInParent<CharacterController>().currentAttackData))
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }

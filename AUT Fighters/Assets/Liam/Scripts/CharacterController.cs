@@ -97,18 +97,31 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         return raycastHitGround.collider != null;
     }
 
-    public bool IsBlocking()
+    public bool IsBlocking(AttackData atkData)  //Blocking for normals
     {
+        bool isBlock = false;
         //Moving in the opposite direciton they are facing
         if (inputs.walk.ReadValue<float>() == (direction * -1))
         {
+            if(atkData.attackType == AttackType.LOW && inputs.crouch.ReadValue<float>() != 0)   //Crouching for a low attack
+            {
+                isBlock = true;
+            }
+            else if(atkData.attackType == AttackType.OVERHEAD && inputs.crouch.ReadValue<float>() == 0)     //Standing for an overhead attack
+            {
+                isBlock = true;
+            }
+            else if(atkData.attackType == AttackType.HIGH)
+            {
+                isBlock = true;
+            }
             Debug.Log("Is Blocking");
-            return true;
         }
 
-        return false;
+        return isBlock;
     }
 
+    //This handles the different attacks of a character - needs a lot of improvement
     public void HandleAttackPress()
     {
         if (inputs.light.ReadValue<float>() != 0 && inputs.med.ReadValue<float>() != 0)
@@ -116,9 +129,10 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
             //anim.SetBool("IsThrowing", true);
         }
-        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0)
+        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0 && stats.currentSuperMeter == stats.maxSuperMeter)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.SUPER);
+            stats.ResetSuperMeter();
         }
         else if (inputs.light.ReadValue<float>() != 0)
         {
@@ -137,6 +151,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             anim.SetInteger("AttackStrength", (int)AttackStrength.SPECIAL);
         }
 
+        //If an attack input has been detected
         if (anim.GetInteger("AttackStrength") != 0)
         {
             //Throw attack

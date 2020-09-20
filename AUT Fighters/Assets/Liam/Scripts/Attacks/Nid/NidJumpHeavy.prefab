@@ -51,4 +51,4 @@ MonoBehaviour:
   blockStunDuration: 0
   hitStunDuration: 2.5
   causeKnockdown: 0
-  attackType: 0
+  attackType: 2

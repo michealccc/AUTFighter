@@ -39,7 +39,7 @@ public class BlockStunState : ICharacterState
     {
         if (other.CompareTag("Hitbox"))
         {
-            if(character.IsBlocking())
+            if(character.IsBlocking(other.GetComponent<Special>().atkData))
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }

@@ -20,8 +20,8 @@ public class BlockStunState : ICharacterState
         Debug.Log("Entered Block Stun State" + atkData);
         character = controller;
         blockDuration = atkData.blockStunDuration;
-        character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * character.opponent.currentAttackData.pushback, ForceMode2D.Impulse);
-        character.rb.AddForce(character.transform.right * -character.direction * character.opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
+        character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * atkData.pushback, ForceMode2D.Impulse);
+        character.rb.AddForce(character.transform.right * -character.direction *  atkData.pushforward, ForceMode2D.Impulse);
         //character.rb.AddForce(character.transform.right * character.direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
     }
 

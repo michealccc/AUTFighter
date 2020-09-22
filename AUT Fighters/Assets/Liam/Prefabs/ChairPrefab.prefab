@@ -165,5 +165,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkData: {fileID: 5460595062749960663, guid: df6d650a964680b47a7a32606c3a9fcf, type: 3}
   moveSpeed: 35
-  timeToLive: 5
+  timeToLive: 2
   rb: {fileID: 2271299964243249927}

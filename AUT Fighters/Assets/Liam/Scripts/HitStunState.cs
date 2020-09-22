@@ -19,8 +19,8 @@ public class HitStunState : ICharacterState
         Debug.Log("Entered Hit Stun State" + atkData);
         character = controller;
         hitDuration = atkData.hitStunDuration;
-        character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * character.opponent.currentAttackData.pushback, ForceMode2D.Impulse); 
-        character.rb.AddForce(character.transform.right * -character.direction * character.opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
+        character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * atkData.pushback, ForceMode2D.Impulse);
+        character.rb.AddForce(character.transform.right * -character.direction * atkData.pushforward, ForceMode2D.Impulse);
     }
 
     public void Execute()

@@ -13,7 +13,10 @@ public class AttackState : ICharacterState
         character = controller;
         character.anim.SetBool("IsAttacking", true);
         character.rb.velocity = new Vector2(0, 0);
-        character.stats.GainMeter(character.currentAttackData.damage * 0.1f);
+        if(character.currentAttackData != null)
+        {
+            character.stats.GainMeter(character.currentAttackData.damage * 0.1f);
+        }
     }
 
     public void Execute()

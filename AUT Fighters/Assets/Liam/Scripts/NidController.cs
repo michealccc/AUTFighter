@@ -77,9 +77,9 @@ public class NidController : CharacterController
         stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
     }
 
-    public override void OnHit(AttackData atkData)
+    public override void OnHit(AttackData atkData)  //Hit by Special Attack
     {
-        Debug.Log("Hit via special atk");
+        Debug.Log("Hit via special atk" + atkData);
         rb.velocity = new Vector2(0, 0);
         //rb.AddForce(transform.right * -direction * atkData.pushforward, ForceMode2D.Impulse);
 
@@ -175,13 +175,14 @@ public class NidController : CharacterController
     {
        //Enter the round start/empty state and play victory animation
         ChangeState(new RoundStartState());
-        anim.Play("NidVictory");
+        //anim.Play("NidVictory");
     }
 
     public override void OnKO()
     {
         //Enter the round start/empty state and play KO animation
         ChangeState(new RoundStartState());
+        anim.SetBool("IsKO", true);
         anim.Play("NidKO");
     }
 

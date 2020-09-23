@@ -45,10 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: NidCrouchHeavy
   damage: 60
-  pushback: 7
+  pushback: 1
   pushforward: 0
-  launchForce: {x: 20, y: 45}
+  launchForce: {x: 0, y: 0}
   blockStunDuration: 1.5
   hitStunDuration: 0
   causeKnockdown: 1
-  attackType: 0
+  attackType: 1

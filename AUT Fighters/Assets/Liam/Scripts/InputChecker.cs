@@ -22,7 +22,7 @@ public class InputChecker : MonoBehaviour
         light = GetComponent<PlayerInput>().currentActionMap.FindAction("LightAttack");
         med = GetComponent<PlayerInput>().currentActionMap.FindAction("MedAttack");
         heavy = GetComponent<PlayerInput>().currentActionMap.FindAction("HeavyAttack");
-
+        special = GetComponent<PlayerInput>().currentActionMap.FindAction("SpecialAttack");
     }
 
 }

@@ -7,12 +7,11 @@ public class HitStunState : ICharacterState
     private CharacterController character;
     private AttackData atkData;
     private float hitDuration;
-    private CharacterController opponent;
+    //private CharacterController opponent;
 
-    public HitStunState(CharacterController opponent)
+    public HitStunState(AttackData atk)
     {
-        atkData = opponent.currentAttackData;
-        this.opponent = opponent;
+        atkData = atk;
     }
 
     public void Enter(CharacterController controller)
@@ -20,8 +19,8 @@ public class HitStunState : ICharacterState
         Debug.Log("Entered Hit Stun State" + atkData);
         character = controller;
         hitDuration = atkData.hitStunDuration;
-        character.rb.velocity = new Vector2(0, 0);
-        //character.anim.GetCurrentAnimatorClipInfo(0).
+        character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * atkData.pushback, ForceMode2D.Impulse);
+        character.rb.AddForce(character.transform.right * -character.direction * atkData.pushforward, ForceMode2D.Impulse);
     }
 
     public void Execute()
@@ -54,7 +53,16 @@ public class HitStunState : ICharacterState
         else
         {
             character.anim.SetBool("InHitStun", false);
-            character.ChangeState(new IdleState());
+            if(character.inputs.crouch.ReadValue<float>() != 0)
+            {
+                Debug.Log("Maintain crouch from hit");
+                character.anim.SetBool("IsCrouching", true);
+                character.ChangeState(new CrouchState());
+            }
+            else
+            {
+                character.ChangeState(new IdleState());
+            }
         }
     }
 }

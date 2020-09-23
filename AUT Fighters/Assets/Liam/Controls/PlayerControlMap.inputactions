@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SpecialAttack",
+                    "type": "Button",
+                    "id": "d7579b80-2dc2-432a-b8fd-940141d4fc78",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -142,6 +150,17 @@
                     "action": "HeavyAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b505cde9-3b0d-4a5e-b3ff-a650432008bf",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpecialAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -193,6 +212,14 @@
                     "name": "HeavyAttack",
                     "type": "Button",
                     "id": "46c6323c-1ee5-4935-8520-978889791a87",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SpecialAttack",
+                    "type": "Button",
+                    "id": "c47556f9-f2b8-4a09-85ef-4a01b24ded53",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -284,6 +311,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "HeavyAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4678b3fb-c2b7-49e6-bb87-41f215c39ce1",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpecialAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackName: NidThrow
-  damage: 70
+  damage: 60
   pushback: 0
   pushforward: 0
-  launchForce: {x: 24, y: 60}
+  launchForce: {x: 30, y: 50}
   blockStunDuration: 0
   hitStunDuration: 0
   causeKnockdown: 1

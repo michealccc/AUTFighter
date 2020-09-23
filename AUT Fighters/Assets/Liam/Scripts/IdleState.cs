@@ -49,7 +49,7 @@ public class IdleState : ICharacterState
     {
         if (other.CompareTag("Hitbox"))
         {
-            if(character.IsBlocking())
+            if (character.IsBlocking(other.GetComponentInParent<CharacterController>().currentAttackData))
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }
@@ -58,6 +58,18 @@ public class IdleState : ICharacterState
                 character.OnHit(other.GetComponentInParent<CharacterController>());
             }
             Debug.Log(character.GetHashCode() + "Contact made in idle");
+        }
+        else if(other.CompareTag("Special"))
+        {
+            Debug.Log("Hit by special");
+            if (character.IsBlocking(other.GetComponent<Special>().atkData))
+            {
+                character.OnBlock(other.GetComponent<Special>().atkData);
+            }
+            else
+            {
+                character.OnHit(other.GetComponent<Special>().atkData);
+            }
         }
         else if(other.CompareTag("Throwbox"))
         {

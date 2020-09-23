@@ -15,6 +15,7 @@ public class ThrownState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        Debug.Log("Entered Thrown State");
         //character.collider.enabled = false;
     }
 
@@ -30,6 +31,7 @@ public class ThrownState : ICharacterState
 
     public void Exit()
     {
+        Debug.Log("Exiting Thrown State");
         Debug.Log("Throw force: " + new Vector2(character.direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y));
         character.rb.AddForce(new Vector2(character.direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y), ForceMode2D.Impulse);
         //character.collider.enabled = true;

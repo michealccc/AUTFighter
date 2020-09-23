@@ -11,6 +11,7 @@ public class LaunchState : ICharacterState
         Debug.Log("Entered Launch State");
         character = controller;
         character.anim.SetBool("IsLaunched", true);
+        //character.rb.AddForce(new Vector2(-character.direction * character.opponent.currentAttackData.launchForce.x, 1 * character.opponent.currentAttackData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
     }
 
     public void Execute()

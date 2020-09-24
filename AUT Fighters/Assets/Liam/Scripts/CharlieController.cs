@@ -1,31 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-//Script that handles character controls
-public class NidController : CharacterController
+public class CharlieController : CharacterController
 {
-    public Collider2D myHitbox;
-    public Collider2D enemyGroundCol;
-    public ChairScript chairPrefab;
-    public GameObject chairSuperPrefab;   
-
+    public DroneScript dronePrefab;
+    public FireballScript superFireballPrefab;
     // Start is called before the first frame update
     void Start()
     {
         rb.gravityScale *= 1.25f;
         airAttackPerformed = false;
         ChangeState(new IdleState());
-        //Debug.Log(transform.Find("Hitbox").GetComponent<BoxCollider2D>());
-        //Physics2D.IgnoreCollision(transform.Find("Hitbox").GetComponent<BoxCollider2D>(), opponent.transform.Find("GroundCollider").GetComponent<BoxCollider2D>());
-        //Physics2D.IgnoreCollision(myHitbox, enemyGroundCol, true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //DirectionToBeFacing();
         currentState.Execute();
     }
 
@@ -35,9 +26,9 @@ public class NidController : CharacterController
         //opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
         //rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
         rb.velocity = new Vector2(0, 0);
-        if(opponent.currentAttackData.causeKnockdown) //If the attack causes a knockdown
+        if (opponent.currentAttackData.causeKnockdown) //If the attack causes a knockdown
         {
-            anim.Play("NidKnockdown");
+            anim.Play("Knockdown");
             if (opponent.currentAttackData.launchForce != new Vector2(0, 0))        //If the attack launches the target, apply the launch force
             {
                 //rb.AddForce(new Vector2(-direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
@@ -49,7 +40,7 @@ public class NidController : CharacterController
                 ChangeState(new KnockdownState());
             }
         }
-        else if(!IsGrounded())   //They are hit in the air
+        else if (!IsGrounded())   //They are hit in the air
         {
             ChangeState(new AirResetState());
         }
@@ -60,13 +51,13 @@ public class NidController : CharacterController
             if (inputs.crouch.ReadValue<float>() != 0)
             {
                 Debug.Log("Play crouch hit stun");
-                //anim.Play("NidCrouchHit", 0, 0);
-                anim.Play("NidCrouchHit", 0, 0);
+                //anim.Play("CrouchHit", 0, 0);
+                anim.Play("CrouchHit", 0, 0);
             }
             else
             {
                 Debug.Log("Play stand hit stun");
-                anim.Play("NidStandHit", 0, 0);
+                anim.Play("StandHit", 0, 0);
             }
         }
 
@@ -74,7 +65,7 @@ public class NidController : CharacterController
         stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
     }
 
-    public override void OnHit(AttackData atkData)  //Hit by Special Attack
+    public override void OnHit(AttackData atkData)
     {
         Debug.Log("Hit via special atk" + atkData);
         rb.velocity = new Vector2(0, 0);
@@ -82,7 +73,7 @@ public class NidController : CharacterController
 
         if (atkData.causeKnockdown) //If the attack causes a knockdown
         {
-            anim.Play("NidKnockdown");
+            anim.Play("Knockdown");
             if (atkData.launchForce != new Vector2(0, 0))        //If the attack launches the target, apply the launch force
             {
                 //rb.AddForce(new Vector2(-direction * atkData.launchForce.x, 1 * atkData.launchForce.y), ForceMode2D.Impulse); //Maybe shift this into kncokdown state, change the argument for the constructor
@@ -105,13 +96,13 @@ public class NidController : CharacterController
             if (inputs.crouch.ReadValue<float>() != 0)
             {
                 Debug.Log("Play crouch hit stun");
-                //anim.Play("NidCrouchHit", 0, 0);
-                anim.Play("NidCrouchHit", 0, 0);
+                //anim.Play("CrouchHit", 0, 0);
+                anim.Play("CrouchHit", 0, 0);
             }
             else
             {
                 Debug.Log("Play stand hit stun");
-                anim.Play("NidStandHit", 0, 0);
+                anim.Play("StandHit", 0, 0);
             }
         }
 
@@ -129,11 +120,11 @@ public class NidController : CharacterController
 
         if (inputs.crouch.ReadValue<float>() != 0)
         {
-            anim.Play("NidCrouchBlocking", 0, 0);
+            anim.Play("CrouchBlocking", 0, 0);
         }
         else
         {
-            anim.Play("NidStandBlocking", 0, 0);
+            anim.Play("StandBlocking", 0, 0);
         }
 
         stats.TakeDamage(opponent.currentAttackData.damage * 0.2f);
@@ -149,11 +140,11 @@ public class NidController : CharacterController
 
         if (inputs.crouch.ReadValue<float>() != 0)
         {
-            anim.Play("NidCrouchBlocking", 0, 0);
+            anim.Play("CrouchBlocking", 0, 0);
         }
         else
         {
-            anim.Play("NidStandBlocking", 0, 0);
+            anim.Play("StandBlocking", 0, 0);
         }
 
         stats.TakeDamage(atkData.damage * 0.2f);
@@ -164,15 +155,15 @@ public class NidController : CharacterController
     {
         ChangeState(new ThrownState(opponent));
         anim.SetBool("IsThrown", true);
-        anim.Play("NidGetThrown");
+        anim.Play("GetThrown");
         stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
     }
 
     public override void OnVictory()
     {
-       //Enter the round start/empty state and play victory animation
+        //Enter the round start/empty state and play victory animation
         ChangeState(new RoundStartState());
-        //anim.Play("NidVictory");
+        //anim.Play("Victory");
     }
 
     public override void OnKO()
@@ -180,21 +171,26 @@ public class NidController : CharacterController
         //Enter the round start/empty state and play KO animation
         ChangeState(new RoundStartState());
         anim.SetBool("IsKO", true);
-        anim.Play("NidKO");
+        anim.Play("KO");
     }
 
-    public void ThrowChair()
+    public void SpawnDrone()
     {
-        ChairScript chairInstance = Instantiate(chairPrefab, transform.position + new Vector3(direction * 3, 0, 0), transform.rotation);
-        chairInstance.rb.velocity = new Vector2(direction * chairInstance.moveSpeed, 0);
-        chairInstance.transform.parent = transform;
-        Debug.Log("Throw a chair!");
+        if(!FindObjectOfType<DroneScript>())
+        {
+            DroneScript droneInstance = Instantiate(dronePrefab, transform.position, transform.rotation);
+            //chairInstance.rb.velocity = new Vector2(direction * chairInstance.moveSpeed, 0);
+            //chairInstance.transform.parent = transform;
+            Debug.Log("Spawned a drone!");
+        }
     }
 
     public void SuperAttack()
     {
-        GameObject superInstance = Instantiate(chairSuperPrefab, transform.position, transform.rotation);
-        superInstance.transform.parent = transform;
-        Debug.Log("Chair Super");
+        FireballScript superInstance = Instantiate(superFireballPrefab, transform.position + new Vector3(direction * 3, 0, 0), transform.rotation);
+        superInstance.rb.velocity = new Vector2(direction * superInstance.moveSpeed * Time.deltaTime, 0);
+        superInstance.SetDirection(direction);
+        //superInstance.transform.parent = transform;
+        Debug.Log("Fireball Super");
     }
 }

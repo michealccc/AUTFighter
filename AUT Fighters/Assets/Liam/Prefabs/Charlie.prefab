@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6509746955161523418}
   - component: {fileID: 6509746955161523420}
   - component: {fileID: 6509746955161523421}
-  - component: {fileID: 6509746955161523419}
+  - component: {fileID: 3951515819069901484}
   - component: {fileID: 6509746955161523422}
   - component: {fileID: 6394092474089173644}
   m_Layer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 6f45d3ad-9760-4c1b-bc95-0a5a1b514789
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!50 &6509746955161523420
@@ -171,7 +171,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39106125, y: 3.0678115}
   m_EdgeRadius: 0
---- !u!114 &6509746955161523419
+--- !u!114 &3951515819069901484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,41 +180,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 6509746955161523398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217b9d8acf5cfdf4da0a4bd904785026, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f494a8ce9bac8e4b8269e92cb4e6784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 6394092474089173644}
   rb: {fileID: 6509746955161523420}
   collider: {fileID: 6509746955161523421}
-  groundCollider: {fileID: 6727261817406772724}
+  groundCollider: {fileID: 0}
   throwBox: {fileID: 6509746956580588095}
   opponent: {fileID: 0}
   stats:
     maxHp: 1000
-    currentHp: 1000
+    currentHp: 0
     maxSuperMeter: 100
     currentSuperMeter: 0
-  attacks: []
+  attacks:
+  - {fileID: 5460595062749960663, guid: d6f9e1dcb2294704cb634e8f339ad4d9, type: 3}
+  - {fileID: 5460595062749960663, guid: a135d233af99f684ab2b5b79322c0046, type: 3}
+  - {fileID: 5460595062749960663, guid: 3cc875d13c178c64e96c2176993fba26, type: 3}
+  - {fileID: 5460595062749960663, guid: 0f92fe68e127cdb43bc25d35c8a0fe90, type: 3}
+  - {fileID: 5460595062749960663, guid: c2c8b8489be817041adcaad0b9d31b30, type: 3}
+  - {fileID: 5460595062749960663, guid: d0794f7d387d4f041938e451d37f6389, type: 3}
+  - {fileID: 5460595062749960663, guid: df5ebda9bc0e0c24aad9a44ebe0707e8, type: 3}
+  - {fileID: 5460595062749960663, guid: 9a35cd0aca900764cb50cd58b92804b6, type: 3}
+  - {fileID: 5460595062749960663, guid: 48e1a0d224538574c96fc362c5aba193, type: 3}
+  - {fileID: 5460595062749960663, guid: b593d72258408fe49844ceac68a2d6ed, type: 3}
+  - {fileID: 5460595062749960663, guid: 4f3dc689cb856a44f9a9c2a7d025e980, type: 3}
+  - {fileID: 5460595062749960663, guid: d2137a03219cf9946a2451d2b3af021e, type: 3}
   currentAttackData: {fileID: 0}
-  moveSpeed: 500
+  moveSpeed: 450
   jumpForceY: 13
   jumpForceX: 325
   isMoving: 0
   isJumping: 0
   isCrouching: 0
-  direction: 1
+  direction: 0
   moveDir: 0
   airAttackPerformed: 0
   inputs: {fileID: 6509746955161523422}
   platformLayer:
     serializedVersion: 2
     m_Bits: 256
-  myHitbox: {fileID: 6509746956580982842}
-  enemyGroundCol: {fileID: 0}
-  chairPrefab: {fileID: 4711428166695717520, guid: 1812347e2a1cfbb4293c19e63cc7eb6d,
-    type: 3}
-  chairSuperPrefab: {fileID: 8946967101232592092, guid: cbb34fc730036b64298f0cd1f58c8ecb,
-    type: 3}
 --- !u!114 &6509746955161523422
 MonoBehaviour:
   m_ObjectHideFlags: 0

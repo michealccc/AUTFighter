@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Charlie/Scenes/OptionsScene.unity
     guid: 84ebc833fd2257347b74c7c5faeb94f8
+  - enabled: 1
+    path: Assets/Sandesh/Scenes/StPaulStreetStage.unity
+    guid: a2e75d6f33afb4588a299e5ba3fe66b3
+  - enabled: 1
+    path: Assets/Sandesh/Scenes/WellesleyStreetStage.unity
+    guid: 4281bf732eab04ef587ece278083cba1
   m_configObjects: {}

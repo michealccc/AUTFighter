@@ -11,6 +11,7 @@ public class DroneScript : MonoBehaviour
     public Vector2 destination;
     private float halfLife;
     private bool destReached;
+    private bool beamFired;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class DroneScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!destReached)
+        if(destReached)
         {
             FireBeam();
             Decay();
@@ -50,20 +51,26 @@ public class DroneScript : MonoBehaviour
 
     private void FireBeam()
     {
-        if(timeToLive <= halfLife)
+        if(timeToLive <= halfLife && !beamFired)
         {
             GameObject droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
+            droneBeamInstance.transform.parent = transform;
+            beamFired = true;
         }
     }
 
     private IEnumerator MoveToDest()
     {
-         yield return new WaitForSeconds(0);
-         float startTime=Time.time; // Time.time contains current frame time, so remember starting point
-         for (float t = startTime; Time.time - t <= 1; )
+        float time = 0;
+
+         while(time < 1)
          {                                              // until one second passed
-             transform.position = Vector2.Lerp(startPoint, destination, Time.time - startTime); // lerp from A to B in one second
+             transform.position = Vector2.Lerp(startPoint, destination, time / 1); // lerp from A to B in one second
+             time += Time.deltaTime;
+             yield return null; //Wait for next frame
          }
-         yield return 1; // wait for next frame
+
+         transform.position = destination;
+         destReached = true;
     }
 }

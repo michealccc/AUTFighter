@@ -176,9 +176,11 @@ public class CharlieController : CharacterController
 
     public void SpawnDrone()
     {
-        if(!FindObjectOfType<DroneScript>())
+        if(FindObjectOfType<DroneScript>() == null)
         {
             DroneScript droneInstance = Instantiate(dronePrefab, transform.position, transform.rotation);
+            droneInstance.SetDirection(direction);
+            droneInstance.destination = transform.position + new Vector3(direction * 2f, 0, 0);
             //chairInstance.rb.velocity = new Vector2(direction * chairInstance.moveSpeed, 0);
             //chairInstance.transform.parent = transform;
             Debug.Log("Spawned a drone!");
@@ -187,7 +189,7 @@ public class CharlieController : CharacterController
 
     public void SuperAttack()
     {
-        FireballScript superInstance = Instantiate(superFireballPrefab, transform.position + new Vector3(direction * 3, 0, 0), transform.rotation);
+        FireballScript superInstance = Instantiate(superFireballPrefab, transform.position + new Vector3(direction * 5, 0, 0), transform.rotation);
         superInstance.rb.velocity = new Vector2(direction * superInstance.moveSpeed * Time.deltaTime, 0);
         superInstance.SetDirection(direction);
         //superInstance.transform.parent = transform;

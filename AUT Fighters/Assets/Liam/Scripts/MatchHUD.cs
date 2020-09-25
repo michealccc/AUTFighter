@@ -22,8 +22,11 @@ public class MatchHUD : MonoBehaviour
     public void ResetPlayerHUDs()
     {
         p1HUD.ResetHealthBar();
+        p1HUD.ResetSuperBar();
         p1HUD.ResetRoundCounter();
+
         p2HUD.ResetHealthBar();
+        p2HUD.ResetSuperBar();
         p2HUD.ResetRoundCounter();
     }
 

@@ -7,7 +7,8 @@ using TMPro;
 public class PlayerHUD : MonoBehaviour
 {
     public Slider healthBar;
-    public Image roundCounter;
+    public Slider superBar;
+    public TextMeshProUGUI roundCounter;
     public Image portrait;
     public TextMeshProUGUI name;
 
@@ -43,13 +44,23 @@ public class PlayerHUD : MonoBehaviour
         healthBar.normalizedValue = playerHealth;
     }
 
-    public void ResetRoundCounter()
+    public void ResetSuperBar()
     {
-
+        superBar.value = 0;
     }
 
-    public void UpdateRoundCounter()
+    public void UpdateSuperBar(float superMeter)
     {
+        superBar.value = superMeter;
+    }
 
+    public void ResetRoundCounter()
+    {
+        roundCounter.SetText("0");
+    }
+
+    public void UpdateRoundCounter(int count)
+    {
+        roundCounter.SetText(count.ToString());
     }
 }

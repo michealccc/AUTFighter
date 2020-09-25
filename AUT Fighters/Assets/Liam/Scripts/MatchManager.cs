@@ -11,7 +11,7 @@ public class MatchManager : MonoBehaviour
     public CharacterController p2;
     public Transform p1Spawn;
     public Transform p2Spawn;
-    public Animator temp;
+    public Animator hudAnimator;
     public CameraController camera;
 
     public float roundEndTimer;
@@ -116,6 +116,7 @@ public class MatchManager : MonoBehaviour
                     p1.OnKO();
                     p2.OnVictory();
                     p2Score++;
+                    matchHUD.p2HUD.UpdateRoundCounter(p2Score);
                     //Also update round counter
                 }
                 else if (p1.stats.currentHp > p2.stats.currentHp)    //Player 2 loses round
@@ -123,6 +124,7 @@ public class MatchManager : MonoBehaviour
                     p2.OnKO();
                     p1.OnVictory();
                     p1Score++;
+                    matchHUD.p1HUD.UpdateRoundCounter(p1Score);
                     //Also update round counter
                 }
                 else                                               //Double KO
@@ -150,13 +152,17 @@ public class MatchManager : MonoBehaviour
         {
             rEndTimeCurrent = roundEndTimer;
             roundEnded = false;
-            temp.Play("BlackFade");
+            //temp.Play("BlackFade");
         }
     }
 
     private void UpdateHUD()
     {
+        //Update player 1 stats UI
         matchHUD.p1HUD.UpdateHealthBar(p1.stats.currentHp / p1.stats.maxHp);
+        matchHUD.p1HUD.UpdateSuperBar(p1.stats.currentSuperMeter);
+        //Update player 2 stats UI
         matchHUD.p2HUD.UpdateHealthBar(p2.stats.currentHp / p2.stats.maxHp);
+        matchHUD.p2HUD.UpdateSuperBar(p2.stats.currentSuperMeter);
     }
 }

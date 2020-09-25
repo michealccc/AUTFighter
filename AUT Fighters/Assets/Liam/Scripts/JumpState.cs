@@ -43,6 +43,11 @@ public class JumpState : ICharacterState
         if (other.CompareTag("Hitbox"))
         {
             Debug.Log("Contact made in jump");
+            character.OnHit(other.GetComponentInParent<CharacterController>());
+        }
+        else if(other.CompareTag("Special"))
+        {
+            character.OnHit(other.GetComponent<Special>().atkData);
         }
     }
 }

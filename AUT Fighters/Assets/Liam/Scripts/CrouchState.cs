@@ -8,7 +8,10 @@ public class CrouchState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
-        character.anim.SetBool("IsCrouching", true);
+        if(!character.anim.GetBool("IsCrouching"))
+        {
+            character.anim.SetBool("IsCrouching", true);
+        }
         character.rb.velocity = new Vector2(0, 0);
         Debug.Log("Entered Crouch State");
     }
@@ -44,7 +47,7 @@ public class CrouchState : ICharacterState
     {
         if (other.CompareTag("Hitbox"))
         {
-            if(character.IsBlocking())
+            if (character.IsBlocking(other.GetComponentInParent<CharacterController>().currentAttackData))
             {
                 character.OnBlock(other.GetComponentInParent<CharacterController>());
             }
@@ -53,6 +56,18 @@ public class CrouchState : ICharacterState
                 character.OnHit(other.GetComponentInParent<CharacterController>());
             }
             Debug.Log(character.GetHashCode() + "Contact made in crouch");
+        }
+        else if (other.CompareTag("Special"))
+        {
+            Debug.Log("Hit by special");
+            if (character.IsBlocking(other.GetComponent<Special>().atkData))
+            {
+                character.OnBlock(other.GetComponent<Special>().atkData);
+            }
+            else
+            {
+                character.OnHit(other.GetComponent<Special>().atkData);
+            }
         }
         else if(other.CompareTag("Throwbox"))
         {

@@ -48,7 +48,7 @@ MonoBehaviour:
   pushback: 0
   pushforward: 0
   launchForce: {x: 0, y: 0}
-  blockStunDuration: 0
+  blockStunDuration: 2
   hitStunDuration: 2.5
   causeKnockdown: 0
-  attackType: 0
+  attackType: 2

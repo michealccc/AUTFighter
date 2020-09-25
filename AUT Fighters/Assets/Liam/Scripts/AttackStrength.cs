@@ -7,5 +7,7 @@ public enum AttackStrength
     LIGHT = 1,
     MED = 2,
     HEAVY = 3,
-    THROW = 4
+    THROW = 4,
+    SPECIAL = 5,
+    SUPER = 6
 }

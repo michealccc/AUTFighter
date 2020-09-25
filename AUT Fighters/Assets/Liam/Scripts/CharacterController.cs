@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterController : MonoBehaviour, IGettingAttacked
+public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 {
     public Animator anim;
     public Rigidbody2D rb;
@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     public BoxCollider2D groundCollider;
     public BoxCollider2D throwBox;
     public ICharacterState currentState;
-    public GameObject opponent;
+    public CharacterController opponent;
 
     public PlayerStats stats;
 
@@ -61,7 +61,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
 
     public void DirectionToBeFacing()
     {
-        float distDifference = opponent.transform.position.x - gameObject.transform.position.x;
+        float distDifference = opponent.gameObject.transform.position.x - gameObject.transform.position.x;
         //Debug.Log("Distance difference: " + distDifference);
         float newDirection = 0;
         //Can probably replace this if statement using some calculation and normalize
@@ -97,24 +97,42 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         return raycastHitGround.collider != null;
     }
 
-    public bool IsBlocking()
+    public bool IsBlocking(AttackData atkData)  //Blocking for normals
     {
+        bool isBlock = false;
         //Moving in the opposite direciton they are facing
         if (inputs.walk.ReadValue<float>() == (direction * -1))
         {
+            if(atkData.attackType == AttackType.LOW && inputs.crouch.ReadValue<float>() != 0)   //Crouching for a low attack
+            {
+                isBlock = true;
+            }
+            else if(atkData.attackType == AttackType.OVERHEAD && inputs.crouch.ReadValue<float>() == 0)     //Standing for an overhead attack
+            {
+                isBlock = true;
+            }
+            else if(atkData.attackType == AttackType.HIGH)
+            {
+                isBlock = true;
+            }
             Debug.Log("Is Blocking");
-            return true;
         }
 
-        return false;
+        return isBlock;
     }
 
+    //This handles the different attacks of a character - needs a lot of improvement
     public void HandleAttackPress()
     {
         if (inputs.light.ReadValue<float>() != 0 && inputs.med.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
             //anim.SetBool("IsThrowing", true);
+        }
+        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0 && stats.currentSuperMeter == stats.maxSuperMeter)
+        {
+            anim.SetInteger("AttackStrength", (int)AttackStrength.SUPER);
+            stats.ResetSuperMeter();
         }
         else if (inputs.light.ReadValue<float>() != 0)
         {
@@ -128,12 +146,12 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.HEAVY);
         }
-        //else if (inputs.light.ReadValue<float>() != 0 && inputs.light.ReadValue<float>() != 0)
-        //{
-        //    anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
-        //    //anim.SetBool("IsThrowing", true);
-        //}
+        else if (inputs.special.ReadValue<float>() != 0)
+        {
+            anim.SetInteger("AttackStrength", (int)AttackStrength.SPECIAL);
+        }
 
+        //If an attack input has been detected
         if (anim.GetInteger("AttackStrength") != 0)
         {
             //Throw attack
@@ -141,7 +159,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             {
                 ChangeState(new ThrowState());
             }
-            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.THROW)
+            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.THROW && anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") != (int)AttackStrength.SPECIAL && anim.GetInteger("AttackStrength") != (int)AttackStrength.SUPER)
             {
                 Debug.Log("Jump attcking");
                 ChangeState(new JumpAtkState());
@@ -150,7 +168,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
             {
                 ChangeState(new CrouchAttackState());
             }
-            else if(anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.THROW)
+            else if (anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.THROW || anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.SPECIAL || anim.GetBool("IsJumping") && anim.GetInteger("AttackStrength") == (int)AttackStrength.SUPER)
             {
                 //Do nothing
             }
@@ -177,23 +195,9 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
 
     public void JumpLandCheck(GameObject opponent)
     {
-        //float distanceFromOpponent = opponent.transform.position.x - this.transform.position.x;
-        //if(opponent.GetComponent<Rigidbody2D>().velocity.y < 0 && Mathf.Abs(distanceFromOpponent) <= collider.bounds.extents.x * 1.5f)
-        //{
-        //    if (distanceFromOpponent < 0)               //Left side landing
-        //    {
-        //        Debug.Log("Left side fall");
-        //        opponent.transform.position = new Vector2(opponent.transform.position.x + (-collider.bounds.extents.x - 0.65f), opponent.transform.position.y);
-        //        opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
-        //    }
-        //    else if (distanceFromOpponent >= 0)               //Right side landing
-        //    {
-        //        opponent.transform.position = new Vector2(opponent.transform.position.x + (collider.bounds.extents.x + 0.65f), opponent.transform.position.y);
-        //        opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
-        //    }
-        //}
-        Vector2 futurePos = (Vector2)opponent.transform.position + opponent.GetComponent<Rigidbody2D>().velocity.normalized; //Get future position of the falling character
-        float xPosDiff = futurePos.x - transform.position.x; //Difference on the x-axis between this character and the opponent - to get if they're landing on the left or right side
+        Debug.Log("Checking jump land!");
+        Vector2 futurePos = (Vector2)opponent.transform.position + opponent.GetComponent<Rigidbody2D>().velocity.normalized;        //Get future position of the falling character
+        float xPosDiff = futurePos.x - transform.position.x;                                                                //Difference on the x-axis between this character and the opponent - to get if they're landing on the left or right side
         if(xPosDiff <= 0)   //Left side landing
         {
             if(Mathf.Abs(xPosDiff) <= 1)
@@ -203,14 +207,15 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         }
         else                //Right side landing
         {
-            if (Mathf.Abs(xPosDiff) >= 1)
+            if (Mathf.Abs(xPosDiff) <= 1)
             {
                 futurePos.x = transform.position.x + 1.1f;
             }
         }
 
-        //Move the position of the falling opponent into the future position
+        //Move the position of the falling opponent into the future position (this should force the collider of the falling opponent into the collider of other character causing them to push each other away)
         opponent.transform.position = futurePos;
+        opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
     }
 
     private bool CheckNextToWall(Vector2 direction, Vector2 origin, float dist)
@@ -235,9 +240,15 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
     //Detecting the hitbox that belongs to the opposing character
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.GetComponentInParent<CharacterController>().gameObject);
-        if (other.GetComponentInParent<CharacterController>().gameObject == opponent)
+        Debug.Log(other.tag);
+        if(other.tag == "Special" && other.GetComponentInParent<CharacterController>().gameObject == opponent)
         {
+            Debug.Log("Special Collision");
+            currentState.OnTriggerEnter(other);
+        }
+        else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
+        {
+            Debug.Log("Trigger Collision");
             currentState.OnTriggerEnter(other);
         }
     }
@@ -266,12 +277,32 @@ public class CharacterController : MonoBehaviour, IGettingAttacked
         throw new System.NotImplementedException();
     }
 
+    public virtual void OnHit(AttackData atkData)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public virtual void OnBlock(CharacterController opponent)
     {
         throw new System.NotImplementedException();
     }
 
+    public virtual void OnBlock(AttackData atkData)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public virtual void OnThrown(CharacterController opponent)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void OnVictory()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void OnKO()
     {
         throw new System.NotImplementedException();
     }

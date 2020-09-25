@@ -250,6 +250,10 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
             Debug.Log("Special Collision");
             currentState.OnTriggerEnter(other);
         }
+        else if(other.tag == "Ground" ||other.tag == "Wall")
+        {
+            //Ignore if its the ground
+        }
         else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
         {
             Debug.Log("Trigger Collision");

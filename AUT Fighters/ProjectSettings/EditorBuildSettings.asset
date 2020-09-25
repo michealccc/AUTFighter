@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Charlie/Scenes/OnlineScene.unity
     guid: fdd79e06e08c24b439da8d711a186fb1
   - enabled: 1
-    path: Assets/Charlie/Scenes/CharactersScene.unity
-    guid: d07b1ea5d290f3441a6797b163a60112
-  - enabled: 1
     path: Assets/Charlie/Scenes/OptionsScene.unity
     guid: 84ebc833fd2257347b74c7c5faeb94f8
   - enabled: 1
@@ -26,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sandesh/Scenes/WellesleyStreetStage.unity
     guid: 4281bf732eab04ef587ece278083cba1
+  - enabled: 1
+    path: Assets/MichealNew/Scene/MatchScene.unity
+    guid: 76d77d4de4ad43e4faf197885928f13b
+  - enabled: 1
+    path: Assets/Sandesh/CharacterSelect/Scenes/CharacterSelect.unity
+    guid: 4bb85a89158b545cfbf3dcd14ee19a3b
+  - enabled: 1
+    path: Assets/Sandesh/Scenes/StageSelect.unity
+    guid: 51659f5167a7842219f9fe8ca0b3666c
   m_configObjects: {}

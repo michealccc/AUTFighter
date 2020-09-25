@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 104434443}
   - component: {fileID: 104434445}
   - component: {fileID: 104434444}
+  - component: {fileID: 104434446}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -356,6 +357,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104434442}
   m_CullTransparentMesh: 0
+--- !u!114 &104434446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104434442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea2ca37757cdd9429a153c96f84119b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &357510283
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +535,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 364175614}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 104434446}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StageSelect
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &364175614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +748,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 557152706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 104434446}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StageSelect
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &557152706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,7 +1454,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1254060210}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 104434446}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StageSelect
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1254060210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,7 +1900,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1555309290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 104434446}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StageSelect
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1555309290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1973,7 +2030,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1696344749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 104434446}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StageSelect
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1696344749
 MonoBehaviour:
   m_ObjectHideFlags: 0

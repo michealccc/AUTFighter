@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void CharactersButtonAction()
     {
-        SceneManager.LoadScene("CharactersScene");
+        SceneManager.LoadScene("CharacterSelect");
     }
 
     public void OptionsButtonAction()

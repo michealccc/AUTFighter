@@ -28,6 +28,9 @@ public class MatchManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        
+        //CharacterChoice.p1Character = Characters.CHARLIE;
+        //CharacterChoice.p2Character = Characters.SAN;
         p1Score = 0;
         p2Score = 0;
         IntializeCharacters();
@@ -53,7 +56,7 @@ public class MatchManager : MonoBehaviour
         //Instantiate the characters based on what the players chose
         foreach(CharacterController character in characters)
         {
-            if(character.characterID == CharacterChoice.p1Character)
+            if(character.characterID == Characters.CHARLIE)
             {
                 p1 = Instantiate(character, transform.position, transform.rotation);
                 //p1.GetComponent<PlayerInput>().defaultActionMap = "Player1";
@@ -62,7 +65,7 @@ public class MatchManager : MonoBehaviour
                 Debug.Log("Player one default map: " + p1.GetComponent<PlayerInput>().defaultActionMap);
             }
 
-            if(character.characterID == CharacterChoice.p2Character)
+            if(character.characterID == Characters.SAN)
             {
                 p2 = Instantiate(character, transform.position, transform.rotation);
                // p2.GetComponent<PlayerInput>().defaultActionMap = "Player2";

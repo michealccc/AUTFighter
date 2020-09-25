@@ -14,6 +14,7 @@ public class NidController : CharacterController
     // Start is called before the first frame update
     void Start()
     {
+        //inputs.AssignInputs();
         rb.gravityScale *= 1.25f;
         airAttackPerformed = false;
         ChangeState(new IdleState());

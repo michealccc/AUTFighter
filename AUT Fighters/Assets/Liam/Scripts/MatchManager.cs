@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MatchManager : MonoBehaviour
 {
+    public MatchHUD matchHUD;
     public CharacterController[] characters;
     public CharacterController p1;
     public CharacterController p2;
@@ -23,13 +25,18 @@ public class MatchManager : MonoBehaviour
     private int p2Score;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rEndTimeCurrent = roundEndTimer;
         p1Score = 0;
         p2Score = 0;
+        IntializeCharacters();
         ResetRound();
         RoundStart();           //Temporary here
+        matchHUD.ResetPlayerHUDs();
+        matchHUD.SetupPlayerProfiles(p1, p2);
+        camera.p1Pos = p1.transform;    //Set up character reference for camera
+        camera.p2Pos = p2.transform;
     }
 
     // Update is called once per frame
@@ -37,33 +44,57 @@ public class MatchManager : MonoBehaviour
     {
         CheckRoundEnd();
         HandleRoundEnd();   //Or run this in the Check round End
+        UpdateHUD();
     }
 
     private void IntializeCharacters()
     {
         //Instantiate the characters based on what the players chose
+        foreach(CharacterController character in characters)
+        {
+            if(character.characterID == CharacterChoice.p1Character)
+            {
+                p1 = Instantiate(character, transform.position, transform.rotation);
+                //p1.GetComponent<PlayerInput>().defaultActionMap = "Player1";
+                p1.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player1");
+                //p1.inputs.AssignInputs();
+                Debug.Log("Player one default map: " + p1.GetComponent<PlayerInput>().defaultActionMap);
+            }
 
+            if(character.characterID == CharacterChoice.p2Character)
+            {
+                p2 = Instantiate(character, transform.position, transform.rotation);
+               // p2.GetComponent<PlayerInput>().defaultActionMap = "Player2";
+                p2.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player2");
+                //p2.inputs.AssignInputs();
+                Debug.Log("Player two default map: " + p2.GetComponent<PlayerInput>().defaultActionMap);
+            }
+        }
+
+        p1.opponent = p2;
+        p2.opponent = p1;
     }
 
     public void ResetRound()
     {
         Time.timeScale = 1.0f;
-        //Probably make a method that takes in a character controller and runs these so there doesn't need to be dupe code
-        p1.ChangeState(new RoundStartState());
-        p1.stats.ResetHp();
-        p1.stats.ResetSuperMeter();
+
+        ResetCharacter(p1);
+        ResetCharacter(p2);
         p1.transform.position = p1Spawn.position;
-        p1.anim.SetBool("IsKO", false);
-
-        p2.ChangeState(new RoundStartState());
-        p2.stats.ResetHp();
-        p2.stats.ResetSuperMeter();
         p2.transform.position = p2Spawn.position;
-        p2.anim.SetBool("IsKO", false);
-
         camera.ResetCamera();
 
         RoundStart();
+    }
+
+    private void ResetCharacter(CharacterController player)
+    {
+        player.ChangeState(new RoundStartState());
+        player.stats.ResetHp();
+        player.stats.ResetSuperMeter();
+        //player.transform.position = p1Spawn.position;
+        player.anim.SetBool("IsKO", false);
     }
 
     public void RoundStart()
@@ -74,18 +105,6 @@ public class MatchManager : MonoBehaviour
 
     private void CheckRoundEnd()
     {
-        //if (p1.stats.currentHp <= 0)     //Player 1 KO
-        //{
-        //    p1.OnKO();
-        //    //p2.OnVictory();
-        //    Time.timeScale = 0.5f;
-        //}
-        //else if (p2.stats.currentHp <= 0)    //Player 2 KO
-        //{
-        //    p2.OnKO();
-        //    //p1.OnVictory();
-        //    Time.timeScale = 0.5f;
-        //}
 
         //Don't actually want this to loop
         if(!roundEnded)
@@ -133,5 +152,11 @@ public class MatchManager : MonoBehaviour
             roundEnded = false;
             temp.Play("BlackFade");
         }
+    }
+
+    private void UpdateHUD()
+    {
+        matchHUD.p1HUD.UpdateHealthBar(p1.stats.currentHp / p1.stats.maxHp);
+        matchHUD.p2HUD.UpdateHealthBar(p2.stats.currentHp / p2.stats.maxHp);
     }
 }

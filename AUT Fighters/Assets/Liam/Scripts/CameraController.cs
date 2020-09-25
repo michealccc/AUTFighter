@@ -14,8 +14,6 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Camera width: " + cam.orthographicSize);
-        //Debug.Log("Gap: " + (xR - xL));
         CalcScreen(p1Pos, p2Pos);
     }
 
@@ -33,7 +31,6 @@ public class CameraController : MonoBehaviour
 
     private void SetCameraPos()
     {
-        Debug.Log("Cam diff length: " + (cam.orthographicSize * 2 + 6));
         if ((xR - xL) <= cam.orthographicSize * 2 + 6)
         {
             cameraPos.position = new Vector2((xR + xL) / 2, cameraPos.position.y);
@@ -52,6 +49,5 @@ public class CameraController : MonoBehaviour
             xL = p2.position.x - margin;
             xR = p1.position.x + margin;
         }
-        Debug.Log("Gap: " + (xR - xL));
     }
 }

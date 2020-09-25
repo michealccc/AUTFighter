@@ -332,7 +332,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 99
+  m_SortingOrder: 98
   m_Sprite: {fileID: 8020143640844766479, guid: a320ffeb59481424890854d23ae0323f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 6f45d3ad-9760-4c1b-bc95-0a5a1b514789
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!50 &210302935320503894
@@ -429,7 +429,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: -0.14535785, y: 0.008378267}
+  m_Offset: {x: -0.075348616, y: 0.03881359}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -440,7 +440,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.39106125, y: 3.0678115}
+  m_Size: {x: 1.0711532, y: 3.008667}
   m_EdgeRadius: 0
 --- !u!114 &210302935320503889
 MonoBehaviour:
@@ -460,8 +460,11 @@ MonoBehaviour:
   groundCollider: {fileID: 423454641188054910}
   throwBox: {fileID: 210302935131748533}
   opponent: {fileID: 0}
+  characterID: 0
+  charactePortrait: {fileID: 21300000, guid: cde09861992856f409dd00cdb5c742da, type: 3}
+  characterName: Sandesh
   stats:
-    maxHp: 1000
+    maxHp: 50
     currentHp: 1000
     maxSuperMeter: 100
     currentSuperMeter: 0

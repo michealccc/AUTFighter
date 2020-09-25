@@ -14,7 +14,7 @@ public class RoundStartState : ICharacterState
 
     public void Execute()
     {
-        //Do nothing
+        character.DirectionToBeFacing();
     }
 
     public void Exit()

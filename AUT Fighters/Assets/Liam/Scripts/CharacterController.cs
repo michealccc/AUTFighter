@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 {
@@ -12,6 +13,9 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public BoxCollider2D throwBox;
     public ICharacterState currentState;
     public CharacterController opponent;
+    public Characters characterID;
+    public Sprite charactePortrait;
+    public string characterName;
 
     public PlayerStats stats;
 

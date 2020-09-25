@@ -14,12 +14,10 @@ public class NidController : CharacterController
     // Start is called before the first frame update
     void Start()
     {
+        //inputs.AssignInputs();
         rb.gravityScale *= 1.25f;
-        Time.timeScale = 1f;
         airAttackPerformed = false;
-        stats.ResetHp();
-        stats.ResetSuperMeter();
-        ChangeState(new IdleState());
+        //ChangeState(new IdleState());
         //Debug.Log(transform.Find("Hitbox").GetComponent<BoxCollider2D>());
         //Physics2D.IgnoreCollision(transform.Find("Hitbox").GetComponent<BoxCollider2D>(), opponent.transform.Find("GroundCollider").GetComponent<BoxCollider2D>());
         //Physics2D.IgnoreCollision(myHitbox, enemyGroundCol, true);

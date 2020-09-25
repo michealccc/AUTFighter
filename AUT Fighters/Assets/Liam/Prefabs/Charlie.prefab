@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6509746955161523418}
   - component: {fileID: 6509746955161523420}
   - component: {fileID: 6509746955161523421}
-  - component: {fileID: 6509746955161523419}
+  - component: {fileID: 3951515819069901484}
   - component: {fileID: 6509746955161523422}
   - component: {fileID: 6394092474089173644}
   m_Layer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 99
+  m_SortingOrder: 98
   m_Sprite: {fileID: 2697499868052367263, guid: 350aff4da897f5a4a8347430dc02efcb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 6f45d3ad-9760-4c1b-bc95-0a5a1b514789
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!50 &6509746955161523420
@@ -156,9 +156,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 47cc20e77ae72234f8fef4eeececfecc, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: -0.14535785, y: 0.008378267}
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.052908063, y: -0.09264922}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -169,9 +169,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.39106125, y: 3.0678115}
+  m_Size: {x: 0.9316937, y: 3.068944}
   m_EdgeRadius: 0
---- !u!114 &6509746955161523419
+--- !u!114 &3951515819069901484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,40 +180,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 6509746955161523398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217b9d8acf5cfdf4da0a4bd904785026, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f494a8ce9bac8e4b8269e92cb4e6784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 6394092474089173644}
   rb: {fileID: 6509746955161523420}
   collider: {fileID: 6509746955161523421}
-  groundCollider: {fileID: 6727261817406772724}
+  groundCollider: {fileID: 0}
   throwBox: {fileID: 6509746956580588095}
   opponent: {fileID: 0}
+  characterID: 1
+  charactePortrait: {fileID: 21300000, guid: ddae99258dd7bfa4ead9390edceb291b, type: 3}
+  characterName: Charlie
   stats:
-    maxHp: 1000
-    currentHp: 1000
+    maxHp: 50
+    currentHp: 0
     maxSuperMeter: 100
     currentSuperMeter: 0
-  attacks: []
+  attacks:
+  - {fileID: 5460595062749960663, guid: d6f9e1dcb2294704cb634e8f339ad4d9, type: 3}
+  - {fileID: 5460595062749960663, guid: a135d233af99f684ab2b5b79322c0046, type: 3}
+  - {fileID: 5460595062749960663, guid: 3cc875d13c178c64e96c2176993fba26, type: 3}
+  - {fileID: 5460595062749960663, guid: 0f92fe68e127cdb43bc25d35c8a0fe90, type: 3}
+  - {fileID: 5460595062749960663, guid: c2c8b8489be817041adcaad0b9d31b30, type: 3}
+  - {fileID: 5460595062749960663, guid: d0794f7d387d4f041938e451d37f6389, type: 3}
+  - {fileID: 5460595062749960663, guid: df5ebda9bc0e0c24aad9a44ebe0707e8, type: 3}
+  - {fileID: 5460595062749960663, guid: 9a35cd0aca900764cb50cd58b92804b6, type: 3}
+  - {fileID: 5460595062749960663, guid: 48e1a0d224538574c96fc362c5aba193, type: 3}
+  - {fileID: 5460595062749960663, guid: b593d72258408fe49844ceac68a2d6ed, type: 3}
+  - {fileID: 5460595062749960663, guid: 4f3dc689cb856a44f9a9c2a7d025e980, type: 3}
+  - {fileID: 5460595062749960663, guid: d2137a03219cf9946a2451d2b3af021e, type: 3}
   currentAttackData: {fileID: 0}
   moveSpeed: 500
   jumpForceY: 13
-  jumpForceX: 325
+  jumpForceX: 330
   isMoving: 0
   isJumping: 0
   isCrouching: 0
-  direction: 1
+  direction: 0
   moveDir: 0
   airAttackPerformed: 0
   inputs: {fileID: 6509746955161523422}
   platformLayer:
     serializedVersion: 2
     m_Bits: 256
-  myHitbox: {fileID: 6509746956580982842}
-  enemyGroundCol: {fileID: 0}
-  chairPrefab: {fileID: 4711428166695717520, guid: 1812347e2a1cfbb4293c19e63cc7eb6d,
-    type: 3}
-  chairSuperPrefab: {fileID: 8946967101232592092, guid: cbb34fc730036b64298f0cd1f58c8ecb,
+  dronePrefab: {fileID: 943998399, guid: 5eea4718a30c32b409bd072c6d664e4b, type: 3}
+  superFireballPrefab: {fileID: 4530552117671946099, guid: cde51a727ebe4e04b9714f281acd1650,
     type: 3}
 --- !u!114 &6509746955161523422
 MonoBehaviour:
@@ -346,7 +358,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01336503, y: -1.7447335}
+  m_Offset: {x: 0.09832978, y: -1.6915743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -357,7 +369,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84327364, y: 0.080863}
+  m_Size: {x: 0.92974234, y: 0.024905682}
   m_EdgeRadius: 0
 --- !u!1 &6509746956422051827
 GameObject:
@@ -384,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6509746956422051827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.402, y: 0.393, z: 0}
+  m_LocalPosition: {x: 1.402, y: 0.05, z: 0}
   m_LocalScale: {x: 0.20144542, y: 0.20144518, z: 1}
   m_Children: []
   m_Father: {fileID: 6509746955161523416}

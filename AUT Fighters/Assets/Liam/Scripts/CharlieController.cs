@@ -12,7 +12,7 @@ public class CharlieController : CharacterController
         //inputs.AssignInputs();
         rb.gravityScale *= 1.25f;
         airAttackPerformed = false;
-        ChangeState(new IdleState());
+        //ChangeState(new IdleState());
     }
 
     // Update is called once per frame

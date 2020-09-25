@@ -17,7 +17,7 @@ public class NidController : CharacterController
         //inputs.AssignInputs();
         rb.gravityScale *= 1.25f;
         airAttackPerformed = false;
-        ChangeState(new IdleState());
+        //ChangeState(new IdleState());
         //Debug.Log(transform.Find("Hitbox").GetComponent<BoxCollider2D>());
         //Physics2D.IgnoreCollision(transform.Find("Hitbox").GetComponent<BoxCollider2D>(), opponent.transform.Find("GroundCollider").GetComponent<BoxCollider2D>());
         //Physics2D.IgnoreCollision(myHitbox, enemyGroundCol, true);

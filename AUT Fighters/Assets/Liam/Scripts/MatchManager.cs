@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class MatchManager : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class MatchManager : MonoBehaviour
     public Transform p2Spawn;
     public Animator hudAnimator;
     public CameraController camera;
+    public TextMeshProUGUI gameEndText;
 
-    public float roundEndTimer;
-    private float rEndTimeCurrent;
+    private bool gameEnded = false;
 
     [SerializeField]
     private bool roundEnded;
@@ -27,12 +28,11 @@ public class MatchManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        rEndTimeCurrent = roundEndTimer;
         p1Score = 0;
         p2Score = 0;
         IntializeCharacters();
         ResetRound();
-        RoundStart();           //Temporary here
+        //RoundStart();           //Temporary here
         matchHUD.ResetPlayerHUDs();
         matchHUD.SetupPlayerProfiles(p1, p2);
         camera.p1Pos = p1.transform;    //Set up character reference for camera
@@ -42,8 +42,9 @@ public class MatchManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Probably could just run these within the characters?
         CheckRoundEnd();
-        HandleRoundEnd();   //Or run this in the Check round End
+        //HandleRoundEnd();   //Or run this in the Check round End
         UpdateHUD();
     }
 
@@ -78,14 +79,14 @@ public class MatchManager : MonoBehaviour
     public void ResetRound()
     {
         Time.timeScale = 1.0f;
+        hudAnimator.Play("ReadyText");
+        roundEnded = false;
 
         ResetCharacter(p1);
         ResetCharacter(p2);
         p1.transform.position = p1Spawn.position;
         p2.transform.position = p2Spawn.position;
         camera.ResetCamera();
-
-        RoundStart();
     }
 
     private void ResetCharacter(CharacterController player)
@@ -93,19 +94,32 @@ public class MatchManager : MonoBehaviour
         player.ChangeState(new RoundStartState());
         player.stats.ResetHp();
         player.stats.ResetSuperMeter();
-        //player.transform.position = p1Spawn.position;
         player.anim.SetBool("IsKO", false);
     }
 
     public void RoundStart()
     {
+        roundEnded = false;
         p1.ChangeState(new IdleState());
         p2.ChangeState(new IdleState());
     }
 
+    public void GameEnd()
+    {
+        Debug.Log("Game ended");
+        if(p1Score > p2Score)
+        {
+            gameEndText.SetText("Player 1 WINS!");
+        }
+        else
+        {
+            gameEndText.SetText("Player 2 WINS!");
+        }
+        hudAnimator.SetBool("IsGameEnded", true);
+    }
+
     private void CheckRoundEnd()
     {
-
         //Don't actually want this to loop
         if(!roundEnded)
         {
@@ -136,23 +150,23 @@ public class MatchManager : MonoBehaviour
 
                 Time.timeScale = 0.5f;
                 roundEnded = true;
+                if(p1Score == 2 || p2Score == 2)
+                {
+                    gameEnded = true;
+                }
+                HandleRoundEnd();
             }
         }
     }
 
     private void HandleRoundEnd()
     {
-        if(roundEnded && rEndTimeCurrent > 0)
+        Debug.Log("ended round");
+        hudAnimator.Play("KOText");
+        if(gameEnded)
         {
-            //Play round end screen - wait for end screen to finish before reseting or time it
-            rEndTimeCurrent -= Time.deltaTime;
-            Debug.Log(rEndTimeCurrent);
-        }
-        else if(roundEnded && rEndTimeCurrent <= 0)
-        {
-            rEndTimeCurrent = roundEndTimer;
-            roundEnded = false;
-            //temp.Play("BlackFade");
+            hudAnimator.SetBool("IsGameEnded", true);
+            GameEnd();
         }
     }
 

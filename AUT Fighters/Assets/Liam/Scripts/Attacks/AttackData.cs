@@ -12,6 +12,7 @@ public enum AttackType
 [System.Serializable]
 public class AttackData : MonoBehaviour
 {
+    public CharacterController origin;
     public string attackName;
     public float damage;
     public float pushback;

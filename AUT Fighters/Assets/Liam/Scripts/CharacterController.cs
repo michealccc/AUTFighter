@@ -9,11 +9,13 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public Animator anim;
     public Rigidbody2D rb;
     public BoxCollider2D collider;
-    public BoxCollider2D groundCollider;
     public BoxCollider2D throwBox;
-    public ICharacterState currentState;
     public CharacterController opponent;
-    public Characters characterID;
+    public AttackData attack;
+
+    public ICharacterState currentState;
+
+    public Characters characterID;  //Maybe separate this stuff into its down class
     public Sprite charactePortrait;
     public string characterName;
 
@@ -195,6 +197,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public void ThrowFinish()
     {
         opponent.GetComponent<CharacterController>().anim.SetBool("IsThrown", false);
+        
     }
 
     public void JumpLandCheck(GameObject opponent)
@@ -238,27 +241,32 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void SetAttackData(string atkData)
     {
-        currentAttackData = FindAttackData(atkData);
+        attack = FindAttackData(atkData);        
+        //GetComponentInChildren<AttackData>() = FindAttackData(atkData);
     }
 
     //Detecting the hitbox that belongs to the opposing character
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
-        if(other.tag == "Special" && other.GetComponentInParent<CharacterController>().gameObject == opponent)
+        if(other.tag == "Attack")
         {
-            Debug.Log("Special Collision");
-            currentState.OnTriggerEnter(other);
+            Debug.Log(other.GetComponent<AttackData>().origin);
+            if(other.GetComponent<AttackData>().origin == opponent)
+            {
+                Debug.Log("Took an attack");
+                currentState.OnTriggerEnter(other);
+            }
         }
         else if(other.tag == "Ground" ||other.tag == "Wall")
         {
             //Ignore if its the ground
         }
-        else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
-        {
-            Debug.Log("Trigger Collision");
-            currentState.OnTriggerEnter(other);
-        }
+        //else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
+        //{
+        //    Debug.Log("Trigger Collision");
+        //    currentState.OnTriggerEnter(other);
+        //}
     }
 
     private AttackData FindAttackData(string atkName)
@@ -280,25 +288,33 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         return theData;
     }
 
-    public virtual void OnHit(CharacterController opponent)
+    protected void SetAttackDataOrigin()
+    {
+        foreach(AttackData atk in attacks)
+        {
+            atk.origin = this;
+        }
+    }
+
+    public virtual void OnHit(AttackData theAtk)
     {
         throw new System.NotImplementedException();
     }
 
-    public virtual void OnHit(AttackData atkData)
+    //public virtual void OnHit(AttackData atkData)
+    //{
+    //    throw new System.NotImplementedException();
+    //}
+
+    public virtual void OnBlock(AttackData theAtk)
     {
         throw new System.NotImplementedException();
     }
 
-    public virtual void OnBlock(CharacterController opponent)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public virtual void OnBlock(AttackData atkData)
-    {
-        throw new System.NotImplementedException();
-    }
+    //public virtual void OnBlock(AttackData atkData)
+    //{
+    //    throw new System.NotImplementedException();
+    //}
 
     public virtual void OnThrown(CharacterController opponent)
     {

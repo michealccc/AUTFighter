@@ -186,9 +186,9 @@ MonoBehaviour:
   anim: {fileID: 6394092474089173644}
   rb: {fileID: 6509746955161523420}
   collider: {fileID: 6509746955161523421}
-  groundCollider: {fileID: 0}
   throwBox: {fileID: 6509746956580588095}
   opponent: {fileID: 0}
+  attack: {fileID: 7092887775185645242}
   characterID: 1
   charactePortrait: {fileID: 21300000, guid: ddae99258dd7bfa4ead9390edceb291b, type: 3}
   characterName: Charlie
@@ -519,9 +519,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6509746956580982841}
   - component: {fileID: 6509746956580982842}
+  - component: {fileID: 7092887775185645242}
   m_Layer: 0
   m_Name: Hitbox
-  m_TagString: Hitbox
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,6 +567,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1623187, y: 0.4973152}
   m_EdgeRadius: 0
+--- !u!114 &7092887775185645242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509746956580982840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 0}
+  attackName: 
+  damage: 0
+  pushback: 0
+  pushforward: 0
+  launchForce: {x: 0, y: 0}
+  blockStunDuration: 0
+  hitStunDuration: 0
+  causeKnockdown: 0
+  attackType: 0
 --- !u!1 &8714148535971622529
 GameObject:
   m_ObjectHideFlags: 0

@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 210302935130038960}
   m_Layer: 0
   m_Name: Hitbox
-  m_TagString: Hitbox
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,9 +457,9 @@ MonoBehaviour:
   anim: {fileID: 210302935320503891}
   rb: {fileID: 210302935320503894}
   collider: {fileID: 210302935320503895}
-  groundCollider: {fileID: 423454641188054910}
   throwBox: {fileID: 210302935131748533}
   opponent: {fileID: 0}
+  attack: {fileID: 0}
   characterID: 0
   charactePortrait: {fileID: 21300000, guid: cde09861992856f409dd00cdb5c742da, type: 3}
   characterName: Sandesh
@@ -497,7 +497,7 @@ MonoBehaviour:
   enemyGroundCol: {fileID: 0}
   chairPrefab: {fileID: 4711428166695717520, guid: 1812347e2a1cfbb4293c19e63cc7eb6d,
     type: 3}
-  chairSuperPrefab: {fileID: 8946967101232592092, guid: cbb34fc730036b64298f0cd1f58c8ecb,
+  chairSuperPrefab: {fileID: 8946967101232592093, guid: cbb34fc730036b64298f0cd1f58c8ecb,
     type: 3}
 --- !u!114 &210302935320503892
 MonoBehaviour:

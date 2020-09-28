@@ -45,14 +45,17 @@ public class JumpAtkState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-            Debug.Log("Contact made in jump attack");
-            character.OnHit(other.GetComponentInParent<CharacterController>());
-        }
-        else if (other.CompareTag("Special"))
-        {
-            character.OnHit(other.GetComponent<Special>().atkData);
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
+            {
+                character.OnBlock(atk);
+            }
+            else
+            {
+                character.OnHit(atk);
+            }
         }
     }
 }

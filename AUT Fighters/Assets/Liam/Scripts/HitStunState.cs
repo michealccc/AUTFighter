@@ -35,10 +35,17 @@ public class HitStunState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-           character.OnHit(other.GetComponentInParent<CharacterController>());
-           Debug.Log(character.GetHashCode() + "Contact made in hit stun");
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
+            {
+                character.OnBlock(atk);
+            }
+            else
+            {
+                character.OnHit(atk);
+            }
         }
     }
 

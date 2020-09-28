@@ -38,17 +38,17 @@ public class BlockStunState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-            if(character.IsBlocking(other.GetComponent<Special>().atkData))
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
             {
-                character.OnBlock(other.GetComponentInParent<CharacterController>());
+                character.OnBlock(atk);
             }
             else
             {
-                character.OnHit(other.GetComponentInParent<CharacterController>());
+                character.OnHit(atk);
             }
-            Debug.Log(character.GetHashCode() + "Contact made in blocking");
         }
     }
 

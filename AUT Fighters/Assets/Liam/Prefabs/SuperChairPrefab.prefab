@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2271299964243249928}
   - component: {fileID: 2271299964243249927}
   - component: {fileID: 775827017547504239}
+  - component: {fileID: 7682063893620803572}
   m_Layer: 0
   m_Name: SuperChairPrefab
-  m_TagString: Special
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,8 +164,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91277a2d817d52343a42dd42155dd0f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkData: {fileID: 5460595062749960663, guid: df6d650a964680b47a7a32606c3a9fcf, type: 3}
+  atkData: {fileID: 0}
   moveSpeed: 25
   timeToLive: 8
   rb: {fileID: 2271299964243249927}
   self: {fileID: 0}
+--- !u!114 &7682063893620803572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2271299964243249926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 0}
+  attackName: ChairThrow
+  damage: 50
+  pushback: 0
+  pushforward: 8
+  launchForce: {x: 0, y: 0}
+  blockStunDuration: 1
+  hitStunDuration: 1.5
+  causeKnockdown: 0
+  attackType: 0

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DroneScript : MonoBehaviour
 {
-    public GameObject droneBeamPrefab;
+    public CharacterController origin;
+    public DroneBeamScript droneBeamPrefab;
     public float direction;
     public float timeToLive;
     public Vector2 startPoint;
@@ -53,8 +54,9 @@ public class DroneScript : MonoBehaviour
     {
         if(timeToLive <= halfLife && !beamFired)
         {
-            GameObject droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
+            DroneBeamScript droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
             droneBeamInstance.transform.parent = transform;
+            droneBeamInstance.GetComponent<AttackData>().origin = origin;
             beamFired = true;
         }
     }

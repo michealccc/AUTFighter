@@ -45,28 +45,16 @@ public class CrouchState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-            if (character.IsBlocking(other.GetComponentInParent<CharacterController>().currentAttackData))
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
             {
-                character.OnBlock(other.GetComponentInParent<CharacterController>());
+                character.OnBlock(atk);
             }
             else
             {
-                character.OnHit(other.GetComponentInParent<CharacterController>());
-            }
-            Debug.Log(character.GetHashCode() + "Contact made in crouch");
-        }
-        else if (other.CompareTag("Special"))
-        {
-            Debug.Log("Hit by special");
-            if (character.IsBlocking(other.GetComponent<Special>().atkData))
-            {
-                character.OnBlock(other.GetComponent<Special>().atkData);
-            }
-            else
-            {
-                character.OnHit(other.GetComponent<Special>().atkData);
+                character.OnHit(atk);
             }
         }
         else if(other.CompareTag("Throwbox"))

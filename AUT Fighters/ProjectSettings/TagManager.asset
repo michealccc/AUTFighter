@@ -10,6 +10,8 @@ TagManager:
   - Throwbox
   - Landing
   - Special
+  - Drone
+  - Attack
   layers:
   - Default
   - TransparentFX

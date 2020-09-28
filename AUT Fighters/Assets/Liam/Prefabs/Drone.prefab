@@ -94,7 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6583b2e9cccf323478b53299094ef6ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneBeamPrefab: {fileID: 4213646995073707895, guid: 31614a212cd97fd4e86e642b9e774b85,
+  origin: {fileID: 0}
+  droneBeamPrefab: {fileID: 4213646995073707880, guid: 31614a212cd97fd4e86e642b9e774b85,
     type: 3}
   direction: 0
   timeToLive: 2

@@ -241,7 +241,8 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void SetAttackData(string atkData)
     {
-        attack = FindAttackData(atkData);        
+        //attack = FindAttackData(atkData);
+        transform.Find("Hitbox").GetComponent<AttackData>().SetAttackData(FindAttackData(atkData));
         //GetComponentInChildren<AttackData>() = FindAttackData(atkData);
     }
 

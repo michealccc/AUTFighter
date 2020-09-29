@@ -22,4 +22,17 @@ public class AttackData : MonoBehaviour
     public float hitStunDuration;
     public bool causeKnockdown;
     public AttackType attackType;
+
+    public void SetAttackData(AttackData data)
+    {
+        origin = data.origin;
+        attackName = data.attackName;
+        damage = data.damage;
+        pushback = data.pushback;
+        launchForce = data.launchForce;
+        blockStunDuration = data.blockStunDuration;
+        hitStunDuration = data.hitStunDuration;
+        causeKnockdown = data.causeKnockdown;
+        attackType = data.attackType;
+    }
 }

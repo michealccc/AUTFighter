@@ -12,6 +12,7 @@ public class CharlieController : CharacterController
         //inputs.AssignInputs();
         rb.gravityScale *= 1.25f;
         airAttackPerformed = false;
+        SetAttackDataOrigin();
         //ChangeState(new IdleState());
     }
 

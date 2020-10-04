@@ -17,7 +17,7 @@ public class JumpState : ICharacterState
 
     public void Execute()
     {
-        if(character.IsLanding() && character.rb.velocity.y < 0)
+        if(character.IsLanding() && character.rb.velocity.y <= 0)
         {
             character.ChangeState(new IdleState());
         }

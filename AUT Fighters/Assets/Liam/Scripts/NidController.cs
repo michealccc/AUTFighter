@@ -63,11 +63,13 @@ public class NidController : CharacterController
             {
                 Debug.Log("Play crouch hit stun");
                 //anim.Play("NidCrouchHit", 0, 0);
+                hitSpark.Play();
                 anim.Play("NidCrouchHit", 0, 0);
             }
             else
             {
                 Debug.Log("Play stand hit stun");
+                hitSpark.Play();
                 anim.Play("NidStandHit", 0, 0);
             }
         }
@@ -133,9 +135,11 @@ public class NidController : CharacterController
         if (inputs.crouch.ReadValue<float>() != 0)
         {
             anim.Play("NidCrouchBlocking", 0, 0);
+            blockSpark.Play();
         }
         else
         {
+            blockSpark.Play();
             anim.Play("NidStandBlocking", 0, 0);
         }
 

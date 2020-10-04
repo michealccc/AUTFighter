@@ -11,7 +11,7 @@ public class IdleState : ICharacterState
         character.rb.velocity = new Vector2(0, character.rb.velocity.y);
         character.airAttackPerformed = false;
         character.anim.SetInteger("AttackStrength", 0);
-        //character.moveDir = 0;
+        character.moveDir = 0;
         //character.isMoving = false;
         Debug.Log("Entered Idle State");
     }
@@ -79,5 +79,11 @@ public class IdleState : ICharacterState
         {
             character.JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
+    }
+
+
+    public void FixedExecute()
+    {
+        //Not needed
     }
 }

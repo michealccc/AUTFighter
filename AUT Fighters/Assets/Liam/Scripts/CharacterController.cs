@@ -12,6 +12,8 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public BoxCollider2D throwBox;
     public CharacterController opponent;
     public AttackData attack;
+    public ParticleSystem blockSpark;
+    public ParticleSystem hitSpark;
 
     public ICharacterState currentState;
 
@@ -56,13 +58,15 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void Walk()
     {
-        rb.velocity = new Vector2(moveSpeed * moveDir * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(moveSpeed * moveDir, rb.velocity.y);
     }
 
     public void Jump()
     {
+        rb.velocity = new Vector2(0, 0);
         moveDir = inputs.walk.ReadValue<float>();
-        rb.velocity = new Vector2(jumpForceX * moveDir * Time.deltaTime, jumpForceY);
+        //rb.velocity = new Vector2(jumpForceX * moveDir * Time.fixedDeltaTime, jumpForceY);
+        rb.AddForce(new Vector2(jumpForceX * moveDir, jumpForceY), ForceMode2D.Impulse);
     }
 
     public void DirectionToBeFacing()
@@ -84,6 +88,8 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         {
             direction = newDirection;
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y, 1);
+            hitSpark.transform.localScale = new Vector3(Mathf.Abs(hitSpark.transform.localScale.x), Mathf.Abs(hitSpark.transform.localScale.y), Mathf.Abs(hitSpark.transform.localScale.z)) * direction;
+            blockSpark.transform.localScale = new Vector3(Mathf.Abs(blockSpark.transform.localScale.x), Mathf.Abs(blockSpark.transform.localScale.y), Mathf.Abs(blockSpark.transform.localScale.z)) * direction;
         }
     }
 

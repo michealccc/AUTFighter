@@ -66,4 +66,10 @@ public class CrouchState : ICharacterState
             character.JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
     }
+
+
+    public void FixedExecute()
+    {
+        //Do nothing
+    }
 }

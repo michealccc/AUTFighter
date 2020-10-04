@@ -53,12 +53,14 @@ public class CharlieController : CharacterController
             if (inputs.crouch.ReadValue<float>() != 0)
             {
                 Debug.Log("Play crouch hit stun");
+                hitSpark.Play();
                 //anim.Play("CrouchHit", 0, 0);
                 anim.Play("CrouchHit", 0, 0);
             }
             else
             {
                 Debug.Log("Play stand hit stun");
+                hitSpark.Play();
                 anim.Play("StandHit", 0, 0);
             }
         }
@@ -123,10 +125,12 @@ public class CharlieController : CharacterController
         if (inputs.crouch.ReadValue<float>() != 0)
         {
             anim.Play("CrouchBlocking", 0, 0);
+            blockSpark.Play();
         }
         else
         {
             anim.Play("StandBlocking", 0, 0);
+            blockSpark.Play();
         }
 
         stats.TakeDamage(theAtk.damage * 0.2f);

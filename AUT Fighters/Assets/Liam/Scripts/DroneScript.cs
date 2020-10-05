@@ -17,7 +17,7 @@ public class DroneScript : MonoBehaviour
     void Start()
     {
         startPoint = transform.position;
-        halfLife = timeToLive / 2;
+        //halfLife = timeToLive / 2;
         destReached = false;
         StartCoroutine(MoveToDest());
     }
@@ -27,21 +27,17 @@ public class DroneScript : MonoBehaviour
     {
         if(destReached)
         {
-            FireBeam();
-            Decay();
+            if(!beamFired)
+            {
+                StartCoroutine(FireBeam());
+            }
         }
     }
 
-    public void Decay()
+    private IEnumerator Decay(float destroyTime)
     {
-        if(timeToLive <= 0)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            timeToLive -= Time.deltaTime;
-        }
+        yield return new WaitForSeconds(destroyTime);
+        Destroy(gameObject);
     }
 
     public void SetDirection(float dir)
@@ -50,15 +46,15 @@ public class DroneScript : MonoBehaviour
         transform.localScale = new Vector2(direction * transform.localScale.x, transform.localScale.y);
     }
 
-    private void FireBeam()
+    private IEnumerator FireBeam()
     {
-        if(timeToLive <= halfLife && !beamFired)
-        {
-            DroneBeamScript droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
-            droneBeamInstance.transform.parent = transform;
-            droneBeamInstance.GetComponent<AttackData>().origin = origin;
-            beamFired = true;
-        }
+        beamFired = true;
+        yield return new WaitForSeconds(1f);
+        DroneBeamScript droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
+        droneBeamInstance.transform.parent = transform;
+        droneBeamInstance.GetComponent<AttackData>().origin = origin;
+
+        StartCoroutine(Decay(timeToLive));
     }
 
     private IEnumerator MoveToDest()

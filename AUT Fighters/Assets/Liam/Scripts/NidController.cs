@@ -63,12 +63,14 @@ public class NidController : CharacterController
             {
                 Debug.Log("Play crouch hit stun");
                 //anim.Play("NidCrouchHit", 0, 0);
+                hitSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
                 hitSpark.Play();
                 anim.Play("NidCrouchHit", 0, 0);
             }
             else
             {
                 Debug.Log("Play stand hit stun");
+                hitSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
                 hitSpark.Play();
                 anim.Play("NidStandHit", 0, 0);
             }
@@ -135,10 +137,12 @@ public class NidController : CharacterController
         if (inputs.crouch.ReadValue<float>() != 0)
         {
             anim.Play("NidCrouchBlocking", 0, 0);
+            blockSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
             blockSpark.Play();
         }
         else
         {
+            blockSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
             blockSpark.Play();
             anim.Play("NidStandBlocking", 0, 0);
         }
@@ -167,12 +171,12 @@ public class NidController : CharacterController
     //    stats.GainMeter(atkData.damage * 0.2f);
     //}
 
-    public override void OnThrown(CharacterController opponent)
+    public override void OnThrown(AttackData atkData)
     {
-        ChangeState(new ThrownState(opponent));
+        ChangeState(new ThrownState(atkData));
         anim.SetBool("IsThrown", true);
         anim.Play("NidGetThrown");
-        stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
+        stats.GainMeter(atkData.damage * 0.3f);
     }
 
     public override void OnVictory()

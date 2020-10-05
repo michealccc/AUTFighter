@@ -8,6 +8,7 @@ public class IdleState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        character.throwHurtbox.enabled = true;
         character.rb.velocity = new Vector2(0, character.rb.velocity.y);
         character.airAttackPerformed = false;
         character.anim.SetInteger("AttackStrength", 0);
@@ -19,7 +20,7 @@ public class IdleState : ICharacterState
     public void Execute()
     {
         character.DirectionToBeFacing();
-        character.rb.velocity = new Vector2(0, 0);
+        character.rb.velocity = new Vector2(0, character.rb.velocity.y);
 
         if(character.inputs.walk.ReadValue<float>() != 0)
         {
@@ -49,6 +50,7 @@ public class IdleState : ICharacterState
     {
         if (other.CompareTag("Attack"))
         {
+            Debug.Log("Being attacked!!!");
             AttackData atk = other.GetComponent<AttackData>();
             if (character.IsBlocking(atk))
             {
@@ -73,17 +75,12 @@ public class IdleState : ICharacterState
         //}
         else if(other.CompareTag("Throwbox"))
         {
-            character.OnThrown(other.GetComponentInParent<CharacterController>());
+            Debug.Log("Being thrown!!!");
+            character.OnThrown(other.GetComponent<AttackData>());
         }
         else if(other.CompareTag("Landing"))
         {
             character.JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
-    }
-
-
-    public void FixedExecute()
-    {
-        //Not needed
     }
 }

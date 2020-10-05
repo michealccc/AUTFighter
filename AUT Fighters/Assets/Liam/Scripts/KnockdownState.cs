@@ -10,6 +10,7 @@ public class KnockdownState : ICharacterState
     {
         Debug.Log("Entered Knockdown State");
         character = controller;
+        character.throwHurtbox.enabled = false;
         //character.anim.SetBool("IsKnockedDown", true);
         //character.rb.velocity = new Vector2(0, 0);
         //character.gameObject.GetComponent<BoxCollider2D>().enabled = false;

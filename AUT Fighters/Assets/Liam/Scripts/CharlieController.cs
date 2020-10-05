@@ -53,6 +53,7 @@ public class CharlieController : CharacterController
             if (inputs.crouch.ReadValue<float>() != 0)
             {
                 Debug.Log("Play crouch hit stun");
+                hitSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
                 hitSpark.Play();
                 //anim.Play("CrouchHit", 0, 0);
                 anim.Play("CrouchHit", 0, 0);
@@ -60,6 +61,7 @@ public class CharlieController : CharacterController
             else
             {
                 Debug.Log("Play stand hit stun");
+                hitSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
                 hitSpark.Play();
                 anim.Play("StandHit", 0, 0);
             }
@@ -125,11 +127,13 @@ public class CharlieController : CharacterController
         if (inputs.crouch.ReadValue<float>() != 0)
         {
             anim.Play("CrouchBlocking", 0, 0);
+            blockSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
             blockSpark.Play();
         }
         else
         {
             anim.Play("StandBlocking", 0, 0);
+            blockSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
             blockSpark.Play();
         }
 
@@ -157,12 +161,12 @@ public class CharlieController : CharacterController
     //    stats.GainMeter(atkData.damage * 0.2f);
     //}
 
-    public override void OnThrown(CharacterController opponent)
+    public override void OnThrown(AttackData atkData)
     {
-        ChangeState(new ThrownState(opponent));
+        ChangeState(new ThrownState(atkData));
         anim.SetBool("IsThrown", true);
         anim.Play("GetThrown");
-        stats.GainMeter(opponent.currentAttackData.damage * 0.3f);
+        stats.GainMeter(atkData.damage * 0.3f);
     }
 
     public override void OnVictory()
@@ -197,10 +201,8 @@ public class CharlieController : CharacterController
     public void SuperAttack()
     {
         FireballScript superInstance = Instantiate(superFireballPrefab, transform.position + new Vector3(direction * 5, 0, 0), transform.rotation);
-        superInstance.rb.velocity = new Vector2(direction * superInstance.moveSpeed * Time.deltaTime, 0);
+        superInstance.rb.velocity = new Vector2(direction * superInstance.moveSpeed * Time.fixedDeltaTime, 0);
         superInstance.SetDirection(direction);
-        //superInstance.transform.parent = transform;
-        //superInstance.transform.parent = transform;
         superInstance.GetComponent<AttackData>().origin = this;
         Debug.Log("Fireball Super");
     }

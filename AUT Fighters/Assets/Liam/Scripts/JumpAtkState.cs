@@ -10,6 +10,7 @@ public class JumpAtkState : ICharacterState
     {
         Debug.Log("Entering Jump Atk State");
         character = controller;
+        character.throwHurtbox.enabled = false;
         character.anim.SetBool("IsAttacking", true);
         character.anim.SetBool("IsJumping", true);
     }

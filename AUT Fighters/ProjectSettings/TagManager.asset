@@ -12,6 +12,7 @@ TagManager:
   - Special
   - Drone
   - Attack
+  - ThrowHurtbox
   layers:
   - Default
   - TransparentFX

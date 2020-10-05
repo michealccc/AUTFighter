@@ -9,6 +9,7 @@ public class WalkState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        character.throwHurtbox.enabled = true;
         character.anim.SetBool("IsWalking", true);
         Debug.Log("Entered Walking State");
     }
@@ -63,7 +64,7 @@ public class WalkState : ICharacterState
         }
         else if (other.CompareTag("Throwbox"))
         {
-            character.OnThrown(other.GetComponentInParent<CharacterController>());
+            character.OnThrown(other.GetComponent<AttackData>());
         }
         else if (other.CompareTag("Landing"))
         {

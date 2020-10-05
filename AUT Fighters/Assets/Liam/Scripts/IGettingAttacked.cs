@@ -6,5 +6,5 @@ public interface IGettingAttacked
 {
     void OnHit(AttackData theAtk);
     void OnBlock(AttackData theAtk);
-    void OnThrown(CharacterController opponent);
+    void OnThrown(AttackData atkData);
 }

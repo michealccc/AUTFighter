@@ -12,12 +12,14 @@ public class CrouchState : ICharacterState
         {
             character.anim.SetBool("IsCrouching", true);
         }
+        character.throwHurtbox.enabled = true;
         character.rb.velocity = new Vector2(0, 0);
         Debug.Log("Entered Crouch State");
     }
 
     public void Execute()
     {
+        character.DirectionToBeFacing();
         character.rb.velocity = new Vector2(0, 0);
         if(character.inputs.crouch.ReadValue<float>() == 0)
         {
@@ -59,17 +61,11 @@ public class CrouchState : ICharacterState
         }
         else if(other.CompareTag("Throwbox"))
         {
-            character.OnThrown(other.GetComponentInParent<CharacterController>());
+            character.OnThrown(other.GetComponent<AttackData>());
         }
         else if(other.CompareTag("Landing"))
         {
             character.JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
-    }
-
-
-    public void FixedExecute()
-    {
-        //Do nothing
     }
 }

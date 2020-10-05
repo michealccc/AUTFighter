@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atkData: {fileID: 0}
-  moveSpeed: 525
+  moveSpeed: 800
   timeToLive: 5
   rb: {fileID: 4530552117671946098}
 --- !u!50 &4530552117671946098

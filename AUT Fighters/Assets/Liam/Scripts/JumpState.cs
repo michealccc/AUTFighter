@@ -9,6 +9,7 @@ public class JumpState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        character.throwHurtbox.enabled = false;
         character.anim.SetBool("IsJumping", true);
         //character.ToggleGroundCollider();
         //character.Jump();

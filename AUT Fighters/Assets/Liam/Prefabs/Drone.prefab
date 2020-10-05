@@ -98,6 +98,6 @@ MonoBehaviour:
   droneBeamPrefab: {fileID: 4213646995073707880, guid: 31614a212cd97fd4e86e642b9e774b85,
     type: 3}
   direction: 0
-  timeToLive: 2
+  timeToLive: 1
   startPoint: {x: 0, y: 0}
   destination: {x: 0, y: 0}

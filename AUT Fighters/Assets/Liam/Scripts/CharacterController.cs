@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public Animator anim;
     public Rigidbody2D rb;
     public BoxCollider2D collider;
+    public BoxCollider2D throwHurtbox;
     public BoxCollider2D throwBox;
     public CharacterController opponent;
     public AttackData attack;
@@ -113,7 +114,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     {
         bool isBlock = false;
         //Moving in the opposite direciton they are facing
-        if (inputs.walk.ReadValue<float>() == (direction * -1))
+        if (inputs.walk.ReadValue<float>() == (direction * -1) && IsGrounded())
         {
             if(atkData.attackType == AttackType.LOW && inputs.crouch.ReadValue<float>() != 0)   //Crouching for a low attack
             {
@@ -141,7 +142,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
             anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
             //anim.SetBool("IsThrowing", true);
         }
-        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0 && stats.currentSuperMeter == stats.maxSuperMeter)
+        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0 && stats.currentSuperMeter == stats.maxSuperMeter && IsGrounded())
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.SUPER);
             stats.ResetSuperMeter();
@@ -193,9 +194,9 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void CheckThrowCollider()
     {
-        if(throwBox.IsTouching(opponent.GetComponent<BoxCollider2D>()))
+        if(throwBox.IsTouching(opponent.throwHurtbox))
         {
-            Debug.Log("We are throwing!!!");
+            Debug.Log("Got throw");
             anim.SetBool("IsThrowing", true);
         }
     }
@@ -256,7 +257,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
-        if(other.tag == "Attack")
+        if(other.tag == "Attack" || other.tag == "Throwbox")
         {
             Debug.Log(other.GetComponent<AttackData>().origin);
             if(other.GetComponent<AttackData>().origin == opponent)
@@ -323,7 +324,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     //    throw new System.NotImplementedException();
     //}
 
-    public virtual void OnThrown(CharacterController opponent)
+    public virtual void OnThrown(AttackData atkData)
     {
         throw new System.NotImplementedException();
     }

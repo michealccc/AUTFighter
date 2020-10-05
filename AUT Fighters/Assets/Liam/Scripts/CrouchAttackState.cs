@@ -10,6 +10,7 @@ public class CrouchAttackState : ICharacterState
     {
         Debug.Log("Entering Crouch Attack State");
         character = controller;
+        character.throwHurtbox.enabled = true;
         character.anim.SetBool("IsAttacking", true);
         character.anim.SetBool("IsCrouching", true);
         character.rb.velocity = new Vector2(0, 0);

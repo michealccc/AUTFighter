@@ -52,7 +52,6 @@ public class HitStunState : ICharacterState
 
     private void HitStunned()
     {
-        Debug.Log(hitDuration);
         if (hitDuration > 0)
         {
             hitDuration -= 0.05f;

@@ -15,7 +15,6 @@ public class NidController : CharacterController
     void Start()
     {
         //inputs.AssignInputs();
-        rb.gravityScale *= 1.25f;
         airAttackPerformed = false;
         SetAttackDataOrigin();
         //ChangeState(new IdleState());
@@ -37,6 +36,7 @@ public class NidController : CharacterController
         //opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
         //rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
         rb.velocity = new Vector2(0, 0);
+        audio.Play("HitSound");
         if(theAtk.causeKnockdown) //If the attack causes a knockdown
         {
             anim.Play("NidKnockdown");
@@ -130,6 +130,7 @@ public class NidController : CharacterController
     {
         anim.SetBool("InBlockStun", true);
         rb.velocity = new Vector2(0, 0);
+        audio.Play("BlockSound");
         //opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into blockstun state, change the argument for the constructor
         //rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
         ChangeState(new BlockStunState(theAtk));
@@ -208,6 +209,7 @@ public class NidController : CharacterController
         NidSuper superInstance = Instantiate(chairSuperPrefab, transform.position, transform.rotation);
         superInstance.transform.parent = transform;
         superInstance.origin = this;
+        audio.Play("SuperChairSound");
         Debug.Log("Chair Super");
     }
 }

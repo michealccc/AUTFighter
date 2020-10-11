@@ -21,6 +21,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public Characters characterID;  //Maybe separate this stuff into its down class
     public Sprite charactePortrait;
     public string characterName;
+    protected AudioManager audio;
 
     public PlayerStats stats;
 
@@ -44,6 +45,12 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     [SerializeField]
     public LayerMask platformLayer;
+
+    void Awake()
+    {
+        audio = FindObjectOfType<AudioManager>();
+        rb.gravityScale *= 3.75f;
+    }
 
     public void ChangeState(ICharacterState newState)
     {
@@ -140,7 +147,6 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         if (inputs.light.ReadValue<float>() != 0 && inputs.med.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
-            //anim.SetBool("IsThrowing", true);
         }
         else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0 && stats.currentSuperMeter == stats.maxSuperMeter && IsGrounded())
         {
@@ -257,16 +263,16 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
-        if(other.tag == "Attack" || other.tag == "Throwbox")
+        if (other.tag == "Attack" || other.tag == "Throwbox")
         {
             Debug.Log(other.GetComponent<AttackData>().origin);
-            if(other.GetComponent<AttackData>().origin == opponent)
+            if (other.GetComponent<AttackData>().origin == opponent)
             {
                 Debug.Log("Took an attack");
                 currentState.OnTriggerEnter(other);
             }
         }
-        else if(other.tag == "Ground" ||other.tag == "Wall")
+        else if (other.tag == "Ground" || other.tag == "Wall")
         {
             //Ignore if its the ground
         }
@@ -275,6 +281,15 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         //    Debug.Log("Trigger Collision");
         //    currentState.OnTriggerEnter(other);
         //}
+    }
+
+    void OnCollisionEnter2D(Collision2D collInfo)
+    {
+        if(collInfo.gameObject.tag == "Attack")
+        {
+            Debug.Log("Collision Info: " + collInfo.collider);
+        }
+        Debug.Log("My collider: " + collInfo.gameObject + " other = " + collInfo.otherCollider);
     }
 
     private AttackData FindAttackData(string atkName)

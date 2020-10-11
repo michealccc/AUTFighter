@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210302934543773916}
   - component: {fileID: 210302934543773917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LandingDetector
   m_TagString: Landing
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210302934869738878}
   - component: {fileID: 210302934869738879}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThrowPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 210302935130038963}
   - component: {fileID: 210302935130038960}
   - component: {fileID: 2559772380367640000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hitbox
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 210302935131748532}
   - component: {fileID: 210302935131748533}
   - component: {fileID: 5356273013703370897}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Throwbox
   m_TagString: Throwbox
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 210302935320503895}
   - component: {fileID: 210302935320503889}
   - component: {fileID: 210302935320503892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: San
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -477,8 +477,8 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 47cc20e77ae72234f8fef4eeececfecc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: -0.075348616, y: 0.03881359}
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.075348616, y: 0.027410269}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -489,7 +489,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0711532, y: 3.008667}
+  m_Size: {x: 1.0711532, y: 2.9858603}
   m_EdgeRadius: 0
 --- !u!114 &210302935320503889
 MonoBehaviour:
@@ -533,8 +533,8 @@ MonoBehaviour:
   - {fileID: 5460595062749960663, guid: 16ec7e6482a2396479331a8a1a35629f, type: 3}
   currentAttackData: {fileID: 0}
   moveSpeed: 7.5
-  jumpForceY: 65
-  jumpForceX: 20
+  jumpForceY: 120
+  jumpForceX: 29
   isMoving: 0
   isJumping: 0
   isCrouching: 0
@@ -629,7 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2008883068825226475}
   - component: {fileID: 423454641188054910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9109667340209633672}
   - component: {fileID: 2155631166189277191}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ThrowHurtbox
   m_TagString: ThrowHurtbox
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.23724055, y: 0.9419968}
@@ -815,6 +815,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockSpark
       objectReference: {fileID: 0}
+    - target: {fileID: 2711175368119294167, guid: 627265ad69ecd94449a9237173f4abb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 627265ad69ecd94449a9237173f4abb9, type: 3}
 --- !u!4 &1987429747172170237 stripped
@@ -910,6 +915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HitSpark
+      objectReference: {fileID: 0}
+    - target: {fileID: 838737668510000601, guid: 0fe85aa854d9b524c850b8a904b21778,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fe85aa854d9b524c850b8a904b21778, type: 3}

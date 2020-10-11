@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6012014687317747265}
   - component: {fileID: 8516655246751999795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ThrowHurtbox
   m_TagString: ThrowHurtbox
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 3951515819069901484}
   - component: {fileID: 6509746955161523422}
   - component: {fileID: 6394092474089173644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Charlie
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -275,8 +275,8 @@ MonoBehaviour:
   - {fileID: 5460595062749960663, guid: d2137a03219cf9946a2451d2b3af021e, type: 3}
   currentAttackData: {fileID: 0}
   moveSpeed: 7
-  jumpForceY: 70
-  jumpForceX: 19
+  jumpForceY: 120
+  jumpForceX: 28
   isMoving: 0
   isJumping: 0
   isCrouching: 0
@@ -387,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6509746956093440598}
   - component: {fileID: 6509746956093440599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LandingDetector
   m_TagString: Landing
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6509746956422051828}
   - component: {fileID: 6509746956422051829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThrowPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 6509746956580588094}
   - component: {fileID: 6509746956580588095}
   - component: {fileID: 1743232814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Throwbox
   m_TagString: Throwbox
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 6509746956580982841}
   - component: {fileID: 6509746956580982842}
   - component: {fileID: 7092887775185645242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hitbox
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4853927927626776161}
   - component: {fileID: 6727261817406772724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,6 +814,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HitSpark
       objectReference: {fileID: 0}
+    - target: {fileID: 838737668510000601, guid: 0fe85aa854d9b524c850b8a904b21778,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fe85aa854d9b524c850b8a904b21778, type: 3}
 --- !u!4 &1922604909887788036 stripped
@@ -914,6 +919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlockSpark
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711175368119294167, guid: 627265ad69ecd94449a9237173f4abb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 627265ad69ecd94449a9237173f4abb9, type: 3}

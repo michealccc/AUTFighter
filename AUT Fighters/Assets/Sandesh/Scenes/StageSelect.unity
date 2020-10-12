@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 16468062}
   - component: {fileID: 16468061}
   - component: {fileID: 16468060}
+  - component: {fileID: 16468063}
   m_Layer: 5
   m_Name: StageOneButton
   m_TagString: Untagged
@@ -203,15 +204,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1992118577}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1992118578}
+        m_MethodName: WellesleyImage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MatchScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &16468061
@@ -251,6 +252,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16468058}
   m_CullTransparentMesh: 0
+--- !u!114 &16468063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16468058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6090f0c2a33e4ae99f0639b806f3d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: Backgrounds
+  backgrounds: []
 --- !u!1 &22728684
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +278,7 @@ GameObject:
   - component: {fileID: 22728688}
   - component: {fileID: 22728687}
   - component: {fileID: 22728686}
+  - component: {fileID: 22728689}
   m_Layer: 5
   m_Name: StageSixButton
   m_TagString: Untagged
@@ -333,15 +349,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1992118577}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1992118578}
+        m_MethodName: SymondStreetImageChanger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MatchScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &22728687
@@ -381,6 +397,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22728684}
   m_CullTransparentMesh: 0
+--- !u!114 &22728689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22728684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6090f0c2a33e4ae99f0639b806f3d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: Backgrounds
+  backgrounds: []
 --- !u!1 &300318676
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +958,7 @@ GameObject:
   - component: {fileID: 540230772}
   - component: {fileID: 540230771}
   - component: {fileID: 540230770}
+  - component: {fileID: 540230773}
   m_Layer: 5
   m_Name: StageFiveButton
   m_TagString: Untagged
@@ -998,15 +1029,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1992118577}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1992118578}
+        m_MethodName: AlbertParkImageChanger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MatchScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &540230771
@@ -1046,6 +1077,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540230768}
   m_CullTransparentMesh: 0
+--- !u!114 &540230773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540230768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6090f0c2a33e4ae99f0639b806f3d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: Backgrounds
+  backgrounds: []
 --- !u!1 &575753046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1103,7 @@ GameObject:
   - component: {fileID: 575753050}
   - component: {fileID: 575753049}
   - component: {fileID: 575753048}
+  - component: {fileID: 575753051}
   m_Layer: 5
   m_Name: StageTwoButton
   m_TagString: Untagged
@@ -1128,15 +1174,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1992118577}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1992118578}
+        m_MethodName: StPaulImageChanger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MatchScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &575753049
@@ -1176,6 +1222,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575753046}
   m_CullTransparentMesh: 0
+--- !u!114 &575753051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575753046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6090f0c2a33e4ae99f0639b806f3d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: Backgrounds
+  backgrounds: []
 --- !u!1 &745832744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,6 +2117,7 @@ GameObject:
   - component: {fileID: 1992118576}
   - component: {fileID: 1992118575}
   - component: {fileID: 1992118577}
+  - component: {fileID: 1992118578}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -2096,7 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2132,6 +2193,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea2ca37757cdd9429a153c96f84119b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1992118578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992118573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6090f0c2a33e4ae99f0639b806f3d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: Backgrounds
+  backgrounds: []
 --- !u!1 &2008487552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2379,7 @@ GameObject:
   - component: {fileID: 2013935909}
   - component: {fileID: 2013935908}
   - component: {fileID: 2013935907}
+  - component: {fileID: 2013935910}
   m_Layer: 5
   m_Name: StageThreeButton
   m_TagString: Untagged
@@ -2374,15 +2450,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1992118577}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1992118578}
+        m_MethodName: LectureRoomImageChanger
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MatchScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2013935908
@@ -2422,3 +2498,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013935905}
   m_CullTransparentMesh: 0
+--- !u!114 &2013935910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013935905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6090f0c2a33e4ae99f0639b806f3d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceName: Backgrounds
+  backgrounds: []

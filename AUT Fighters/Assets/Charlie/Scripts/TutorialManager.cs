@@ -87,6 +87,10 @@ public class TutorialManager : MonoBehaviour
         {
             grabPhase();        // Grab           
         }
+        else
+        {
+            complete();
+        }
     }
 
     public void movementPhase()
@@ -166,6 +170,14 @@ public class TutorialManager : MonoBehaviour
         if (Keyboard.current[Key.U].wasPressedThisFrame && Keyboard.current[Key.I].wasPressedThisFrame)
         {
             popUpIndex++;
+        }
+    }
+
+    public void complete()
+    {
+        if (Keyboard.current[Key.Enter].wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

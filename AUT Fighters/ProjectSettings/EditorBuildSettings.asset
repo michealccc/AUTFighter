@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sandesh/Scenes/StageSelect.unity
     guid: 51659f5167a7842219f9fe8ca0b3666c
+  - enabled: 1
+    path: Assets/Charlie/Scenes/MatchScene 1.unity
+    guid: eea75370958c7134fb7623d4a0e8318f
   m_configObjects: {}

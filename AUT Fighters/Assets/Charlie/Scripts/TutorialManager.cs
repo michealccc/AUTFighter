@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -14,8 +12,6 @@ public class TutorialManager : MonoBehaviour
     private bool rightKeyPressed;
     private bool jumpKeyPressed;
     private bool crouchKeyPressed;
-    private bool superUsed;
-    private bool grabHit;
 
     private float previousHp;
     private float currentHp;
@@ -34,8 +30,6 @@ public class TutorialManager : MonoBehaviour
         rightKeyPressed = false;
         jumpKeyPressed = false;
         crouchKeyPressed = false;
-        superUsed = false;
-        grabHit = false;
 
         previousHp = mm.p2.stats.maxHp;
         currentHp = mm.p2.stats.currentHp;
@@ -82,17 +76,7 @@ public class TutorialManager : MonoBehaviour
             else if (Keyboard.current.jKey.wasPressedThisFrame)
             {
                 lastHitKey1 = KeyCode.J;    // Special atk
-            }
-            else if (Keyboard.current.jKey.wasPressedThisFrame && Keyboard.current.oKey.wasPressedThisFrame)
-            {
-                lastHitKey1 = KeyCode.J;    // Super atk
-                lastHitKey2 = KeyCode.O;
-            }
-            else if (Keyboard.current.uKey.wasPressedThisFrame && Keyboard.current.iKey.wasPressedThisFrame)
-            {
-                lastHitKey1 = KeyCode.U;    // Grab
-                lastHitKey2 = KeyCode.I;
-            }
+            }                     
         }
     }
 
@@ -226,7 +210,6 @@ public class TutorialManager : MonoBehaviour
         {
             if (Math.Truncate(mm.p1.stats.currentSuperMeter) == 5)
             {
-                superUsed = true;
                 previousHp = currentHp;
                 popUpIndex++;
             }

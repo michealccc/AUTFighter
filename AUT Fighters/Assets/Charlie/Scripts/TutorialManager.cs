@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,26 +14,31 @@ public class TutorialManager : MonoBehaviour
     private bool rightKeyPressed;
     private bool jumpKeyPressed;
     private bool crouchKeyPressed;
-    private bool lightAtkHit;
-    private bool medAtkHit;
-    private bool heavyAtkHit;
-    private bool specialAtkHit;
-    private bool rageAtkHit;
+    private bool superUsed;
     private bool grabHit;
+
+    private float previousHp;
+    private float currentHp;
+
+    public GameObject match;
+    public MatchManager mm;
+
+    private KeyCode lastHitKey1;
+    private KeyCode lastHitKey2;
 
     private void Start()
     {
         popUpIndex = 0;
+
         leftKeyPressed = false;
         rightKeyPressed = false;
         jumpKeyPressed = false;
         crouchKeyPressed = false;
-        lightAtkHit = false;
-        medAtkHit = false;
-        heavyAtkHit = false;
-        specialAtkHit = false;
-        rageAtkHit = false;
+        superUsed = false;
         grabHit = false;
+
+        previousHp = mm.p2.stats.maxHp;
+        currentHp = mm.p2.stats.currentHp;
     }
 
     private void Update()
@@ -49,6 +55,43 @@ public class TutorialManager : MonoBehaviour
             {
                 // Hide all other instructions
                 popUps[i].SetActive(false);
+            }
+        }
+    }
+
+    private void OnGUI()
+    {
+        // Get current hp of player 2
+        currentHp = mm.p2.stats.currentHp;
+
+        // Get last key hit
+        if (Keyboard.current.anyKey.wasPressedThisFrame)
+        {
+            if (Keyboard.current.uKey.wasPressedThisFrame)
+            {
+                lastHitKey1 = KeyCode.U;    // Light atk
+            } 
+            else if (Keyboard.current.iKey.wasPressedThisFrame)
+            {
+                lastHitKey1 = KeyCode.I;    // Medium atk
+            }
+            else if (Keyboard.current.oKey.wasPressedThisFrame)
+            {
+                lastHitKey1 = KeyCode.O;    // Heavy atk
+            }
+            else if (Keyboard.current.jKey.wasPressedThisFrame)
+            {
+                lastHitKey1 = KeyCode.J;    // Special atk
+            }
+            else if (Keyboard.current.jKey.wasPressedThisFrame && Keyboard.current.oKey.wasPressedThisFrame)
+            {
+                lastHitKey1 = KeyCode.J;    // Super atk
+                lastHitKey2 = KeyCode.O;
+            }
+            else if (Keyboard.current.uKey.wasPressedThisFrame && Keyboard.current.iKey.wasPressedThisFrame)
+            {
+                lastHitKey1 = KeyCode.U;    // Grab
+                lastHitKey2 = KeyCode.I;
             }
         }
     }
@@ -81,7 +124,7 @@ public class TutorialManager : MonoBehaviour
         } 
         else if (phase == 6)
         {
-            rageAtkPhase();     // Rage attack           
+            superAtkPhase();    // Super attack           
         }
         else if (phase == 7)
         {
@@ -89,7 +132,7 @@ public class TutorialManager : MonoBehaviour
         }
         else
         {
-            complete();
+            complete();         // Tutorial complete
         }
     }
 
@@ -126,50 +169,79 @@ public class TutorialManager : MonoBehaviour
     }
 
     public void lightAtkPhase()
-    {
-        if (Keyboard.current[Key.U].wasPressedThisFrame)
+    {       
+        if (currentHp != previousHp)
         {
-            popUpIndex++;
+            if (lastHitKey1 == KeyCode.U)
+            {
+                previousHp = currentHp;
+                popUpIndex++;
+            }           
         }
     }
 
     public void medAtkPhase()
     {
-        if (Keyboard.current[Key.I].wasPressedThisFrame)
+        if (currentHp != previousHp)
         {
-            popUpIndex++;
+            if (lastHitKey1 == KeyCode.I)
+            {
+                previousHp = currentHp;
+                popUpIndex++;
+            }
         }
     }
 
     public void heavyAtkPhase()
     {
-        if (Keyboard.current[Key.O].wasPressedThisFrame)
+        if (currentHp != previousHp)
         {
-            popUpIndex++;
+            if (lastHitKey1 == KeyCode.O)
+            {
+                previousHp = currentHp;
+                popUpIndex++;
+            }
         }
     }
 
     public void specialAtkPhase()
     {
-        if (Keyboard.current[Key.J].wasPressedThisFrame)
+        if (currentHp != previousHp)
         {
-            popUpIndex++;
+            if (lastHitKey1 == KeyCode.J)
+            {
+                previousHp = currentHp;
+
+                mm.p1.stats.ResetSuperMeter();
+                mm.p1.stats.GainMeter(100f);
+
+                popUpIndex++;
+            }
         }
     }
 
-    public void rageAtkPhase()
+    public void superAtkPhase()
     {
-        if (Keyboard.current[Key.J].wasPressedThisFrame && Keyboard.current[Key.O].wasPressedThisFrame)
+        if (currentHp != previousHp)
         {
-            popUpIndex++;
+            if (Math.Truncate(mm.p1.stats.currentSuperMeter) == 5)
+            {
+                superUsed = true;
+                previousHp = currentHp;
+                popUpIndex++;
+            }
         }
     }
 
     public void grabPhase()
     {
-        if (Keyboard.current[Key.U].wasPressedThisFrame && Keyboard.current[Key.I].wasPressedThisFrame)
+        if (currentHp != previousHp)
         {
-            popUpIndex++;
+            if (lastHitKey1 == KeyCode.U)
+            {
+                previousHp = currentHp;
+                popUpIndex++;
+            }
         }
     }
 

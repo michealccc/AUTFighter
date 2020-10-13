@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 131087073}
   - component: {fileID: 131087072}
   m_Layer: 0
-  m_Name: Rage
+  m_Name: Super
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,10 +524,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press O and J together to perform a rage attack.
+  m_text: 'Press O and J together to perform a super attack.
 
-    Rage attacks can
-    only be performed when your rage meter fills up.
+    Super attacks can
+    only be performed when your meter fills up.
 
 
 '
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 115
+  m_firstOverflowCharacterIndex: 112
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -599,10 +599,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 131087072}
-    characterCount: 116
+    characterCount: 113
     spriteCount: 0
-    spaceCount: 23
-    wordCount: 22
+    spaceCount: 22
+    wordCount: 21
     linkCount: 0
     lineCount: 3
     pageCount: 1
@@ -2379,6 +2379,8 @@ MonoBehaviour:
   - {fileID: 131087070}
   - {fileID: 365819973}
   - {fileID: 1739048593}
+  match: {fileID: 1866880765}
+  mm: {fileID: 1866880766}
 --- !u!1 &1100304549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3979,7 +3981,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Well done. \nYou have completed the tutorial!"
+  m_text: 'Well done. You have completed the tutorial!
+
+    Press Enter to return
+    to the main menu.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -4048,10 +4053,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1739048595}
-    characterCount: 44
+    characterCount: 84
     spriteCount: 0
-    spaceCount: 7
-    wordCount: 7
+    spaceCount: 14
+    wordCount: 15
     linkCount: 0
     lineCount: 2
     pageCount: 1

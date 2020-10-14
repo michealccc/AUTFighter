@@ -15,6 +15,7 @@ public class MatchManager : MonoBehaviour
     public Animator hudAnimator;
     public CameraController camera;
     public TextMeshProUGUI gameEndText;
+    private AudioManager audio;
 
     private bool gameEnded = false;
 
@@ -28,7 +29,7 @@ public class MatchManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        audio = FindObjectOfType<AudioManager>();
         CharacterChoice.p1Character = Characters.CHARLIE;
         CharacterChoice.p2Character = Characters.SAN;
         p1Score = 0;
@@ -83,6 +84,7 @@ public class MatchManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         hudAnimator.Play("ReadyText");
+        //audio.Play("Countdown");
         roundEnded = false;
 
         ResetCharacter(p1);
@@ -102,6 +104,7 @@ public class MatchManager : MonoBehaviour
 
     public void RoundStart()
     {
+        audio.Play("Fight");
         roundEnded = false;
         p1.ChangeState(new IdleState());
         p2.ChangeState(new IdleState());
@@ -110,13 +113,15 @@ public class MatchManager : MonoBehaviour
     public void GameEnd()
     {
         Debug.Log("Game ended");
-        if(p1Score > p2Score)
+        if(p1Score > p2Score)   //If player 1 wins
         {
             gameEndText.SetText("Player 1 WINS!");
+            hudAnimator.GetComponent<HUDAnimationsScript>().winner = "p1";
         }
-        else
+        else                    //If player 2 wins
         {
             gameEndText.SetText("Player 2 WINS!");
+            hudAnimator.GetComponent<HUDAnimationsScript>().winner = "p2";
         }
         hudAnimator.SetBool("IsGameEnded", true);
     }
@@ -146,6 +151,7 @@ public class MatchManager : MonoBehaviour
                 }
                 else                                               //Double KO
                 {
+                    audio.Play("Tie");
                     p1.OnKO();
                     p2.OnKO();
                     //Also update round counter
@@ -166,6 +172,7 @@ public class MatchManager : MonoBehaviour
     {
         Debug.Log("ended round");
         hudAnimator.Play("KOText");
+        audio.Play("KO");
         if(gameEnded)
         {
             hudAnimator.SetBool("IsGameEnded", true);

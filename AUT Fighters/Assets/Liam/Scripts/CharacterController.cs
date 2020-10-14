@@ -215,27 +215,35 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void JumpLandCheck(GameObject opponent)
     {
-        Debug.Log("Checking jump land!");
-        Vector2 futurePos = (Vector2)opponent.transform.position + opponent.GetComponent<Rigidbody2D>().velocity.normalized;        //Get future position of the falling character
-        float xPosDiff = futurePos.x - transform.position.x;                                                                //Difference on the x-axis between this character and the opponent - to get if they're landing on the left or right side
-        if(xPosDiff <= 0)   //Left side landing
+        if(opponent.GetComponent<Rigidbody2D>().velocity.y < 0)
         {
-            if(Mathf.Abs(xPosDiff) <= 1)
+            Debug.Log("Checking jump land!");
+            //Vector2 futurePos = (Vector2)opponent.transform.position + opponent.GetComponent<Rigidbody2D>().velocity.normalized;        //Get future position of the falling character
+            Vector2 oppPos = opponent.transform.position;
+            float xPosDiff = oppPos.x - transform.position.x;                                                                //Difference on the x-axis between this character and the opponent - to get if they're landing on the left or right side
+            if (xPosDiff <= 0)   //Left side landing
             {
-                futurePos.x = transform.position.x - 1.1f;
-            }
-        }
-        else                //Right side landing
-        {
-            if (Mathf.Abs(xPosDiff) <= 1)
-            {
-                futurePos.x = transform.position.x + 1.1f;
-            }
-        }
+                //if(Mathf.Abs(xPosDiff) <= 1)
+                //{
 
-        //Move the position of the falling opponent into the future position (this should force the collider of the falling opponent into the collider of other character causing them to push each other away)
-        opponent.transform.position = futurePos;
-        opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+                //}
+                opponent.transform.position = new Vector2(opponent.transform.position.x - opponent.GetComponent<BoxCollider2D>().bounds.extents.x, opponent.transform.position.y - 1);
+            }
+            else                //Right side landing
+            {
+                //if (Mathf.Abs(xPosDiff) <= 1)
+                //{
+
+                //}
+                opponent.transform.position = new Vector2(opponent.transform.position.x + opponent.GetComponent<BoxCollider2D>().bounds.extents.x, opponent.transform.position.y - 1);
+            }
+
+            //rb.AddForce(new Vector2(opponent.GetComponent<Rigidbody2D>().velocity.x * 2000, 0), ForceMode2D.Force);
+
+            //Move the position of the falling opponent into the future position (this should force the collider of the falling opponent into the collider of other character causing them to push each other away)
+            //opponent.transform.position = futurePos;
+            //opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+        }
     }
 
     private bool CheckNextToWall(Vector2 direction, Vector2 origin, float dist)
@@ -263,7 +271,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
-        if (other.tag == "Attack" || other.tag == "Throwbox")
+        if (other.CompareTag("Attack") || other.CompareTag("Throwbox"))
         {
             Debug.Log(other.GetComponent<AttackData>().origin);
             if (other.GetComponent<AttackData>().origin == opponent)
@@ -272,9 +280,13 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
                 currentState.OnTriggerEnter(other);
             }
         }
-        else if (other.tag == "Ground" || other.tag == "Wall")
+        else if (other.CompareTag("Ground") || other.CompareTag("Wall"))
         {
             //Ignore if its the ground
+        }
+        else if(other.CompareTag("Landing"))
+        {
+            JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
         //else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
         //{
@@ -283,14 +295,14 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         //}
     }
 
-    void OnCollisionEnter2D(Collision2D collInfo)
-    {
-        if(collInfo.gameObject.tag == "Attack")
-        {
-            Debug.Log("Collision Info: " + collInfo.collider);
-        }
-        Debug.Log("My collider: " + collInfo.gameObject + " other = " + collInfo.otherCollider);
-    }
+    //void OnCollisionEnter2D(Collision2D collInfo)
+    //{
+    //    if(collInfo.gameObject.tag == "Attack")
+    //    {
+    //        Debug.Log("Collision Info: " + collInfo.collider);
+    //    }
+    //    Debug.Log("My collider: " + collInfo.gameObject + " other = " + collInfo.otherCollider);
+    //}
 
     private AttackData FindAttackData(string atkName)
     {

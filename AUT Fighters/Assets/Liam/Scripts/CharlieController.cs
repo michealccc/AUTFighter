@@ -27,6 +27,7 @@ public class CharlieController : CharacterController
         //opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into hitstun state, change the argument for the constructor
         //rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
         rb.velocity = new Vector2(0, 0);
+        audio.Play("Grunt2");
         if (theAtk.causeKnockdown) //If the attack causes a knockdown
         {
             anim.Play("Knockdown");
@@ -53,7 +54,6 @@ public class CharlieController : CharacterController
             {
                 Debug.Log("Play crouch hit stun");
                 hitSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
-                hitSpark.Play();
                 //anim.Play("CrouchHit", 0, 0);
                 anim.Play("CrouchHit", 0, 0);
             }
@@ -61,11 +61,11 @@ public class CharlieController : CharacterController
             {
                 Debug.Log("Play stand hit stun");
                 hitSpark.transform.position = new Vector2(blockSpark.transform.position.x, collider.bounds.center.y);
-                hitSpark.Play();
                 anim.Play("StandHit", 0, 0);
             }
         }
 
+        hitSpark.Play();
         stats.TakeDamage(theAtk.damage);
         stats.GainMeter(theAtk.damage * 0.3f);
     }
@@ -119,6 +119,7 @@ public class CharlieController : CharacterController
     {
         anim.SetBool("InBlockStun", true);
         rb.velocity = new Vector2(0, 0);
+        audio.Play("BlockSound");
         //opponent.rb.AddForce(transform.right * -opponent.direction * opponent.currentAttackData.pushback, ForceMode2D.Impulse); //Maybe shift this into blockstun state, change the argument for the constructor
         //rb.AddForce(transform.right * -direction * opponent.currentAttackData.pushforward, ForceMode2D.Impulse);
         ChangeState(new BlockStunState(theAtk));
@@ -183,10 +184,12 @@ public class CharlieController : CharacterController
         anim.Play("KO");
     }
 
+
     public void SpawnDrone()
     {
         if(FindObjectOfType<DroneScript>() == null)
         {
+            //Check directional input here and set location for drone accordingly
             DroneScript droneInstance = Instantiate(dronePrefab, transform.position, transform.rotation);
             droneInstance.SetDirection(direction);
             droneInstance.destination = transform.position + new Vector3(direction * 2f, 0, 0);
@@ -203,6 +206,7 @@ public class CharlieController : CharacterController
         superInstance.rb.velocity = new Vector2(direction * superInstance.moveSpeed * Time.fixedDeltaTime, 0);
         superInstance.SetDirection(direction);
         superInstance.GetComponent<AttackData>().origin = this;
+        audio.Play("FireballSound");
         Debug.Log("Fireball Super");
     }
 }

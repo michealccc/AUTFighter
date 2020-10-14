@@ -13,7 +13,13 @@ public class DroneScript : MonoBehaviour
     private float halfLife;
     private bool destReached;
     private bool beamFired;
+    private AudioManager audio;
     // Start is called before the first frame update
+    void Awake()
+    {
+        audio = FindObjectOfType<AudioManager>();
+    }
+
     void Start()
     {
         startPoint = transform.position;
@@ -53,6 +59,7 @@ public class DroneScript : MonoBehaviour
         DroneBeamScript droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
         droneBeamInstance.transform.parent = transform;
         droneBeamInstance.GetComponent<AttackData>().origin = origin;
+        audio.Play("LaserSound");
 
         StartCoroutine(Decay(timeToLive));
     }

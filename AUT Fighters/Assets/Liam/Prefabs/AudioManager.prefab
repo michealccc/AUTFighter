@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5293034197453713573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5293034197453713574}
+  - component: {fileID: 5293034197453713575}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5293034197453713574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5293034197453713573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8465284, y: 0.97502863, z: -14.857072}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5293034197453713575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5293034197453713573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc993665e0a171848bb2e0c1c2c0c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BlockSound
+    clip: {fileID: 8300000, guid: 2e12e2692e79d8746b7e0016eda9e75c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: HitSound
+    clip: {fileID: 8300000, guid: 52ddbf4b3076a91498b455b382fa9835, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: LaserSound
+    clip: {fileID: 8300000, guid: 416831623643cd34eae077aee0d5e94d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: ChairSuperSound
+    clip: {fileID: 8300000, guid: 44ca78f50f07a0140be35de1e9b4f115, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: ChairThrowSound
+    clip: {fileID: 8300000, guid: 435dbb3f214a8be4593e72693350f0ac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: FireballSound
+    clip: {fileID: 8300000, guid: 416831623643cd34eae077aee0d5e94d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Grunt1
+    clip: {fileID: 8300000, guid: b45c1687cf105be46ba77a818934fa99, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Grunt2
+    clip: {fileID: 8300000, guid: 4bbdf9983644f764dbbf8021f91b8a17, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Countdown
+    clip: {fileID: 8300000, guid: f006a0660f8ffb740a661334d96846de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Fight
+    clip: {fileID: 8300000, guid: 9a1bf19b38510e54bafb902fa8025dc0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: FinalRound
+    clip: {fileID: 8300000, guid: a308dba5ad844d844957546dc89e10c6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 9cfeaf089e6efd34682db260e754c0da, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: KO
+    clip: {fileID: 8300000, guid: a3dc2c6b08c739f49a76b66283bc0b59, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Player1Select
+    clip: {fileID: 8300000, guid: e51e812a5888122449d0070dcf83e129, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Player2Select
+    clip: {fileID: 8300000, guid: b529b1e2fe6842546bb336da2c4c13b3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: PrepareYourself
+    clip: {fileID: 8300000, guid: ec332e080b42d424189fa4a4c1511340, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Round1
+    clip: {fileID: 8300000, guid: 41fa2a5fde54e664a9bdc3d3164c4526, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Round2
+    clip: {fileID: 8300000, guid: 1c95d79b706713844a1c0b6bbdb6574f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Round3
+    clip: {fileID: 8300000, guid: b709e6b47f8aad24d829d010e49c1906, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Tie
+    clip: {fileID: 8300000, guid: 8a0c8e0f415e99e4b82e3f8c629c549c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: WinnerPlayer1
+    clip: {fileID: 8300000, guid: 628aa80416e6dec4cbb7ea8ea05e535c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: WinnerPlayer2
+    clip: {fileID: 8300000, guid: 54550d58708ca174280a9e75abdfaef3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: YouLose
+    clip: {fileID: 8300000, guid: a0c4676ce14ad3b4b9837839b57bad76, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: YouWin
+    clip: {fileID: 8300000, guid: bf57f5cd9eebefa418d9c95292af7aa6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}

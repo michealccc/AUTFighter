@@ -10,6 +10,9 @@ TagManager:
   - Throwbox
   - Landing
   - Special
+  - Drone
+  - Attack
+  - ThrowHurtbox
   layers:
   - Default
   - TransparentFX
@@ -20,8 +23,8 @@ TagManager:
   - 
   - 
   - Floor
-  - 
-  - 
+  - LayerMain
+  - LayerThrow
   - 
   - 
   - 

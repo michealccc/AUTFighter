@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IGettingAttacked
 {
-    void OnHit(CharacterController opponent);
-    void OnBlock(CharacterController opponent);
-    void OnThrown(CharacterController opponent);
+    void OnHit(AttackData theAtk);
+    void OnBlock(AttackData theAtk);
+    void OnThrown(AttackData atkData);
 }

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4530552117671946099}
   - component: {fileID: 4530552117671946098}
   - component: {fileID: 4530552117671946109}
+  - component: {fileID: -5286771735340621147}
   m_Layer: 0
   m_Name: Fireball
-  m_TagString: Special
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa82fe204bee57439ceef84299e0d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkData: {fileID: 5460595062749960663, guid: 4f3dc689cb856a44f9a9c2a7d025e980, type: 3}
-  moveSpeed: 525
+  atkData: {fileID: 0}
+  moveSpeed: 800
   timeToLive: 5
   rb: {fileID: 4530552117671946098}
 --- !u!50 &4530552117671946098
@@ -168,3 +169,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4254147, y: 0.13328016}
   m_EdgeRadius: 0
+--- !u!114 &-5286771735340621147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530552117671946108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 0}
+  attackName: CharlieSuper
+  damage: 200
+  pushback: 0
+  pushforward: 6
+  launchForce: {x: 10, y: 10}
+  blockStunDuration: 3
+  hitStunDuration: 0
+  causeKnockdown: 1
+  attackType: 0

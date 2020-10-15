@@ -43,11 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 0}
   attackName: NidThrow
   damage: 60
   pushback: 0
   pushforward: 0
-  launchForce: {x: 30, y: 50}
+  launchForce: {x: 40, y: 60}
   blockStunDuration: 0
   hitStunDuration: 0
   causeKnockdown: 1

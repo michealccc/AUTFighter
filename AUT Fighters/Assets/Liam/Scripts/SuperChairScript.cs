@@ -7,27 +7,18 @@ public class SuperChairScript : Special
     public float moveSpeed;
     public float timeToLive;
     public Rigidbody2D rb;
-    public GameObject self;
+    public CharacterController origin;
 
-    void Update()
+    void Start()
     {
-        DestroySelf();
+        StartCoroutine(Decay(timeToLive));
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.GetComponentInParent<CharacterController>().gameObject != self)
+        if (other.CompareTag("Player") && other.GetComponentInParent<CharacterController>() != origin)
         {
             Destroy(gameObject);
         };
-    }
-
-    private void DestroySelf()
-    {
-        if (timeToLive <= 0)
-        {
-            Destroy(gameObject);
-        }
-        timeToLive -= Time.deltaTime;
     }
 }

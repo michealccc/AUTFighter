@@ -8,10 +8,11 @@ public class IdleState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        character.throwHurtbox.enabled = true;
         character.rb.velocity = new Vector2(0, character.rb.velocity.y);
         character.airAttackPerformed = false;
         character.anim.SetInteger("AttackStrength", 0);
-        //character.moveDir = 0;
+        character.moveDir = 0;
         //character.isMoving = false;
         Debug.Log("Entered Idle State");
     }
@@ -19,7 +20,7 @@ public class IdleState : ICharacterState
     public void Execute()
     {
         character.DirectionToBeFacing();
-        character.rb.velocity = new Vector2(0, 0);
+        character.rb.velocity = new Vector2(0, character.rb.velocity.y);
 
         if(character.inputs.walk.ReadValue<float>() != 0)
         {
@@ -47,33 +48,35 @@ public class IdleState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-            if (character.IsBlocking(other.GetComponentInParent<CharacterController>().currentAttackData))
+            Debug.Log("Being attacked!!!");
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
             {
-                character.OnBlock(other.GetComponentInParent<CharacterController>());
+                character.OnBlock(atk);
             }
             else
             {
-                character.OnHit(other.GetComponentInParent<CharacterController>());
-            }
-            Debug.Log(character.GetHashCode() + "Contact made in idle");
-        }
-        else if(other.CompareTag("Special"))
-        {
-            Debug.Log("Hit by special");
-            if (character.IsBlocking(other.GetComponent<Special>().atkData))
-            {
-                character.OnBlock(other.GetComponent<Special>().atkData);
-            }
-            else
-            {
-                character.OnHit(other.GetComponent<Special>().atkData);
+                character.OnHit(atk);
             }
         }
+        //else if(other.CompareTag("Special"))
+        //{
+        //    Debug.Log("Hit by special");
+        //    if (character.IsBlocking(other.GetComponent<Special>().atkData))
+        //    {
+        //        character.OnBlock(other.GetComponent<Special>().atkData);
+        //    }
+        //    else
+        //    {
+        //        character.OnHit(other.GetComponent<Special>().atkData);
+        //    }
+        //}
         else if(other.CompareTag("Throwbox"))
         {
-            character.OnThrown(other.GetComponentInParent<CharacterController>());
+            Debug.Log("Being thrown!!!");
+            character.OnThrown(other.GetComponent<AttackData>());
         }
         else if(other.CompareTag("Landing"))
         {

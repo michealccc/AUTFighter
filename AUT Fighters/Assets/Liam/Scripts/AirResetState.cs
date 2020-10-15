@@ -8,6 +8,7 @@ public class AirResetState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        character.throwHurtbox.enabled = false;
         character.anim.SetBool("IsAirReset", true);
         character.rb.AddForce(new Vector2(25 * -character.direction, 15), ForceMode2D.Impulse);
     }

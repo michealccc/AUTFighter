@@ -5,18 +5,18 @@ using UnityEngine;
 public class ThrownState : ICharacterState
 {
     private CharacterController character;
-    private CharacterController opponent;
+    //private CharacterController opponent;
+    private AttackData atkData;
 
-    public ThrownState(CharacterController opponent)
+    public ThrownState(AttackData atk)
     {
-        this.opponent = opponent;
+        atkData = atk;
     }
 
     public void Enter(CharacterController controller)
     {
         character = controller;
         Debug.Log("Entered Thrown State");
-        //character.collider.enabled = false;
     }
 
     public void Execute()
@@ -24,7 +24,7 @@ public class ThrownState : ICharacterState
         FollowThrowPos();
         if(character.anim.GetBool("IsThrown") == false)
         {
-            character.stats.TakeDamage(opponent.currentAttackData.damage);
+            character.stats.TakeDamage(atkData.damage);
             character.ChangeState(new LaunchState());
         }
     }
@@ -32,8 +32,8 @@ public class ThrownState : ICharacterState
     public void Exit()
     {
         Debug.Log("Exiting Thrown State");
-        Debug.Log("Throw force: " + new Vector2(character.direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y));
-        character.rb.AddForce(new Vector2(character.direction * opponent.currentAttackData.launchForce.x, 1 * opponent.currentAttackData.launchForce.y), ForceMode2D.Impulse);
+        Debug.Log("Throw force: " + new Vector2(character.direction * atkData.launchForce.x, 1 * atkData.launchForce.y));
+        character.rb.AddForce(new Vector2(character.direction * atkData.launchForce.x, 1 * atkData.launchForce.y), ForceMode2D.Impulse);
         //character.collider.enabled = true;
     }
 

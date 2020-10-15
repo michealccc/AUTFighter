@@ -11,6 +11,7 @@ public class AttackState : ICharacterState
     {
         Debug.Log("Entering Attack State");
         character = controller;
+        character.throwHurtbox.enabled = true;
         character.anim.SetBool("IsAttacking", true);
         character.rb.velocity = new Vector2(0, 0);
         if(character.currentAttackData != null)
@@ -37,17 +38,21 @@ public class AttackState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-            if (character.IsBlocking(other.GetComponentInParent<CharacterController>().currentAttackData))
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
             {
-                character.OnBlock(other.GetComponentInParent<CharacterController>());
+                character.OnBlock(atk);
+            }
+            else if (other.CompareTag("Throwbox"))
+            {
+                character.OnThrown(other.GetComponent<AttackData>());
             }
             else
             {
-                character.OnHit(other.GetComponentInParent<CharacterController>());
+                character.OnHit(atk);
             }
-            Debug.Log(character.GetHashCode() + "Contact made in idle");
         }
     }
 }

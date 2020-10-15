@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestOrbit : MonoBehaviour
+public class NidSuper : MonoBehaviour
 {
     public Transform tfm;
     public SuperChairScript[] superChairs;
     public float timeToLive;
+    public CharacterController origin;
     private float maxTimeToLive;
     private Transform opponentPos;
     private bool rotate;
@@ -41,8 +42,10 @@ public class TestOrbit : MonoBehaviour
         {
             if(chair != null)
             {
-                Debug.Log("The chair's parent " + this.GetComponentInParent<CharacterController>().gameObject);
-                chair.self = this.GetComponentInParent<CharacterController>().gameObject;
+                //Debug.Log("The chair's parent " + this.GetComponentInParent<CharacterController>().gameObject);
+                //chair.self = this.GetComponentInParent<CharacterController>().gameObject;
+                chair.GetComponent<AttackData>().origin = origin;
+                chair.origin = origin;
             }
         }
     }

@@ -33,7 +33,7 @@ public class CameraController : MonoBehaviour
     {
         if ((xR - xL) <= cam.orthographicSize * 2 + 6)
         {
-            cameraPos.position = new Vector2((xR + xL) / 2, cameraPos.position.y);
+            cameraPos.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
         }
     }
 

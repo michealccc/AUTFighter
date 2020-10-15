@@ -8,9 +8,9 @@ public class ChairScript : Special
     public float timeToLive;
     public Rigidbody2D rb;
 
-    void Update()
+    void Start()
     {
-        DestroySelf();
+        StartCoroutine(Decay(timeToLive));
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -19,14 +19,5 @@ public class ChairScript : Special
         {
             Destroy(gameObject);
         };
-    }
-
-    private void DestroySelf()
-    {
-        if(timeToLive <= 0)
-        {
-            Destroy(gameObject);
-        }
-        timeToLive -= Time.deltaTime;
     }
 }

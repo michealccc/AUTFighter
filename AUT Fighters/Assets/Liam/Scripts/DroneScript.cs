@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DroneScript : MonoBehaviour
 {
-    public GameObject droneBeamPrefab;
+    public CharacterController origin;
+    public DroneBeamScript droneBeamPrefab;
     public float direction;
     public float timeToLive;
     public Vector2 startPoint;
@@ -12,11 +13,17 @@ public class DroneScript : MonoBehaviour
     private float halfLife;
     private bool destReached;
     private bool beamFired;
+    private AudioManager audio;
     // Start is called before the first frame update
+    void Awake()
+    {
+        audio = FindObjectOfType<AudioManager>();
+    }
+
     void Start()
     {
         startPoint = transform.position;
-        halfLife = timeToLive / 2;
+        //halfLife = timeToLive / 2;
         destReached = false;
         StartCoroutine(MoveToDest());
     }
@@ -26,21 +33,17 @@ public class DroneScript : MonoBehaviour
     {
         if(destReached)
         {
-            FireBeam();
-            Decay();
+            if(!beamFired)
+            {
+                StartCoroutine(FireBeam());
+            }
         }
     }
 
-    public void Decay()
+    private IEnumerator Decay(float destroyTime)
     {
-        if(timeToLive <= 0)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            timeToLive -= Time.deltaTime;
-        }
+        yield return new WaitForSeconds(destroyTime);
+        Destroy(gameObject);
     }
 
     public void SetDirection(float dir)
@@ -49,14 +52,16 @@ public class DroneScript : MonoBehaviour
         transform.localScale = new Vector2(direction * transform.localScale.x, transform.localScale.y);
     }
 
-    private void FireBeam()
+    private IEnumerator FireBeam()
     {
-        if(timeToLive <= halfLife && !beamFired)
-        {
-            GameObject droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
-            droneBeamInstance.transform.parent = transform;
-            beamFired = true;
-        }
+        beamFired = true;
+        yield return new WaitForSeconds(1f);
+        DroneBeamScript droneBeamInstance = Instantiate(droneBeamPrefab, transform.position + new Vector3(direction * 2f, 0, 0), transform.rotation);
+        droneBeamInstance.transform.parent = transform;
+        droneBeamInstance.GetComponent<AttackData>().origin = origin;
+        audio.Play("LaserSound");
+
+        StartCoroutine(Decay(timeToLive));
     }
 
     private IEnumerator MoveToDest()

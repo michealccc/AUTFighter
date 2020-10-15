@@ -18,6 +18,7 @@ public class HitStunState : ICharacterState
     {
         Debug.Log("Entered Hit Stun State" + atkData);
         character = controller;
+        character.throwHurtbox.enabled = false;
         hitDuration = atkData.hitStunDuration;
         character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * atkData.pushback, ForceMode2D.Impulse);
         character.rb.AddForce(character.transform.right * -character.direction * atkData.pushforward, ForceMode2D.Impulse);
@@ -35,16 +36,22 @@ public class HitStunState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-           character.OnHit(other.GetComponentInParent<CharacterController>());
-           Debug.Log(character.GetHashCode() + "Contact made in hit stun");
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
+            {
+                character.OnBlock(atk);
+            }
+            else
+            {
+                character.OnHit(atk);
+            }
         }
     }
 
     private void HitStunned()
     {
-        Debug.Log(hitDuration);
         if (hitDuration > 0)
         {
             hitDuration -= 0.05f;

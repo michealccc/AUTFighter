@@ -43,11 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 0}
   attackName: NidStandLight
   damage: 10
   pushback: 4
   pushforward: 0
+  launchForce: {x: 0, y: 0}
   blockStunDuration: 0.8
-  hitStunDuration: 3
+  hitStunDuration: 1
   causeKnockdown: 0
   attackType: 0

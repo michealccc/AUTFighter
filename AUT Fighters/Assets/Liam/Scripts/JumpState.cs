@@ -9,6 +9,7 @@ public class JumpState : ICharacterState
     public void Enter(CharacterController controller)
     {
         character = controller;
+        character.throwHurtbox.enabled = false;
         character.anim.SetBool("IsJumping", true);
         //character.ToggleGroundCollider();
         //character.Jump();
@@ -17,7 +18,7 @@ public class JumpState : ICharacterState
 
     public void Execute()
     {
-        if(character.IsLanding() && character.rb.velocity.y < 0)
+        if(character.IsLanding() && character.rb.velocity.y <= 0)
         {
             character.ChangeState(new IdleState());
         }
@@ -40,14 +41,17 @@ public class JumpState : ICharacterState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.CompareTag("Hitbox"))
+        if (other.CompareTag("Attack"))
         {
-            Debug.Log("Contact made in jump");
-            character.OnHit(other.GetComponentInParent<CharacterController>());
-        }
-        else if(other.CompareTag("Special"))
-        {
-            character.OnHit(other.GetComponent<Special>().atkData);
+            AttackData atk = other.GetComponent<AttackData>();
+            if (character.IsBlocking(atk))
+            {
+                character.OnBlock(atk);
+            }
+            else
+            {
+                character.OnHit(atk);
+            }
         }
     }
 }

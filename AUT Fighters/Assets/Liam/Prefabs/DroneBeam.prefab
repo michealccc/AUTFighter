@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4213646995073707882}
   - component: {fileID: 4213646995073707881}
   - component: {fileID: 4213646995073707880}
+  - component: {fileID: 5286138593156104090}
   m_Layer: 0
   m_Name: DroneBeam
-  m_TagString: Special
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,4 +142,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c5cf71dc9b83841919df8523bd4abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkData: {fileID: 5460595062749960663, guid: 808dde8fac4b39044a480e8f7f46efb9, type: 3}
+  atkData: {fileID: 0}
+--- !u!114 &5286138593156104090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213646995073707895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 0}
+  attackName: DroneBeam
+  damage: 50
+  pushback: 0
+  pushforward: 2
+  launchForce: {x: 0, y: 0}
+  blockStunDuration: 0.7
+  hitStunDuration: 1
+  causeKnockdown: 0
+  attackType: 0

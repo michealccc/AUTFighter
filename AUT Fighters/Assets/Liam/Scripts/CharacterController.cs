@@ -9,13 +9,19 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public Animator anim;
     public Rigidbody2D rb;
     public BoxCollider2D collider;
-    public BoxCollider2D groundCollider;
+    public BoxCollider2D throwHurtbox;
     public BoxCollider2D throwBox;
-    public ICharacterState currentState;
     public CharacterController opponent;
-    public Characters characterID;
+    public AttackData attack;
+    public ParticleSystem blockSpark;
+    public ParticleSystem hitSpark;
+
+    public ICharacterState currentState;
+
+    public Characters characterID;  //Maybe separate this stuff into its down class
     public Sprite charactePortrait;
     public string characterName;
+    protected AudioManager audio;
 
     public PlayerStats stats;
 
@@ -40,6 +46,12 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     [SerializeField]
     public LayerMask platformLayer;
 
+    void Awake()
+    {
+        audio = FindObjectOfType<AudioManager>();
+        rb.gravityScale *= 3.75f;
+    }
+
     public void ChangeState(ICharacterState newState)
     {
         if (currentState != null)
@@ -54,13 +66,15 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void Walk()
     {
-        rb.velocity = new Vector2(moveSpeed * moveDir * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(moveSpeed * moveDir, rb.velocity.y);
     }
 
     public void Jump()
     {
+        rb.velocity = new Vector2(0, 0);
         moveDir = inputs.walk.ReadValue<float>();
-        rb.velocity = new Vector2(jumpForceX * moveDir * Time.deltaTime, jumpForceY);
+        //rb.velocity = new Vector2(jumpForceX * moveDir * Time.fixedDeltaTime, jumpForceY);
+        rb.AddForce(new Vector2(jumpForceX * moveDir, jumpForceY), ForceMode2D.Impulse);
     }
 
     public void DirectionToBeFacing()
@@ -82,6 +96,8 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         {
             direction = newDirection;
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * direction, transform.localScale.y, 1);
+            hitSpark.transform.localScale = new Vector3(Mathf.Abs(hitSpark.transform.localScale.x), Mathf.Abs(hitSpark.transform.localScale.y), Mathf.Abs(hitSpark.transform.localScale.z)) * direction;
+            blockSpark.transform.localScale = new Vector3(Mathf.Abs(blockSpark.transform.localScale.x), Mathf.Abs(blockSpark.transform.localScale.y), Mathf.Abs(blockSpark.transform.localScale.z)) * direction;
         }
     }
 
@@ -105,7 +121,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     {
         bool isBlock = false;
         //Moving in the opposite direciton they are facing
-        if (inputs.walk.ReadValue<float>() == (direction * -1))
+        if (inputs.walk.ReadValue<float>() == (direction * -1) && IsGrounded())
         {
             if(atkData.attackType == AttackType.LOW && inputs.crouch.ReadValue<float>() != 0)   //Crouching for a low attack
             {
@@ -131,9 +147,8 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         if (inputs.light.ReadValue<float>() != 0 && inputs.med.ReadValue<float>() != 0)
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.THROW);
-            //anim.SetBool("IsThrowing", true);
         }
-        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0 && stats.currentSuperMeter == stats.maxSuperMeter)
+        else if(inputs.heavy.ReadValue<float>() != 0 && inputs.special.ReadValue<float>() != 0 && stats.currentSuperMeter == stats.maxSuperMeter && IsGrounded())
         {
             anim.SetInteger("AttackStrength", (int)AttackStrength.SUPER);
             stats.ResetSuperMeter();
@@ -185,9 +200,9 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void CheckThrowCollider()
     {
-        if(throwBox.IsTouching(opponent.GetComponent<BoxCollider2D>()))
+        if(throwBox.IsTouching(opponent.throwHurtbox))
         {
-            Debug.Log("We are throwing!!!");
+            Debug.Log("Got throw");
             anim.SetBool("IsThrowing", true);
         }
     }
@@ -195,31 +210,40 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     public void ThrowFinish()
     {
         opponent.GetComponent<CharacterController>().anim.SetBool("IsThrown", false);
+        
     }
 
     public void JumpLandCheck(GameObject opponent)
     {
-        Debug.Log("Checking jump land!");
-        Vector2 futurePos = (Vector2)opponent.transform.position + opponent.GetComponent<Rigidbody2D>().velocity.normalized;        //Get future position of the falling character
-        float xPosDiff = futurePos.x - transform.position.x;                                                                //Difference on the x-axis between this character and the opponent - to get if they're landing on the left or right side
-        if(xPosDiff <= 0)   //Left side landing
+        if(opponent.GetComponent<Rigidbody2D>().velocity.y < 0)
         {
-            if(Mathf.Abs(xPosDiff) <= 1)
+            Debug.Log("Checking jump land!");
+            //Vector2 futurePos = (Vector2)opponent.transform.position + opponent.GetComponent<Rigidbody2D>().velocity.normalized;        //Get future position of the falling character
+            Vector2 oppPos = opponent.transform.position;
+            float xPosDiff = oppPos.x - transform.position.x;                                                                //Difference on the x-axis between this character and the opponent - to get if they're landing on the left or right side
+            if (xPosDiff <= 0)   //Left side landing
             {
-                futurePos.x = transform.position.x - 1.1f;
-            }
-        }
-        else                //Right side landing
-        {
-            if (Mathf.Abs(xPosDiff) <= 1)
-            {
-                futurePos.x = transform.position.x + 1.1f;
-            }
-        }
+                //if(Mathf.Abs(xPosDiff) <= 1)
+                //{
 
-        //Move the position of the falling opponent into the future position (this should force the collider of the falling opponent into the collider of other character causing them to push each other away)
-        opponent.transform.position = futurePos;
-        opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+                //}
+                opponent.transform.position = new Vector2(opponent.transform.position.x - opponent.GetComponent<BoxCollider2D>().bounds.extents.x, opponent.transform.position.y - 1);
+            }
+            else                //Right side landing
+            {
+                //if (Mathf.Abs(xPosDiff) <= 1)
+                //{
+
+                //}
+                opponent.transform.position = new Vector2(opponent.transform.position.x + opponent.GetComponent<BoxCollider2D>().bounds.extents.x, opponent.transform.position.y - 1);
+            }
+
+            //rb.AddForce(new Vector2(opponent.GetComponent<Rigidbody2D>().velocity.x * 2000, 0), ForceMode2D.Force);
+
+            //Move the position of the falling opponent into the future position (this should force the collider of the falling opponent into the collider of other character causing them to push each other away)
+            //opponent.transform.position = futurePos;
+            //opponent.GetComponent<Rigidbody2D>().velocity = new Vector2(0, opponent.GetComponent<Rigidbody2D>().velocity.y);
+        }
     }
 
     private bool CheckNextToWall(Vector2 direction, Vector2 origin, float dist)
@@ -238,28 +262,47 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     public void SetAttackData(string atkData)
     {
-        currentAttackData = FindAttackData(atkData);
+        //attack = FindAttackData(atkData);
+        transform.Find("Hitbox").GetComponent<AttackData>().SetAttackData(FindAttackData(atkData));
+        //GetComponentInChildren<AttackData>() = FindAttackData(atkData);
     }
 
     //Detecting the hitbox that belongs to the opposing character
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
-        if(other.tag == "Special" && other.GetComponentInParent<CharacterController>().gameObject == opponent)
+        if (other.CompareTag("Attack") || other.CompareTag("Throwbox"))
         {
-            Debug.Log("Special Collision");
-            currentState.OnTriggerEnter(other);
+            Debug.Log(other.GetComponent<AttackData>().origin);
+            if (other.GetComponent<AttackData>().origin == opponent)
+            {
+                Debug.Log("Took an attack");
+                currentState.OnTriggerEnter(other);
+            }
         }
-        else if(other.tag == "Ground" ||other.tag == "Wall")
+        else if (other.CompareTag("Ground") || other.CompareTag("Wall"))
         {
             //Ignore if its the ground
         }
-        else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
+        else if(other.CompareTag("Landing"))
         {
-            Debug.Log("Trigger Collision");
-            currentState.OnTriggerEnter(other);
+            JumpLandCheck(other.GetComponentInParent<CharacterController>().gameObject);
         }
+        //else if (other.GetComponentInParent<CharacterController>().gameObject == opponent.gameObject)
+        //{
+        //    Debug.Log("Trigger Collision");
+        //    currentState.OnTriggerEnter(other);
+        //}
     }
+
+    //void OnCollisionEnter2D(Collision2D collInfo)
+    //{
+    //    if(collInfo.gameObject.tag == "Attack")
+    //    {
+    //        Debug.Log("Collision Info: " + collInfo.collider);
+    //    }
+    //    Debug.Log("My collider: " + collInfo.gameObject + " other = " + collInfo.otherCollider);
+    //}
 
     private AttackData FindAttackData(string atkName)
     {
@@ -280,27 +323,35 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         return theData;
     }
 
-    public virtual void OnHit(CharacterController opponent)
+    protected void SetAttackDataOrigin()
+    {
+        foreach(AttackData atk in attacks)
+        {
+            atk.origin = this;
+        }
+    }
+
+    public virtual void OnHit(AttackData theAtk)
     {
         throw new System.NotImplementedException();
     }
 
-    public virtual void OnHit(AttackData atkData)
+    //public virtual void OnHit(AttackData atkData)
+    //{
+    //    throw new System.NotImplementedException();
+    //}
+
+    public virtual void OnBlock(AttackData theAtk)
     {
         throw new System.NotImplementedException();
     }
 
-    public virtual void OnBlock(CharacterController opponent)
-    {
-        throw new System.NotImplementedException();
-    }
+    //public virtual void OnBlock(AttackData atkData)
+    //{
+    //    throw new System.NotImplementedException();
+    //}
 
-    public virtual void OnBlock(AttackData atkData)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public virtual void OnThrown(CharacterController opponent)
+    public virtual void OnThrown(AttackData atkData)
     {
         throw new System.NotImplementedException();
     }

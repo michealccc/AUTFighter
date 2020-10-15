@@ -11,20 +11,10 @@ public class KeyBindScript : MonoBehaviour
     public GameObject currentKey;
 
     private Color32 normal = new Color32(255, 255, 255, 255);
-    private Color32 selected = new Color32(239, 116, 36, 255);
+    private Color32 selected = new Color32(115, 118, 54, 255);
 
     public InputActionAsset IAA;
     public InputActionRebindingExtensions.RebindingOperation rebindOperation;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Initialise button text
-        //up.text = IAA.FindActionMap("Player1").FindAction("Jump").GetBindingDisplayString();
-        //down.text = IAA.FindActionMap("Player1").FindAction("Crouch").GetBindingDisplayString();
-        //left.text = IAA.FindActionMap("Player1").FindAction("Walk").GetBindingDisplayString();
-        //right.text = IAA.FindActionMap("Player1").FindAction("Walk").GetBindingDisplayString();
-    }
 
     // Rebind key
     private void OnGUI()

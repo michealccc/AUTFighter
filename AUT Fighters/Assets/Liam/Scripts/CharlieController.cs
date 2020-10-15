@@ -189,13 +189,27 @@ public class CharlieController : CharacterController
     {
         if(FindObjectOfType<DroneScript>() == null)
         {
-            //Check directional input here and set location for drone accordingly
+            //Spawn the drone and set the direction for it to be facing
             DroneScript droneInstance = Instantiate(dronePrefab, transform.position, transform.rotation);
             droneInstance.SetDirection(direction);
-            droneInstance.destination = transform.position + new Vector3(direction * 2f, 0, 0);
-            //droneInstance.transform.parent = transform;
-            droneInstance.origin = this;
-            
+
+            //Check directional input here and set the end location for drone accordingly
+            float location = inputs.walk.ReadValue<float>();
+            if(location == -1)  //High Drone
+            {
+                droneInstance.destination = transform.position + new Vector3(direction * 2f, 4.5f, 0);
+            }
+            else if(location == 1)  //Low Drone
+            {
+                droneInstance.destination = transform.position + new Vector3(direction * 2f, -2f, 0);
+            }
+            else                //Mid Drone
+            {
+                droneInstance.destination = transform.position + new Vector3(direction * 2f, 0, 0);
+            }
+
+            //Set the origin of the drone to this character controller
+            droneInstance.origin = this;           
             Debug.Log("Spawned a drone!");
         }
     }

@@ -91,7 +91,8 @@ public class MatchManager : MonoBehaviour
         ResetCharacter(p2);
         p1.transform.position = p1Spawn.position;
         p2.transform.position = p2Spawn.position;
-        camera.ResetCamera();
+        //camera.ResetCamera();
+        camera.ResetMidPoint();
     }
 
     private void ResetCharacter(CharacterController player)

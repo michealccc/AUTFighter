@@ -25,6 +25,12 @@ public class MainMenu : MonoBehaviour
         audio.Play("Confirm");
     }
 
+    //This scene is for Character select in Training Mode and Arcade Mode
+    public void TrainingButtonAction()
+    {
+        SceneManager.LoadScene("TrainingModeCharacterSelect");
+    }
+
     public void OnlineButtonAction()
     {
         SceneManager.LoadScene("OnlineScene");

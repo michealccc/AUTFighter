@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     private float margin = 0.5f;
     public float xL;
     public float xR;
+    public Transform midPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,19 +22,33 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         CalcScreen(p1Pos, p2Pos);
-        SetCameraPos();
+        SetMidPoint();
+        //SetCameraPos();
     }
 
-    public void ResetCamera()
+    //public void ResetCamera()
+    //{
+    //    cameraPos.position = new Vector2(0, 0);
+    //}
+
+    //private void SetCameraPos()
+    //{
+    //    if ((xR - xL) <= cam.orthographicSize * 2 + 6)
+    //    {
+    //        cameraPos.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
+    //    }
+    //}
+
+    public void ResetMidPoint()
     {
-        cameraPos.position = new Vector2(0, 0);
+        midPoint.position = new Vector2(0, 0);
     }
 
-    private void SetCameraPos()
+    private void SetMidPoint()
     {
-        if ((xR - xL) <= cam.orthographicSize * 2 + 6)
+        if((xR - xL) >= 10f)
         {
-            cameraPos.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
+            midPoint.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
         }
     }
 

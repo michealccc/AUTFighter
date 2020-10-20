@@ -31,7 +31,10 @@ public class MatchManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        audio = FindObjectOfType<AudioManager>();
+        //audio = FindObjectOfType<AudioManager>();
+        //audio.Stop("MenuMusic");    //Could add code so that only a single BGM plays at a time
+        //audio.Play("BattleMusic");
+
         //MatchChoices.p1Character = Characters.CHARLIE;
         //MatchChoices.p2Character = Characters.SAN;
 
@@ -45,6 +48,13 @@ public class MatchManager : MonoBehaviour
         matchHUD.SetupPlayerProfiles(p1, p2);
         camera.p1Pos = p1.transform;    //Set up character reference for camera
         camera.p2Pos = p2.transform;
+    }
+
+    void Start()
+    {
+        audio = FindObjectOfType<AudioManager>();
+        Debug.Log("Audio manager: " + audio.gameObject.name);
+        audio.Play("BattleMusic");
     }
 
     // Update is called once per frame

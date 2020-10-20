@@ -236,3 +236,35 @@ MonoBehaviour:
     bgm: 0
     fx: 1
     source: {fileID: 0}
+  - name: Confirm
+    clip: {fileID: 8300000, guid: 808509f75acfd7440b4513ddacce5902, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: Cancel
+    clip: {fileID: 8300000, guid: fffbe7a227dfe714fa74eddf2291d7c4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    bgm: 0
+    fx: 1
+    source: {fileID: 0}
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: 56de5ff16fda60a44b6c087fb46098b4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    bgm: 1
+    fx: 0
+    source: {fileID: 0}
+  - name: BattleMusic
+    clip: {fileID: 8300000, guid: 28b78a9fd1eecd442a41a585de68f767, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    bgm: 1
+    fx: 0
+    source: {fileID: 0}

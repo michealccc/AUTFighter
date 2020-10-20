@@ -46,10 +46,17 @@ public class CameraController : MonoBehaviour
 
     private void SetMidPoint()
     {
+        float midPosX = midPoint.position.x;
+        float midPosY;
+
+        //If the characters are a set distance apart, change the x-position of the midpoint
         if((xR - xL) >= 10f)
         {
-            midPoint.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
+            //midPoint.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
+            midPosX = (xR + xL) / 2;
         }
+        midPosY = ((p1Pos.position.y + p2Pos.position.y) / 2) + 3;
+        midPoint.position = new Vector2(midPosX, midPosY);
     }
 
     private void CalcScreen(Transform p1, Transform p2)

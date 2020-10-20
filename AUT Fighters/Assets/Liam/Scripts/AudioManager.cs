@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    AudioManager Instance;
-
+    public static AudioManager Instance;
+    public static float BGMVolume = 1;
     public static bool BGMMute;
-
+    public static float FXVolume = 1;
     public static bool FXMute;
 
     public Sound[] sounds;
@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
 
         foreach (Sound s in sounds)
         {
+            Debug.Log("the sounds" + s);
             s.source = gameObject.AddComponent<AudioSource>();
 
             s.source.clip = s.clip;
@@ -34,6 +35,18 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        //foreach (Sound s in sounds)
+        //{
+        //    s.source = gameObject.AddComponent<AudioSource>();
+        //    Debug.Log("the sounds" + s);
+        //    s.source.clip = s.clip;
+        //    s.source.volume = s.volume;
+        //    s.source.pitch = s.pitch;
+        //    s.source.loop = s.loop;
+        //}
+    }
 
     void Update()
     {
@@ -41,12 +54,12 @@ public class AudioManager : MonoBehaviour
         {
             if (s.bgm)
             {
-                //s.source.volume = BGMVolume;
+                s.source.volume = BGMVolume;
                 s.source.mute = BGMMute;
             }
             else if (s.fx)
             {
-                //s.source.volume = FXVolume;
+                s.source.volume = FXVolume;
                 s.source.mute = FXMute;
             }
         }

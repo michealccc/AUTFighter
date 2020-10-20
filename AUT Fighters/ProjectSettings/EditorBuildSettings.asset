@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Sandesh/CharacterSelect/Scenes/CharacterSelect.unity
     guid: 4bb85a89158b545cfbf3dcd14ee19a3b
   - enabled: 1
+    path: Assets/Sandesh/CharacterSelect/Scenes/TrainingModeCharacterSelect.unity
+    guid: 521e777c8f2124f818f7994e1910747f
+  - enabled: 1
     path: Assets/Sandesh/Scenes/StageSelect.unity
     guid: 51659f5167a7842219f9fe8ca0b3666c
   - enabled: 1

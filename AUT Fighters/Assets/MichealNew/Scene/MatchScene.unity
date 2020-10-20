@@ -3559,6 +3559,14 @@ MonoBehaviour:
   - {fileID: 210302935320503889, guid: 4d0c669649728134dbc10deecd37a815, type: 3}
   p1: {fileID: 0}
   p2: {fileID: 0}
+  stages:
+  - {fileID: 21300000, guid: 10656e48ed8f8b041b292a2fce006d9f, type: 3}
+  - {fileID: 21300000, guid: fb6c150cbacaa9a4f88c71897d41816d, type: 3}
+  - {fileID: 21300000, guid: 8c33962fa843921479635cdcdb2e4763, type: 3}
+  - {fileID: 21300000, guid: 912ec6a0c1619d84ba6f2dc3e9039259, type: 3}
+  - {fileID: 21300000, guid: 936f7b9088830f841b0294b15be4d296, type: 3}
+  - {fileID: 21300000, guid: 41b9d2865332eaf40a1eca1eaee52159, type: 3}
+  stageBackground: {fileID: 1869452086}
   p1Spawn: {fileID: 1100304550}
   p2Spawn: {fileID: 141602069}
   hudAnimator: {fileID: 1780132019}

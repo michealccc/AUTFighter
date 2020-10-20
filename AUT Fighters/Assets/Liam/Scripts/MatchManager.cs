@@ -10,6 +10,8 @@ public class MatchManager : MonoBehaviour
     public CharacterController[] characters;
     public CharacterController p1;
     public CharacterController p2;
+    public Sprite[] stages;
+    public SpriteRenderer stageBackground;
     public Transform p1Spawn;
     public Transform p2Spawn;
     public Animator hudAnimator;
@@ -30,10 +32,12 @@ public class MatchManager : MonoBehaviour
     void Awake()
     {
         audio = FindObjectOfType<AudioManager>();
-        CharacterChoice.p1Character = Characters.CHARLIE;
-        CharacterChoice.p2Character = Characters.SAN;
+        //MatchChoices.p1Character = Characters.CHARLIE;
+        //MatchChoices.p2Character = Characters.SAN;
+
         p1Score = 0;
         p2Score = 0;
+        SetStageBackground();
         IntializeCharacters();
         ResetRound();
         //RoundStart();           //Temporary here
@@ -57,7 +61,7 @@ public class MatchManager : MonoBehaviour
         //Instantiate the characters based on what the players chose
         foreach(CharacterController character in characters)
         {
-            if(character.characterID == CharacterChoice.p1Character)
+            if(character.characterID == MatchChoices.p1Character)
             {
                 p1 = Instantiate(character, transform.position, transform.rotation);
                 //p1.GetComponent<PlayerInput>().defaultActionMap = "Player1";
@@ -66,7 +70,7 @@ public class MatchManager : MonoBehaviour
                 Debug.Log("Player one default map: " + p1.GetComponent<PlayerInput>().defaultActionMap);
             }
 
-            if (character.characterID == CharacterChoice.p2Character)
+            if (character.characterID == MatchChoices.p2Character)
             {
                 p2 = Instantiate(character, transform.position, transform.rotation);
                // p2.GetComponent<PlayerInput>().defaultActionMap = "Player2";
@@ -78,6 +82,23 @@ public class MatchManager : MonoBehaviour
 
         p1.opponent = p2;
         p2.opponent = p1;
+    }
+
+    //Iterate through the array of stage backgrounds and set the background to the one chosen by the player
+    private void SetStageBackground()
+    {
+        foreach(Sprite bg in stages)
+        {
+            if(bg.name == MatchChoices.chosenStage)
+            {
+                stageBackground.sprite = bg;
+            }
+        }
+
+        if(stageBackground == null)
+        {
+            Debug.LogError("Stage background was not found!");
+        }
     }
 
     public void ResetRound()

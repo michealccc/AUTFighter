@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using static UnityEngine.UI.Button;
 
 
-public class EnableButton : MonoBehaviour
+public class FirstPlayerEnableButton : MonoBehaviour
 {
     //This script makes the confirm button interactable and sets the Image to be active
     //when the characters are selected

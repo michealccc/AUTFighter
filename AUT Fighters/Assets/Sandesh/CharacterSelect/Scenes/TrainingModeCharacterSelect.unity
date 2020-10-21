@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f58a72e593745bb992ef51299c9d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 210295215}
+  firstcharacterButton: {fileID: 210295215}
   confirmbutton: {fileID: 1792378571}
 --- !u!114 &210295215
 MonoBehaviour:

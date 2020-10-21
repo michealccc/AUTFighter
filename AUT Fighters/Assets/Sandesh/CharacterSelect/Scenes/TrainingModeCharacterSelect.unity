@@ -582,8 +582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 609, y: -137}
-  m_SizeDelta: {x: 530.43066, y: 518.7196}
+  m_AnchoredPosition: {x: 612, y: -122}
+  m_SizeDelta: {x: 754.56836, y: 662.17737}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210295213
 MonoBehaviour:
@@ -633,8 +633,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7607843, g: 0.7607843, b: 0.7607843, a: 1}
-    m_HighlightedColor: {r: 0.50980395, g: 0.6901961, b: 0.7176471, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2533,7 +2533,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792378572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 104434446}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StageSelect
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1792378572
 MonoBehaviour:
   m_ObjectHideFlags: 0

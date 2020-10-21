@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using static UnityEngine.UI.Button;
 
+//This script changes the background on StageSelect UI
+//On Stage Select when a stage is selected it changes the background to that stage before confirming that stage
 public class BackgroundChanger : MonoBehaviour
 {
     public static int AlbertPark = 0;
@@ -21,7 +23,7 @@ public class BackgroundChanger : MonoBehaviour
         if (resourceName != "")
             backgrounds = Resources.LoadAll<Sprite>(resourceName);
     }
-
+    //Albert Park
     public void AlbertParkImageChanger()
     {
         GameObject.Find("Background").GetComponent<Image>().sprite = backgrounds[AlbertPark];

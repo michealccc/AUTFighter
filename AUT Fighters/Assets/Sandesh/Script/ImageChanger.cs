@@ -41,7 +41,7 @@ public class ImageChanger : MonoBehaviour
 
     }
 
-    //Player 1 image
+    //Player 3 image
     public void CharlieCharacterChanger()
     {
         GameObject.Find("SelectedFirstCharacter").GetComponent<Image>().sprite = backgrounds[CharlieCharacter];
@@ -49,7 +49,7 @@ public class ImageChanger : MonoBehaviour
 
     }
 
-    //Player 1 image
+    //Player 4 image
     public void LiamCharacterChanger()
     {
         GameObject.Find("SelectedFirstCharacter").GetComponent<Image>().sprite = backgrounds[LiamCharacter];

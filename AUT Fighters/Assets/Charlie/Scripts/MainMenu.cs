@@ -31,6 +31,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("OptionsScene");
     }
 
+    public void TutorialButtonAction()
+    {
+        SceneManager.LoadScene("MatchScene 1");
+    }
+
     public void QuitButtonAction()
     {
         Application.Quit();

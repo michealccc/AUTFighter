@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Charlie/Scenes/MainMenu.unity
     guid: e6e37b804ba8b684c85ea59bd45b9b65
   - enabled: 1
-    path: Assets/Charlie/Scenes/ArcadeScene.unity
-    guid: 42c09af2f464ef24cb899def46090812
-  - enabled: 1
-    path: Assets/Charlie/Scenes/OnlineScene.unity
-    guid: fdd79e06e08c24b439da8d711a186fb1
-  - enabled: 1
     path: Assets/Charlie/Scenes/OptionsScene.unity
     guid: 84ebc833fd2257347b74c7c5faeb94f8
   - enabled: 1
@@ -35,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Charlie/Scenes/MatchScene 1.unity
     guid: eea75370958c7134fb7623d4a0e8318f
+  - enabled: 1
+    path: Assets/Sandesh/CharacterSelect/Scenes/TrainingModeCharacterSelect.unity
+    guid: 521e777c8f2124f818f7994e1910747f
   m_configObjects: {}

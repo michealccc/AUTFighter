@@ -1133,7 +1133,7 @@ GameObject:
   - component: {fileID: 1263802565}
   - component: {fileID: 1263802564}
   m_Layer: 5
-  m_Name: OnlineButton
+  m_Name: TrainingButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1734,7 +1734,7 @@ GameObject:
   - component: {fileID: 1542477113}
   - component: {fileID: 1542477112}
   m_Layer: 5
-  m_Name: CharactersButton
+  m_Name: VersusButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1934,7 +1934,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2076183100}
-        m_MethodName: ArcadeButtonAction
+        m_MethodName: TrainingButtonAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

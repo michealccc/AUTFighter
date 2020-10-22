@@ -13,10 +13,13 @@ public class ImageChanger : MonoBehaviour
     public static int CharlieCharacterOtherway = 1;
 
     public static int LiamCharacter = 2;
-    public static int MichealCharacter = 3;
+    public static int LiamCharacterOtherway = 3;
 
-    public static int SanCharacter = 4;
-    public static int SanCharacterOtherway = 5;
+    public static int MichealCharacter = 4;
+    public static int MichealCharacterOtherway = 5;
+
+    public static int SanCharacter = 6;
+    public static int SanCharacterOtherway = 7;
 
 
     public string resourceName = "PlayerImages";
@@ -76,7 +79,7 @@ public class ImageChanger : MonoBehaviour
     public void MichealCharacterChanger2()
     {
 
-        GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[MichealCharacter];
+        GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[MichealCharacterOtherway];
 
     }
 
@@ -91,7 +94,7 @@ public class ImageChanger : MonoBehaviour
     //Player 2 Liam image
     public void LiamCharacterChanger2()
     {
-        GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[LiamCharacter];
+        GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[LiamCharacterOtherway];
 
 
     }

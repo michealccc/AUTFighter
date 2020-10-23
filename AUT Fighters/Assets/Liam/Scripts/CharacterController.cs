@@ -48,8 +48,12 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     void Awake()
     {
-        audio = FindObjectOfType<AudioManager>();
         rb.gravityScale *= 3.75f;
+    }
+
+    void Start()
+    {
+        audio = FindObjectOfType<AudioManager>();
     }
 
     public void ChangeState(ICharacterState newState)

@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: c9266ba27997046ad9e1cc1a207dd2df
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -804517298957600173
+    second: victory_pose_spritesheet_0
+  - first:
+      213: 894275634217018797
+    second: victory_pose_spritesheet_1
+  - first:
+      213: 7467966152673202149
+    second: victory_pose_spritesheet_2
+  - first:
+      213: 8817569912196933948
+    second: victory_pose_spritesheet_3
+  - first:
+      213: 8027904610167141615
+    second: victory_pose_spritesheet_4
+  - first:
+      213: 3617967535497155965
+    second: victory_pose_spritesheet_5
+  - first:
+      213: -4207459263497366902
+    second: victory_pose_spritesheet_6
+  - first:
+      213: -4195859848113579605
+    second: victory_pose_spritesheet_7
+  - first:
+      213: -7663829477157108378
+    second: victory_pose_spritesheet_8
+  - first:
+      213: -2204031036905039830
+    second: victory_pose_spritesheet_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +70,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +101,231 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 15
+        width: 127
+        height: 341
+      alignment: 9
+      pivot: {x: 0.46, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ab9f377c7c5d4f0800000000000000
+      internalID: -804517298957600173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 11
+        width: 114
+        height: 351
+      alignment: 9
+      pivot: {x: 0.51, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5eac483fa196c00800000000000000
+      internalID: 894275634217018797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 18
+        width: 127
+        height: 331
+      alignment: 9
+      pivot: {x: 0.46, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef0abc16ab83a760800000000000000
+      internalID: 7467966152673202149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2229
+        y: 15
+        width: 128
+        height: 326
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39abae1e1d4e5a70800000000000000
+      internalID: 8817569912196933948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2885
+        y: 15
+        width: 147
+        height: 312
+      alignment: 9
+      pivot: {x: 0.39, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4bbb395b8d86f60800000000000000
+      internalID: 8027904610167141615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3449
+        y: 15
+        width: 271
+        height: 282
+      alignment: 9
+      pivot: {x: 0.21, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7514320e4a953230800000000000000
+      internalID: 3617967535497155965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4193
+        y: 15
+        width: 192
+        height: 269
+      alignment: 9
+      pivot: {x: 0.3, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a821058871a1c95c0800000000000000
+      internalID: -4207459263497366902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4839
+        y: 15
+        width: 208
+        height: 299
+      alignment: 9
+      pivot: {x: 0.28, y: 0.54}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba99dd1e2bf45c5c0800000000000000
+      internalID: -4195859848113579605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 5573
+        y: 15
+        width: 199
+        height: 328
+      alignment: 9
+      pivot: {x: 0.29, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66502eaf1bb94a590800000000000000
+      internalID: -7663829477157108378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: victory_pose_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 6258
+        y: 11
+        width: 133
+        height: 345
+      alignment: 9
+      pivot: {x: 0.43, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28d65b0375b961e0800000000000000
+      internalID: -2204031036905039830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

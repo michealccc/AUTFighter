@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 7e9b8ac2e909f43f7abd683ed32eba87
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4034172771359729440
+    second: standing_medium_spritesheet_0
+  - first:
+      213: -1267677583378721230
+    second: standing_medium_spritesheet_1
+  - first:
+      213: -2814494391105489670
+    second: standing_medium_spritesheet_2
+  - first:
+      213: -862405819473007126
+    second: standing_medium_spritesheet_3
+  - first:
+      213: -7209255315611597792
+    second: standing_medium_spritesheet_4
+  - first:
+      213: 1838955267037223476
+    second: standing_medium_spritesheet_5
+  - first:
+      213: -6140261974617111582
+    second: standing_medium_spritesheet_6
+  - first:
+      213: -3385747911532840843
+    second: standing_medium_spritesheet_7
+  - first:
+      213: -5384980988756560515
+    second: standing_medium_spritesheet_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +98,210 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 31
+        width: 144
+        height: 324
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8dc880d3db308c0800000000000000
+      internalID: -4034172771359729440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 31
+        width: 138
+        height: 315
+      alignment: 9
+      pivot: {x: 0.42, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2365cf054fd486ee0800000000000000
+      internalID: -1267677583378721230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 31
+        width: 140
+        height: 306
+      alignment: 9
+      pivot: {x: 0.41, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4f3db5348e0f8d0800000000000000
+      internalID: -2814494391105489670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2218
+        y: 31
+        width: 238
+        height: 300
+      alignment: 9
+      pivot: {x: 0.24, y: 0.54}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aede416f97e1804f0800000000000000
+      internalID: -862405819473007126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 31
+        width: 238
+        height: 297
+      alignment: 9
+      pivot: {x: 0.24, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024cfd99c7493fb90800000000000000
+      internalID: -7209255315611597792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3553
+        y: 31
+        width: 168
+        height: 315
+      alignment: 9
+      pivot: {x: 0.35, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a56997218458910800000000000000
+      internalID: 1838955267037223476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 31
+        width: 149
+        height: 312
+      alignment: 9
+      pivot: {x: 0.39, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3cb1f344869caa0800000000000000
+      internalID: -6140261974617111582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4889
+        y: 31
+        width: 141
+        height: 315
+      alignment: 9
+      pivot: {x: 0.41, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578701286386301d0800000000000000
+      internalID: -3385747911532840843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 5535
+        y: 31
+        width: 156
+        height: 321
+      alignment: 9
+      pivot: {x: 0.37, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75fee25254b445b0800000000000000
+      internalID: -5384980988756560515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

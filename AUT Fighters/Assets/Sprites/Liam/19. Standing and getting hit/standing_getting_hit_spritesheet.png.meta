@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: fcfccf4df88e34e368462e3a4d43f031
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6779759710279325910
+    second: standing_getting_hit_spritesheet_0
+  - first:
+      213: 6267178980968867139
+    second: standing_getting_hit_spritesheet_1
+  - first:
+      213: -2594212681992676777
+    second: standing_getting_hit_spritesheet_2
+  - first:
+      213: -6923847134186372651
+    second: standing_getting_hit_spritesheet_3
+  - first:
+      213: -6948532531770522405
+    second: standing_getting_hit_spritesheet_4
+  - first:
+      213: -7368209243665314975
+    second: standing_getting_hit_spritesheet_5
+  - first:
+      213: -7961971829200488867
+    second: standing_getting_hit_spritesheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +92,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: standing_getting_hit_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 31
+        width: 130
+        height: 324
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27ab46d67479e1a0800000000000000
+      internalID: -6779759710279325910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_getting_hit_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 31
+        width: 128
+        height: 317
+      alignment: 9
+      pivot: {x: 0.45, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345a178041e79f650800000000000000
+      internalID: 6267178980968867139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_getting_hit_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 31
+        width: 142
+        height: 313
+      alignment: 9
+      pivot: {x: 0.41, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a530a7f418ffbd0800000000000000
+      internalID: -2594212681992676777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_getting_hit_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2188
+        y: 31
+        width: 176
+        height: 297
+      alignment: 9
+      pivot: {x: 0.33, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d107bf27bd89ef90800000000000000
+      internalID: -6923847134186372651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_getting_hit_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 31
+        width: 162
+        height: 306
+      alignment: 9
+      pivot: {x: 0.36, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4829d2a7ad19f90800000000000000
+      internalID: -6948532531770522405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_getting_hit_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 31
+        width: 135
+        height: 322
+      alignment: 9
+      pivot: {x: 0.43, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b44983bbcdeb990800000000000000
+      internalID: -7368209243665314975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_getting_hit_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 31
+        width: 128
+        height: 322
+      alignment: 9
+      pivot: {x: 0.45, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5676d04ec4618190800000000000000
+      internalID: -7961971829200488867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

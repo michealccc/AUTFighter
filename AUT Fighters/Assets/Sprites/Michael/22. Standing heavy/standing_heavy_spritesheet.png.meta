@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: e2fb34fdc2c7c42dfabf4b83cbbc9112
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 526566989930568413
+    second: standing_heavy_spritesheet_0
+  - first:
+      213: 4842995070452663865
+    second: standing_heavy_spritesheet_1
+  - first:
+      213: -270897866156843016
+    second: standing_heavy_spritesheet_2
+  - first:
+      213: -568432203454657366
+    second: standing_heavy_spritesheet_3
+  - first:
+      213: -2066876549219398997
+    second: standing_heavy_spritesheet_4
+  - first:
+      213: -6863168524622211230
+    second: standing_heavy_spritesheet_5
+  - first:
+      213: -7967290023572216734
+    second: standing_heavy_spritesheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +92,180 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: standing_heavy_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 14
+        width: 132
+        height: 338
+      alignment: 9
+      pivot: {x: 0.6, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda124133edbe4700800000000000000
+      internalID: 526566989930568413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_heavy_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 14
+        width: 103
+        height: 333
+      alignment: 9
+      pivot: {x: 0.77, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9368c477b56c53340800000000000000
+      internalID: 4842995070452663865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_heavy_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 21
+        width: 151
+        height: 324
+      alignment: 9
+      pivot: {x: 0.52, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff5f4573d39d3cf0800000000000000
+      internalID: -270897866156843016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_heavy_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 23
+        width: 135
+        height: 320
+      alignment: 9
+      pivot: {x: 0.59, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac41323ce58c18f0800000000000000
+      internalID: -568432203454657366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_heavy_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 23
+        width: 267
+        height: 304
+      alignment: 9
+      pivot: {x: 0.3, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa4131babaf053e0800000000000000
+      internalID: -2066876549219398997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_heavy_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3687
+        y: 23
+        width: 297
+        height: 292
+      alignment: 9
+      pivot: {x: 0.27, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2675048e69021c0a0800000000000000
+      internalID: -6863168524622211230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_heavy_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4397
+        y: 21
+        width: 183
+        height: 317
+      alignment: 9
+      pivot: {x: 0.43, y: 0.49}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264e672afef7e6190800000000000000
+      internalID: -7967290023572216734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

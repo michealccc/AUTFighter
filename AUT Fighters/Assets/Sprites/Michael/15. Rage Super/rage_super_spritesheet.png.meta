@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 56fb9b888fb68431c9aaef23e2ffe99e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6848364934400700754
+    second: rage_super_spritesheet_0
+  - first:
+      213: 515011502954092478
+    second: rage_super_spritesheet_1
+  - first:
+      213: 5258651422256036376
+    second: rage_super_spritesheet_2
+  - first:
+      213: 904997228425589544
+    second: rage_super_spritesheet_3
+  - first:
+      213: -2575690142208999604
+    second: rage_super_spritesheet_4
+  - first:
+      213: 1220460476571205643
+    second: rage_super_spritesheet_5
+  - first:
+      213: 8945433325607424162
+    second: rage_super_spritesheet_6
+  - first:
+      213: 182257688527544988
+    second: rage_super_spritesheet_7
+  - first:
+      213: 8774432151709234908
+    second: rage_super_spritesheet_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +98,222 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: rage_super_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 18
+        width: 153
+        height: 330
+      alignment: 9
+      pivot: {x: 0.52, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae0ec85068b5f0a0800000000000000
+      internalID: -6848364934400700754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 18
+        width: 144
+        height: 330
+      alignment: 9
+      pivot: {x: 0.55, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb791d8bb30b52700800000000000000
+      internalID: 515011502954092478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 18
+        width: 123
+        height: 330
+      alignment: 9
+      pivot: {x: 0.65, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a7c256b9b7af840800000000000000
+      internalID: 5258651422256036376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 18
+        width: 137
+        height: 327
+      alignment: 9
+      pivot: {x: 0.58, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82335033f223f8c00800000000000000
+      internalID: 904997228425589544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 18
+        width: 129
+        height: 330
+      alignment: 9
+      pivot: {x: 0.62, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f3826567f414cd0800000000000000
+      internalID: -2575690142208999604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 18
+        width: 196
+        height: 330
+      alignment: 9
+      pivot: {x: 0.4, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b004e605652ffe010800000000000000
+      internalID: 1220460476571205643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4259
+        y: 18
+        width: 171
+        height: 330
+      alignment: 9
+      pivot: {x: 0.46, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a095c6f630942c70800000000000000
+      internalID: 8945433325607424162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 18
+        width: 120
+        height: 330
+      alignment: 9
+      pivot: {x: 0.66, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92a44ee662878200800000000000000
+      internalID: 182257688527544988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage_super_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 5633
+        y: 18
+        width: 129
+        height: 330
+      alignment: 9
+      pivot: {x: 0.62, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd635649d8b05c970800000000000000
+      internalID: 8774432151709234908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

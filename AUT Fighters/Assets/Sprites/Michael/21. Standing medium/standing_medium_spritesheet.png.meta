@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 3e119e86b7a3b4bc4b47c8476d80b564
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4034172771359729440
+    second: standing_medium_spritesheet_0
+  - first:
+      213: -1267677583378721230
+    second: standing_medium_spritesheet_1
+  - first:
+      213: -2814494391105489670
+    second: standing_medium_spritesheet_2
+  - first:
+      213: -862405819473007126
+    second: standing_medium_spritesheet_3
+  - first:
+      213: -7209255315611597792
+    second: standing_medium_spritesheet_4
+  - first:
+      213: 1838955267037223476
+    second: standing_medium_spritesheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +89,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 18
+        width: 162
+        height: 332
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8dc880d3db308c0800000000000000
+      internalID: -4034172771359729440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 18
+        width: 169
+        height: 330
+      alignment: 9
+      pivot: {x: 0.48, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2365cf054fd486ee0800000000000000
+      internalID: -1267677583378721230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 18
+        width: 168
+        height: 326
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4f3db5348e0f8d0800000000000000
+      internalID: -2814494391105489670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 18
+        width: 198
+        height: 308
+      alignment: 9
+      pivot: {x: 0.41, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aede416f97e1804f0800000000000000
+      internalID: -862405819473007126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 18
+        width: 152
+        height: 312
+      alignment: 9
+      pivot: {x: 0.53, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024cfd99c7493fb90800000000000000
+      internalID: -7209255315611597792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: standing_medium_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 18
+        width: 282
+        height: 285
+      alignment: 9
+      pivot: {x: 0.29, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a56997218458910800000000000000
+      internalID: 1838955267037223476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

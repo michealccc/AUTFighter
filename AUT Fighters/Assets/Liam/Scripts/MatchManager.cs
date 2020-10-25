@@ -52,8 +52,9 @@ public class MatchManager : MonoBehaviour
 
     void Start()
     {
-        audio = FindObjectOfType<AudioManager>();
+        audio = AudioManager.Instance;
         Debug.Log("Audio manager: " + audio.gameObject.name);
+        audio.Stop("MenuMusic");
         audio.Play("BattleMusic");
     }
 
@@ -120,10 +121,9 @@ public class MatchManager : MonoBehaviour
 
         ResetCharacter(p1);
         ResetCharacter(p2);
+        camera.ResetMidPoint();
         p1.transform.position = p1Spawn.position;
         p2.transform.position = p2Spawn.position;
-        //camera.ResetCamera();
-        camera.ResetMidPoint();
     }
 
     private void ResetCharacter(CharacterController player)
@@ -138,6 +138,7 @@ public class MatchManager : MonoBehaviour
     {
         audio.Play("Fight");
         roundEnded = false;
+        camera.EnableWalls();
         p1.ChangeState(new IdleState());
         p2.ChangeState(new IdleState());
     }

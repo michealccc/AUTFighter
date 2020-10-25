@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -110,6 +110,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -117,12 +129,12 @@ TextureImporter:
       name: standing_medium_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 204
-        y: 31
-        width: 144
-        height: 324
+        x: 205
+        y: 32
+        width: 141
+        height: 321
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,12 +150,12 @@ TextureImporter:
       name: standing_medium_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 882
-        y: 31
-        width: 138
-        height: 315
+        x: 884
+        y: 32
+        width: 135
+        height: 313
       alignment: 9
-      pivot: {x: 0.42, y: 0.51}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,12 +171,12 @@ TextureImporter:
       name: standing_medium_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1549
-        y: 31
-        width: 140
-        height: 306
+        x: 1550
+        y: 32
+        width: 138
+        height: 304
       alignment: 9
-      pivot: {x: 0.41, y: 0.53}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,12 +192,12 @@ TextureImporter:
       name: standing_medium_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2218
-        y: 31
-        width: 238
-        height: 300
+        x: 2219
+        y: 32
+        width: 235
+        height: 298
       alignment: 9
-      pivot: {x: 0.24, y: 0.54}
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,12 +213,12 @@ TextureImporter:
       name: standing_medium_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 2884
-        y: 31
-        width: 238
-        height: 297
+        x: 2886
+        y: 32
+        width: 234
+        height: 295
       alignment: 9
-      pivot: {x: 0.24, y: 0.55}
+      pivot: {x: 0.28, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,12 +234,12 @@ TextureImporter:
       name: standing_medium_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 3553
-        y: 31
-        width: 168
-        height: 315
+        x: 3555
+        y: 32
+        width: 164
+        height: 313
       alignment: 9
-      pivot: {x: 0.35, y: 0.51}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,12 +255,12 @@ TextureImporter:
       name: standing_medium_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 4223
-        y: 31
-        width: 149
-        height: 312
+        x: 4224
+        y: 32
+        width: 147
+        height: 310
       alignment: 9
-      pivot: {x: 0.39, y: 0.52}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,12 +276,12 @@ TextureImporter:
       name: standing_medium_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 4889
-        y: 31
-        width: 141
-        height: 315
+        x: 4891
+        y: 32
+        width: 138
+        height: 313
       alignment: 9
-      pivot: {x: 0.41, y: 0.51}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,12 +297,12 @@ TextureImporter:
       name: standing_medium_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 5535
-        y: 31
-        width: 156
-        height: 321
+        x: 5536
+        y: 32
+        width: 153
+        height: 318
       alignment: 9
-      pivot: {x: 0.37, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

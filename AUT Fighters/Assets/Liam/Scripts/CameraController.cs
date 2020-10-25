@@ -12,6 +12,12 @@ public class CameraController : MonoBehaviour
     public float xL;
     public float xR;
     public Transform midPoint;
+
+    [SerializeField]
+    private BoxCollider2D leftWall;
+    [SerializeField]
+    private BoxCollider2D rightWall;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +47,7 @@ public class CameraController : MonoBehaviour
 
     public void ResetMidPoint()
     {
+        DisableWalls();
         midPoint.position = new Vector2(0, 0);
     }
 
@@ -71,5 +78,17 @@ public class CameraController : MonoBehaviour
             xL = p2.position.x - margin;
             xR = p1.position.x + margin;
         }
+    }
+
+    private void DisableWalls()
+    {
+        leftWall.enabled = false;
+        rightWall.enabled = false;
+    }
+
+    public void EnableWalls()
+    {
+        leftWall.enabled = true;
+        rightWall.enabled = true;
     }
 }

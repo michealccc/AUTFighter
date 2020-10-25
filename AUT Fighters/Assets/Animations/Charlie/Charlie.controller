@@ -814,6 +814,9 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: 8700208538028036546}
+    second:
+    - {fileID: 2281441180686554057}
   - first: {fileID: 5151698900555236434}
     second:
     - {fileID: -2695187133410723434}
@@ -823,9 +826,6 @@ AnimatorStateMachine:
     second:
     - {fileID: -4451035093981625194}
     - {fileID: -126071967046231016}
-  - first: {fileID: 8700208538028036546}
-    second:
-    - {fileID: 2281441180686554057}
   - first: {fileID: 7764145520589254113}
     second:
     - {fileID: 171189704299126581}
@@ -2632,7 +2632,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NidToCrouch
+  m_Name: CharlieToCrouch
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

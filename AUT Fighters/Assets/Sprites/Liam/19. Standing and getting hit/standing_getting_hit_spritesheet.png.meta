@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -104,6 +104,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -111,12 +123,12 @@ TextureImporter:
       name: standing_getting_hit_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 234
-        y: 31
-        width: 130
-        height: 324
+        x: 235
+        y: 37
+        width: 128
+        height: 322
       alignment: 9
-      pivot: {x: 0.45, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,12 +144,12 @@ TextureImporter:
       name: standing_getting_hit_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 903
-        y: 31
-        width: 128
-        height: 317
+        x: 904
+        y: 32
+        width: 126
+        height: 315
       alignment: 9
-      pivot: {x: 0.45, y: 0.51}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,12 +165,12 @@ TextureImporter:
       name: standing_getting_hit_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1558
-        y: 31
-        width: 142
-        height: 313
+        x: 1559
+        y: 32
+        width: 140
+        height: 311
       alignment: 9
-      pivot: {x: 0.41, y: 0.52}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +186,12 @@ TextureImporter:
       name: standing_getting_hit_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2188
-        y: 31
-        width: 176
-        height: 297
+        x: 2190
+        y: 32
+        width: 173
+        height: 295
       alignment: 9
-      pivot: {x: 0.33, y: 0.55}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,12 +207,12 @@ TextureImporter:
       name: standing_getting_hit_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 2871
-        y: 31
-        width: 162
-        height: 306
+        x: 2872
+        y: 32
+        width: 160
+        height: 304
       alignment: 9
-      pivot: {x: 0.36, y: 0.53}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,12 +228,12 @@ TextureImporter:
       name: standing_getting_hit_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 3565
-        y: 31
-        width: 135
-        height: 322
+        x: 3566
+        y: 32
+        width: 133
+        height: 320
       alignment: 9
-      pivot: {x: 0.43, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,12 +249,12 @@ TextureImporter:
       name: standing_getting_hit_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 4243
-        y: 31
-        width: 128
-        height: 322
+        x: 4244
+        y: 32
+        width: 126
+        height: 320
       alignment: 9
-      pivot: {x: 0.45, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

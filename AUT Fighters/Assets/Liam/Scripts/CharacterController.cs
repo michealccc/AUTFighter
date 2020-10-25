@@ -53,7 +53,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
 
     void Start()
     {
-        audio = FindObjectOfType<AudioManager>();
+        //audio = FindObjectOfType<AudioManager>();
     }
 
     public void ChangeState(ICharacterState newState)

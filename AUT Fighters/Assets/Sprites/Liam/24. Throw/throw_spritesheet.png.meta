@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -110,6 +110,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -117,12 +129,12 @@ TextureImporter:
       name: throw_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 225
-        y: 31
-        width: 123
-        height: 324
+        x: 226
+        y: 32
+        width: 120
+        height: 321
       alignment: 9
-      pivot: {x: 0.47, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,12 +150,12 @@ TextureImporter:
       name: throw_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 885
-        y: 31
-        width: 162
-        height: 315
+        x: 887
+        y: 32
+        width: 158
+        height: 313
       alignment: 9
-      pivot: {x: 0.36, y: 0.51}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,12 +171,12 @@ TextureImporter:
       name: throw_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1557
-        y: 31
-        width: 188
-        height: 274
+        x: 1559
+        y: 32
+        width: 185
+        height: 271
       alignment: 9
-      pivot: {x: 0.31, y: 0.59}
+      pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,12 +192,12 @@ TextureImporter:
       name: throw_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2206
-        y: 34
-        width: 291
-        height: 241
+        x: 2208
+        y: 40
+        width: 287
+        height: 239
       alignment: 9
-      pivot: {x: 0.2, y: 0.67}
+      pivot: {x: 0.4, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,12 +213,12 @@ TextureImporter:
       name: throw_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 2873
-        y: 34
-        width: 296
-        height: 256
+        x: 2874
+        y: 35
+        width: 293
+        height: 254
       alignment: 9
-      pivot: {x: 0.2, y: 0.63}
+      pivot: {x: 0.28, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,12 +234,12 @@ TextureImporter:
       name: throw_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 3542
-        y: 34
-        width: 205
-        height: 318
+        x: 3543
+        y: 35
+        width: 203
+        height: 315
       alignment: 9
-      pivot: {x: 0.28, y: 0.51}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,12 +255,12 @@ TextureImporter:
       name: throw_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 4149
-        y: 34
-        width: 265
-        height: 259
+        x: 4151
+        y: 35
+        width: 261
+        height: 257
       alignment: 9
-      pivot: {x: 0.22, y: 0.63}
+      pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,12 +276,12 @@ TextureImporter:
       name: throw_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 4877
-        y: 34
-        width: 206
-        height: 268
+        x: 4879
+        y: 35
+        width: 202
+        height: 265
       alignment: 9
-      pivot: {x: 0.28, y: 0.6}
+      pivot: {x: 0.5, y: 0.6}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,12 +297,12 @@ TextureImporter:
       name: throw_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 5561
-        y: 34
-        width: 153
-        height: 327
+        x: 5563
+        y: 35
+        width: 150
+        height: 324
       alignment: 9
-      pivot: {x: 0.38, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

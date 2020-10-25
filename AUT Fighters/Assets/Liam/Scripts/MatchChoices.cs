@@ -12,8 +12,8 @@ public enum Characters
 
 public class MatchChoices
 {
-    public static Characters p1Character = Characters.CHARLIE;
-    public static Characters p2Character = Characters.SAN;
+    public static Characters p1Character = Characters.LIAM;
+    public static Characters p2Character = Characters.CHARLIE;
 
     public static string chosenStage = Stages.CROSSING;
 }

@@ -21,6 +21,7 @@ public class NidController : CharacterController
         //Debug.Log(transform.Find("Hitbox").GetComponent<BoxCollider2D>());
         //Physics2D.IgnoreCollision(transform.Find("Hitbox").GetComponent<BoxCollider2D>(), opponent.transform.Find("GroundCollider").GetComponent<BoxCollider2D>());
         //Physics2D.IgnoreCollision(myHitbox, enemyGroundCol, true);
+        audio = AudioManager.Instance;
     }
 
     // Update is called once per frame

@@ -12,6 +12,7 @@ public class CharlieController : CharacterController
         //inputs.AssignInputs();
         airAttackPerformed = false;
         SetAttackDataOrigin();
+        audio = AudioManager.Instance;
         //ChangeState(new IdleState());
     }
 

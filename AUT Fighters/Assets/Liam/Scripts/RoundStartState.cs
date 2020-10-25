@@ -15,6 +15,7 @@ public class RoundStartState : ICharacterState
     public void Execute()
     {
         character.DirectionToBeFacing();
+        character.rb.velocity = new Vector2(0, 0);
     }
 
     public void Exit()

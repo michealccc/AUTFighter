@@ -36,7 +36,7 @@ public class ImageChanger : MonoBehaviour
     public void SanCharacterChanger()
     {
         GameObject.Find("SelectedFirstCharacter").GetComponent<Image>().sprite = backgrounds[SanCharacter];
-
+        MatchChoices.p1Character = Characters.SAN;
 
     }
 
@@ -46,14 +46,14 @@ public class ImageChanger : MonoBehaviour
     {
 
         GameObject.Find("SelectedFirstCharacter").GetComponent<Image>().sprite = backgrounds[MichealCharacter];
-
+        MatchChoices.p1Character = Characters.MICHAEL;
     }
 
     //Player 1 Charlie image
     public void CharlieCharacterChanger()
     {
         GameObject.Find("SelectedFirstCharacter").GetComponent<Image>().sprite = backgrounds[CharlieCharacter];
-
+        MatchChoices.p1Character = Characters.CHARLIE;
 
     }
 
@@ -61,7 +61,7 @@ public class ImageChanger : MonoBehaviour
     public void LiamCharacterChanger()
     {
         GameObject.Find("SelectedFirstCharacter").GetComponent<Image>().sprite = backgrounds[LiamCharacter];
-
+        MatchChoices.p1Character = Characters.LIAM;
 
     }
 
@@ -70,7 +70,7 @@ public class ImageChanger : MonoBehaviour
     public void SanCharacterChanger2()
     {
         GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[SanCharacterOtherway];
-
+        MatchChoices.p2Character = Characters.SAN;
 
     }
 
@@ -80,14 +80,14 @@ public class ImageChanger : MonoBehaviour
     {
 
         GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[MichealCharacterOtherway];
-
+        MatchChoices.p2Character = Characters.MICHAEL;
     }
 
     //Player 2 Charlie image
     public void CharlieCharacterChanger2()
     {
         GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[CharlieCharacterOtherway];
-
+        MatchChoices.p2Character = Characters.CHARLIE;
 
     }
 
@@ -95,7 +95,7 @@ public class ImageChanger : MonoBehaviour
     public void LiamCharacterChanger2()
     {
         GameObject.Find("SelectedSecondCharacter").GetComponent<Image>().sprite = backgrounds[LiamCharacterOtherway];
-
+        MatchChoices.p2Character = Characters.LIAM;
 
     }
 

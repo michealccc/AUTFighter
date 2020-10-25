@@ -27,6 +27,7 @@ public class BackgroundChanger : MonoBehaviour
     public void AlbertParkImageChanger()
     {
         GameObject.Find("Background").GetComponent<Image>().sprite = backgrounds[AlbertPark];
+        MatchChoices.chosenStage = Stages.FOUNTAIN;
 
     }
 
@@ -34,6 +35,7 @@ public class BackgroundChanger : MonoBehaviour
     public void LectureRoomImageChanger()
     {
         GameObject.Find("Background").GetComponent<Image>().sprite = backgrounds[LectureRoom];
+        MatchChoices.chosenStage = Stages.LECTURE;
 
 
     }
@@ -42,6 +44,7 @@ public class BackgroundChanger : MonoBehaviour
     public void StPaulImageChanger()
     {
         GameObject.Find("Background").GetComponent<Image>().sprite = backgrounds[StPaulStreet];
+        MatchChoices.chosenStage = Stages.STPAULS;
 
 
     }
@@ -50,6 +53,7 @@ public class BackgroundChanger : MonoBehaviour
     public void SymondStreetImageChanger()
     {
         GameObject.Find("Background").GetComponent<Image>().sprite = backgrounds[SymondsStreet];
+        MatchChoices.chosenStage = Stages.CROSSING;
 
     }
 
@@ -59,6 +63,7 @@ public class BackgroundChanger : MonoBehaviour
     public void WellesleyImage()
     {
         GameObject.Find("Background").GetComponent<Image>().sprite = backgrounds[WellesleyStreet];
+        MatchChoices.chosenStage = Stages.WELLESLEY;
 
 
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LiamController : CharacterController
 {
+    public SuperFire superFirePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -113,13 +114,17 @@ public class LiamController : CharacterController
         anim.Play("KO");
     }
 
-    public void LeapAttack()
+    public void SpecialAttack()
     {
-
+        rb.AddForce(new Vector2(direction * (moveSpeed * 3), 0f), ForceMode2D.Impulse);
     }
 
     public void SuperAttack()
     {
-
+        SuperFire superInstance = Instantiate(superFirePrefab, transform.position + new Vector3(direction * 5, -collider.bounds.extents.y, 0), transform.rotation);
+        superInstance.rb.velocity = new Vector2(direction * superInstance.moveSpeed * Time.fixedDeltaTime, 0);
+        superInstance.GetComponent<AttackData>().origin = this;
+        audio.Play("FireballSound");
+        Debug.Log("Fire Super");
     }
 }

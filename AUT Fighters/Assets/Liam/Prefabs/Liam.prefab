@@ -178,7 +178,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 991affafb5c7cf34694d596073ff2f6e, type: 2}
+  - {fileID: 2100000, guid: 60cb9691b6f9eb24b9ffa89b28b79f1b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -429,6 +429,7 @@ MonoBehaviour:
   - {fileID: 5460595062749960663, guid: 1e2af2bb6be85e64b83608c8f89bff2a, type: 3}
   - {fileID: 5460595062749960663, guid: 1809f17196718d14c8ff33617243d612, type: 3}
   - {fileID: 5460595062749960663, guid: b3b73e0b6a5260748bc4760b025815e6, type: 3}
+  - {fileID: 5460595062749960663, guid: b800e3742e962f4438adc5f1d443481f, type: 3}
   currentAttackData: {fileID: 0}
   moveSpeed: 9
   jumpForceY: 120
@@ -443,6 +444,7 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 256
+  superFirePrefab: {fileID: 542090886, guid: 3c43d2b42af984e4486efe46461f5d74, type: 3}
 --- !u!1 &8537712908333319799
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,12 +652,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {fileID: 3951515819069901484, guid: a335f70644ffbc2498fbd29246a70069, type: 3}
-  attackName: CharlieThrow
+  origin: {fileID: 3182717800394835412}
+  attackName: LiamThrow
   damage: 60
-  pushback: 2
-  pushforward: 2
-  launchForce: {x: 30, y: 50}
+  pushback: 4
+  pushforward: 4
+  launchForce: {x: 40, y: 70}
   blockStunDuration: 0
   hitStunDuration: 0
   causeKnockdown: 1

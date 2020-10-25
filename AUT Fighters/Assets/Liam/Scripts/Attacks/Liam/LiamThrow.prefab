@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3921767901554022016}
   - component: {fileID: 5460595062749960663}
   m_Layer: 0
-  m_Name: LiamSpecial
+  m_Name: LiamThrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: {fileID: 0}
-  attackName: LiamSpecial
+  attackName: LiamThrow
   damage: 70
-  pushback: 0
-  pushforward: 10
-  launchForce: {x: 0, y: 0}
-  blockStunDuration: 1.4
-  hitStunDuration: 1
-  causeKnockdown: 0
+  pushback: 2
+  pushforward: 2
+  launchForce: {x: 30, y: 50}
+  blockStunDuration: 0
+  hitStunDuration: 0
+  causeKnockdown: 1
   attackType: 0

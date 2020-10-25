@@ -13,7 +13,7 @@ public enum Characters
 public class MatchChoices
 {
     public static Characters p1Character = Characters.LIAM;
-    public static Characters p2Character = Characters.CHARLIE;
+    public static Characters p2Character = Characters.MICHAEL;
 
     public static string chosenStage = Stages.CROSSING;
 }

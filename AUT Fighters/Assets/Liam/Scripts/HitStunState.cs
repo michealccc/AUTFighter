@@ -54,7 +54,7 @@ public class HitStunState : ICharacterState
     {
         if (hitDuration > 0)
         {
-            hitDuration -= 0.05f;
+            hitDuration -= 1.5f * Time.fixedDeltaTime;
             //character.anim.Play("NidStandHit");
         }
         else

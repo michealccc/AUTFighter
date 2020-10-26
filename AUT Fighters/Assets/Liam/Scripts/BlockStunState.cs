@@ -57,7 +57,7 @@ public class BlockStunState : ICharacterState
         if(blockDuration > 0)
         {
             Debug.Log("Still Blocking");
-            blockDuration -= 0.05f;
+            blockDuration -= 1.5f * Time.fixedDeltaTime;
         }
         else
         {

@@ -7,15 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     private AudioManager audio;
 
-    void Awake()
-    {
-        //audio = FindObjectOfType<AudioManager>();
-        //audio.Play("MenuMusic");
-    }
-
     void Start()
     {
         audio = FindObjectOfType<AudioManager>();
+        audio.Stop("BattleMusic");
         audio.Play("MenuMusic");
     }
 

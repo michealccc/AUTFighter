@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MichaelController : CharacterController
 {
-
+    public HatSuper hatSuperPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -119,14 +119,10 @@ public class MichaelController : CharacterController
         anim.Play("KO");
     }
 
-
-    public void SpecialAtack()
-    {
-
-    }
-
     public void SuperAttack()
     {
-
+        HatSuper superInstance = Instantiate(hatSuperPrefab, transform.position + new Vector3(direction * 2f, 1.5f, 0), transform.rotation);
+        superInstance.rb.velocity = new Vector2(superInstance.moveSpeed * direction * Time.fixedDeltaTime, 0);
+        superInstance.GetComponent<AttackData>().origin = this;
     }
 }

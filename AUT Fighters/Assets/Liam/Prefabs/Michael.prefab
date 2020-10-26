@@ -82,7 +82,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210302934869738873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.402, y: 0.393, z: 0}
+  m_LocalPosition: {x: 1.7, y: 0.54, z: 0}
   m_LocalScale: {x: 0.20144542, y: 0.20144518, z: 1}
   m_Children: []
   m_Father: {fileID: 210302935320503890}
@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {fileID: 0}
-  attackName: NidThrow
+  origin: {fileID: 1864811807215759523}
+  attackName: MichaelThrow
   damage: 60
   pushback: 0
   pushforward: 0
@@ -601,11 +601,22 @@ MonoBehaviour:
     currentHp: 0
     maxSuperMeter: 100
     currentSuperMeter: 0
-  attacks: []
+  attacks:
+  - {fileID: 5460595062749960663, guid: ec464cc00cbc2dd42957a1e6e7791550, type: 3}
+  - {fileID: 5460595062749960663, guid: 6a7f5004f2ed5fa4b9fdb36afb72dc0b, type: 3}
+  - {fileID: 5460595062749960663, guid: 6193c71001001b6498d60003f36f2737, type: 3}
+  - {fileID: 5460595062749960663, guid: 2544fe8785bcb4841880986733f67803, type: 3}
+  - {fileID: 5460595062749960663, guid: efd4d68cea0e05841a6902cf2617af95, type: 3}
+  - {fileID: 5460595062749960663, guid: 1a18e67d28b69c049a63fbd6199e0215, type: 3}
+  - {fileID: 5460595062749960663, guid: 1e3a65a90dd77b44ea8e857279edc549, type: 3}
+  - {fileID: 5460595062749960663, guid: e88c87e637df6384295c4f24e92aef53, type: 3}
+  - {fileID: 5460595062749960663, guid: 0ce61cc329c40574bb81c648f276c268, type: 3}
+  - {fileID: 5460595062749960663, guid: e15b2b06b645ec14cba80d5bcae2f1fc, type: 3}
+  - {fileID: 5460595062749960663, guid: e59cdd2ad5cd5c74083e77796329a1d1, type: 3}
   currentAttackData: {fileID: 0}
   moveSpeed: 8
-  jumpForceY: 120
-  jumpForceX: 28
+  jumpForceY: 121
+  jumpForceX: 29
   isMoving: 0
   isJumping: 0
   isCrouching: 0
@@ -616,6 +627,8 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 256
+  hatSuperPrefab: {fileID: 7368611201414592594, guid: 03804f916c35e7d4ca748c55003c6d88,
+    type: 3}
 --- !u!1 &2329133787218271243
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,10 @@ public class RoundStartState : ICharacterState
     {
         character = controller;
         character.rb.velocity = new Vector2(0, 0);
+        if(character.anim.GetBool("IsCrouching"))
+        {
+            character.anim.SetBool("IsCrouching", false);
+        }
     }
 
     public void Execute()

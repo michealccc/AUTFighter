@@ -29,21 +29,7 @@ public class CameraController : MonoBehaviour
     {
         CalcScreen(p1Pos, p2Pos);
         SetMidPoint();
-        //SetCameraPos();
     }
-
-    //public void ResetCamera()
-    //{
-    //    cameraPos.position = new Vector2(0, 0);
-    //}
-
-    //private void SetCameraPos()
-    //{
-    //    if ((xR - xL) <= cam.orthographicSize * 2 + 6)
-    //    {
-    //        cameraPos.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
-    //    }
-    //}
 
     public void ResetMidPoint()
     {
@@ -56,12 +42,7 @@ public class CameraController : MonoBehaviour
         float midPosX = midPoint.position.x;
         float midPosY;
 
-        //If the characters are a set distance apart, change the x-position of the midpoint
-        if((xR - xL) >= 10f)
-        {
-            //midPoint.position = new Vector2((xR + xL) / 2, (p1Pos.position.y + p2Pos.position.y) / 2 + 3f);
-            midPosX = (xR + xL) / 2;
-        }
+        midPosX = (xR + xL) / 2;
         midPosY = ((p1Pos.position.y + p2Pos.position.y) / 2) + 3;
         midPoint.position = new Vector2(midPosX, midPosY);
     }

@@ -20,8 +20,11 @@ public class HitStunState : ICharacterState
         character = controller;
         character.throwHurtbox.enabled = false;
         hitDuration = atkData.hitStunDuration;
+
         character.opponent.rb.AddForce(character.transform.right * -character.opponent.direction * atkData.pushback, ForceMode2D.Impulse);
         character.rb.AddForce(character.transform.right * -character.direction * atkData.pushforward, ForceMode2D.Impulse);
+
+        Debug.Log("Character velocity from hitstun: " + character.rb.velocity);
     }
 
     public void Execute()

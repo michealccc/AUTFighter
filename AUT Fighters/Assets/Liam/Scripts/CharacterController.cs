@@ -268,6 +268,7 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
     {
         //attack = FindAttackData(atkData);
         transform.Find("Hitbox").GetComponent<AttackData>().SetAttackData(FindAttackData(atkData));
+        transform.Find("Hitbox").GetComponent<AttackData>().origin = this;
         //GetComponentInChildren<AttackData>() = FindAttackData(atkData);
     }
 
@@ -298,15 +299,6 @@ public class CharacterController : MonoBehaviour, IGettingAttacked, IWinOrLose
         //    currentState.OnTriggerEnter(other);
         //}
     }
-
-    //void OnCollisionEnter2D(Collision2D collInfo)
-    //{
-    //    if(collInfo.gameObject.tag == "Attack")
-    //    {
-    //        Debug.Log("Collision Info: " + collInfo.collider);
-    //    }
-    //    Debug.Log("My collider: " + collInfo.gameObject + " other = " + collInfo.otherCollider);
-    //}
 
     private AttackData FindAttackData(string atkName)
     {

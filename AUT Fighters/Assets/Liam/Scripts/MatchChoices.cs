@@ -13,7 +13,7 @@ public enum Characters
 public class MatchChoices
 {
     public static Characters p1Character = Characters.CHARLIE;
-    public static Characters p2Character = Characters.SAN;
+    public static Characters p2Character = (Characters)Random.Range(0, 3);//Changes to a random character for TrainingMode
 
     public static string chosenStage = Stages.CROSSING;
 }

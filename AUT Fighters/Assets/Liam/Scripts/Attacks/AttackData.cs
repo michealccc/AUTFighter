@@ -29,6 +29,7 @@ public class AttackData : MonoBehaviour
         attackName = data.attackName;
         damage = data.damage;
         pushback = data.pushback;
+        pushforward = data.pushforward;
         launchForce = data.launchForce;
         blockStunDuration = data.blockStunDuration;
         hitStunDuration = data.hitStunDuration;

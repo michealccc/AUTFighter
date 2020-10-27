@@ -410,7 +410,7 @@ MonoBehaviour:
   blockSpark: {fileID: 3690588533727422376}
   hitSpark: {fileID: 3928614422382137383}
   characterID: 2
-  charactePortrait: {fileID: 0}
+  charactePortrait: {fileID: 21300000, guid: 476f0d57fd329d0489ea388a6e5a88c2, type: 3}
   characterName: Liam
   stats:
     maxHp: 1000

@@ -594,7 +594,7 @@ MonoBehaviour:
   blockSpark: {fileID: 1987429747172170238}
   hitSpark: {fileID: 8887347693815883153}
   characterID: 3
-  charactePortrait: {fileID: 0}
+  charactePortrait: {fileID: 21300000, guid: b71f9a7077b32c048ae1dfda249599bb, type: 3}
   characterName: Michael
   stats:
     maxHp: 1000

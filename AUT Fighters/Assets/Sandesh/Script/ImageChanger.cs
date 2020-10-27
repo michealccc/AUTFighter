@@ -30,6 +30,8 @@ public class ImageChanger : MonoBehaviour
     {
         if (resourceName != "")
             backgrounds = Resources.LoadAll<Sprite>(resourceName);
+
+        MatchChoices.p2Character = (Characters)Random.Range(0,3);//Choose random character for second player
     }
 
     //Player 1 San image

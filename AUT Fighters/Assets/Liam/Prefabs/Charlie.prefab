@@ -256,7 +256,6 @@ MonoBehaviour:
   characterID: 1
   charactePortrait: {fileID: 21300000, guid: ddae99258dd7bfa4ead9390edceb291b, type: 3}
   characterName: Charlie
-  UID: 0
   stats:
     maxHp: 1000
     currentHp: 0
@@ -599,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815f7697f3edeb4b8d1bee7b85a5927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {fileID: 0}
+  origin: {fileID: 3951515819069901484}
   attackName: CharlieThrow
   damage: 60
   pushback: 2

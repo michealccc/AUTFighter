@@ -47,7 +47,7 @@ MonoBehaviour:
   attackName: LiamStandMed
   damage: 80
   pushback: 2
-  pushforward: 2
+  pushforward: 4
   launchForce: {x: 0, y: 0}
   blockStunDuration: 1.5
   hitStunDuration: 1.7

@@ -31,31 +31,37 @@ public class MatchManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //audio = FindObjectOfType<AudioManager>();
-        //audio.Stop("MenuMusic");    //Could add code so that only a single BGM plays at a time
-        //audio.Play("BattleMusic");
-
-        //MatchChoices.p1Character = Characters.CHARLIE;
-        //MatchChoices.p2Character = Characters.SAN;
-
+        //Initialize settings for a match
         p1Score = 0;
         p2Score = 0;
         SetStageBackground();
         IntializeCharacters();
         ResetRound();
-        //RoundStart();           //Temporary here
+
+        //Set up the HUD for the players
         matchHUD.ResetPlayerHUDs();
         matchHUD.SetupPlayerProfiles(p1, p2);
-        camera.p1Pos = p1.transform;    //Set up character reference for camera
+
+        //Set up character reference for camera
+        camera.p1Pos = p1.transform;    
         camera.p2Pos = p2.transform;
     }
 
     void Start()
     {
         audio = AudioManager.Instance;
-        Debug.Log("Audio manager: " + audio.gameObject.name);
         audio.Stop("MenuMusic");
         audio.Play("BattleMusic");
+
+        //If the players picked the same character change the colour of p2's duplicate character
+        if(p1.characterName.CompareTo(p2.characterName) == 0)
+        {
+            Debug.Log("Change Colour");
+            p2.GetComponent<SpriteRenderer>().material.SetInt("_colourChanged", 1);
+            Debug.Log("The property: " + p2.GetComponent<SpriteRenderer>().material.GetFloat("_colourChanged"));
+            Debug.Log(p2.GetComponent<SpriteRenderer>().material);
+            //p2.GetComponent<SpriteRenderer>().material.shader.Get = 1;
+        }
     }
 
     // Update is called once per frame

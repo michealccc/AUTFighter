@@ -1,6 +1,8 @@
 # AUTFighter
 
-SDP Project inspired by old school fighter genre from the 90s
+AUTFighter is a rough prototype of an arcade fighting game inspired by classic fighting games from the '90s buit in Unity.
+
+![AUTFighter Demo](https://github.com/michealccc/AUTFighter/blob/develop/assets/demo/demo.gif)
 
 ## Installation
 
